@@ -9,7 +9,7 @@ import { FootersiteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-black text-white ">
+    <footer className="border-t bg-gradient-to-br from-green-500 to-green-800 backdrop-blur-sm text-white ">
       <div className=" py-12 flex flex-col justify-center items-center container mx-auto">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Section */}
