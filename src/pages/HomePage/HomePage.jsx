@@ -1,10 +1,18 @@
+import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
 import HomeBanner from '@/components/view/Home/HomeBanner/HomeBanner'
+import Reviews from '@/components/view/Reviews/Reviews'
+import { TrustedService } from '@/components/view/TrustedService/TrustedService'
+import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import React from 'react'
 
 export default function HomePage() {
     return (
         <>
             <HomeBanner />
+            <FeaturedServices />
+            <TrustedService />
+            <WhoWeAre />
+            <Reviews />
         </>
     )
 }
