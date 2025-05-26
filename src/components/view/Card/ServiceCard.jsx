@@ -20,7 +20,7 @@ const getServiceIcon = (title) => {
 };
 
 export const ServiceCard = ({ service }) => {
-  console.log(service)
+  
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 border-2 border-primary">
       <div className="relative h-48 overflow-hidden ">
