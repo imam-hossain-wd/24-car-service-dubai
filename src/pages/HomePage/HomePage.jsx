@@ -1,4 +1,7 @@
+import Blogs from '@/components/view/Blogs/Blogs'
+import { FAQSection } from '@/components/view/FAQSection/FAQSection'
 import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
+import GetTouch from '@/components/view/GetTouch/GetTouch'
 import HomeBanner from '@/components/view/Home/HomeBanner/HomeBanner'
 import Reviews from '@/components/view/Reviews/Reviews'
 import { TrustedService } from '@/components/view/TrustedService/TrustedService'
@@ -13,6 +16,9 @@ export default function HomePage() {
             <TrustedService />
             <WhoWeAre />
             <Reviews />
+            <Blogs />
+            <FAQSection />
+            <GetTouch />
         </>
     )
 }
