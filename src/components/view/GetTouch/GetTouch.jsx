@@ -1,18 +1,17 @@
 
-import { Mail, MapPin, Phone } from 'lucide-react'
 import React from 'react'
-// import { Card, CardContent, CardHeader, CardTitle } from '../card'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Card , CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function GetTouch() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-8 md:py-24 bg-gradient-to-b from-gray-50 to-white">
     <div className="container mx-auto">
       <div className="grid items-center gap-12 lg:grid-cols-2">
-        <div>
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl mb-4">
-            Get In <span className="text-primary">Touch</span>
+        <div className='w-[85%] mx-auto'>
+          <h2 className="text-3xl text-center font-bold sm:text-4xl md:text-5xl mb-4">
+            Get In <span className="text-primary ">Touch</span>
           </h2>
           <p className="text-lg text-gray-600 mb-8">
             Have questions about your vehicle? Our team is ready to help 24/7 with expert advice and service.

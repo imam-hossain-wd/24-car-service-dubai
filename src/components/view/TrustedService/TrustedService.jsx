@@ -22,7 +22,7 @@ export function TrustedService() {
 
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* 3D Card with Parallax Effect */}
-          <div className="relative group h-[500px] perspective-1000">
+          <div className="relative group h-[400px] lg:h-[500px] w-[90%] md:w-full mx-auto perspective-1000">
             <div className="relative h-full transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-12">
               <div className="absolute inset-0 -mt-5 lg:-mt-20 rounded-3xl shadow-2xl overflow-hidden border-2 border-white/10 bg-gradient-to-br from-gray-900 to-gray-800 backface-hidden">
                 <Image
@@ -33,8 +33,8 @@ export function TrustedService() {
                   quality={100}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex flex-col justify-end">
-                  <div className="space-y-6 text-white">
-                    <div className="flex items-center gap-3">
+                  <div className="space-y-2 text-white">
+                    <div className="flex items-center gap-1">
                       <div className="p-2 rounded-full bg-green-500/20">
                         <BadgeCheck className="h-6 w-6 text-green-400" />
                       </div>
@@ -55,7 +55,7 @@ export function TrustedService() {
           </div>
 
           {/* Modern Feature Grid */}
-          <div className="space-y-8">
+          <div className="space-y-8 mx-5">
             <p className="text-lg text-gray-600 leading-relaxed">
               With 15+ years perfecting automotive excellence in Dubai, we combine cutting-edge technology with artisan craftsmanship for your luxury vehicle.
             </p>

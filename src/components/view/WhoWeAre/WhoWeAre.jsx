@@ -6,8 +6,8 @@ import { images } from "@/utils/assets";
 
 export function WhoWeAre() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
+    <section className=" mx-auto py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="px-4 mx-5 ">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Image Section */}
           <div className="relative h-full min-h-[400px]">

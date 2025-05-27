@@ -12,7 +12,7 @@ export default function FeaturedServices() {
           <Badge variant="outline" className="mb-4 bg-primary/10 text-primary">
             Our Services
           </Badge>
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl mb-4">
+          <h2 className="text-3xl font-bold sm:text-3xl md:text-5xl mb-4">
             Featured <span className="text-primary">Car Repair</span> Services
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

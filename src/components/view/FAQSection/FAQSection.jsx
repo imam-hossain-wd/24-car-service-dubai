@@ -63,7 +63,7 @@ export function FAQSection() {
   return (
     <section className="bg-gradient-to-b from-gray-50">
       <div 
-      className="relative py-16 md:py-24 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden container mx-auto"
+      className="relative py-16 md:py-24 container mx-auto to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden "
       onMouseMove={handleMouseMove}
     >
       {/* Animated background gradient */}
@@ -118,7 +118,7 @@ export function FAQSection() {
           </p>
         </motion.div>
 
-        <div className="mx-auto max-w-3xl">
+        <div className=" max-w-3xl mx-5 lg:mx-auto">
           <Accordion 
             type="single" 
             collapsible 
