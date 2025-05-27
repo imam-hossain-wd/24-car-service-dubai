@@ -12,6 +12,7 @@ const nextConfig = {
       'img.freepik.com',
       'i.ibb.co', 
       'example.com',
+      '/www.freepik.com'
       // Add any other domains you need here
     ],
   },

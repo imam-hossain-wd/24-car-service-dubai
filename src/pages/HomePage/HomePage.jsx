@@ -1,3 +1,4 @@
+
 import Blogs from '@/components/view/Blogs/Blogs'
 import { FAQSection } from '@/components/view/FAQSection/FAQSection'
 import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
