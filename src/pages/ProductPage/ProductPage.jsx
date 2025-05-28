@@ -118,9 +118,9 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import Loading from '@/components/ui/Shared/Loading/Loading';
 import ProductCard from '@/components/view/Card/ProductCard';
 import productData from '@/data/productData';
+import Loading from '@/components/ui/shared/Loading/Loading';
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
