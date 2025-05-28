@@ -8,6 +8,8 @@ import Reviews from '@/components/view/Reviews/Reviews'
 import { TrustedService } from '@/components/view/TrustedService/TrustedService'
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import React from 'react'
+import BlogPage from '../BlogPage/BlogPage'
+import GalleryPage from '../GalleryPage/GalleryPage'
 
 export default function HomePage() {
     return (
@@ -17,7 +19,9 @@ export default function HomePage() {
             <TrustedService />
             <WhoWeAre />
             <Reviews />
-            <Blogs />
+            <GalleryPage />
+            <BlogPage />
+            {/* <Blogs /> */}
             <FAQSection />
             <GetTouch />
         </>
