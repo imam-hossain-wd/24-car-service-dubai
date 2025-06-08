@@ -22,7 +22,7 @@ import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/Booki
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Products", href: "/products" },
+  // { name: "Products", href: "/products" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Blog", href: "/blog" },

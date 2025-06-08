@@ -10,6 +10,7 @@ import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import React from 'react'
 import BlogPage from '../BlogPage/BlogPage'
 import GalleryPage from '../GalleryPage/GalleryPage'
+import MapComponent from '@/components/ui/shared/Map/MapComponent'
 
 export default function HomePage() {
     return (
@@ -24,6 +25,7 @@ export default function HomePage() {
             {/* <Blogs /> */}
             <FAQSection />
             <GetTouch />
+            <MapComponent/>
         </>
     )
 }
