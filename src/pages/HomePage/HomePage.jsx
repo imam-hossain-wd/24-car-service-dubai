@@ -18,14 +18,15 @@ export default function HomePage() {
             <HomeBanner />
             <FeaturedServices />
             <TrustedService />
-            <WhoWeAre />
-            <Reviews />
-            <GalleryPage />
+             <GalleryPage />
             <BlogPage />
+            <WhoWeAre />
+           
             {/* <Blogs /> */}
-            <FAQSection />
             <GetTouch />
             <MapComponent/>
+            <Reviews />
+            <FAQSection />
         </>
     )
 }

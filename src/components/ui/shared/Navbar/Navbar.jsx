@@ -124,16 +124,16 @@ export function Navbar() {
           </div>
 
           {/* Logo - Centered on mobile */}
-          <Link href="/" className="-mt-3 flex flex-col justify-center items-center">
+          <Link href="/" className="  flex flex-col justify-center items-center">
             <Image
-              className="w-24 h-24"
+              className="w-20 h-20"
               src={bandlogo.logo3}
               quality={100}
               width={1000}
               height={1000}
               alt="24 car service dubai band logo"
             />
-            <h3 className="text-[#04a909] -mt-7 text-[20px] font-bold">24 Car Service Dubai</h3>
+            {/* <h3 className="text-[#04a909] -mt-7 text-[20px] font-bold">24 Car Service Dubai</h3> */}
           </Link>
           {/* <Link href="/" className="text-xl font-bold md:text-2xl">
             24CarServiceDubai
