@@ -3,6 +3,7 @@ import "./globals.css";
 import { Footer } from "@/components/ui/shared/Footer/Footer";
 import { Navbar } from "@/components/ui/shared/Navbar/Navbar";
 import { FloatingButtons } from "@/components/ui/shared/Buttons/FloatingButtons/FloatingButtons";
+import { MobileBottomNav } from "@/components/ui/shared/Navbar/MobileBottomNav";
 
 
 const geistSans = Geist({
@@ -27,11 +28,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
-
-        <Navbar />
-        {children}
-        <FloatingButtons />
-        <Footer />
+          <Navbar />
+          {children}
+          <FloatingButtons />
+          <MobileBottomNav />
+          <Footer />
         </div>
       </body>
     </html>

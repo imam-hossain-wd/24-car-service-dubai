@@ -492,7 +492,7 @@ export default function CompactHomeBanner() {
     <div className="relative overflow-hidden h-[55vh] sm:h-[40vh] md:h-[45vh] lg:h-[50vh] ">
       {/* Modern Green Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-teal-600 to-green-700 z-0 " />
-      
+
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-[length:40px_40px]" />
@@ -503,7 +503,7 @@ export default function CompactHomeBanner() {
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center h-full">
             {/* Text Content */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -547,11 +547,13 @@ export default function CompactHomeBanner() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="flex  gap-2 justify-center lg:justify-start mb-4"
+                className="flex flex-col lg:flex-row gap-2 justify-center lg:justify-start mb-4"
               >
-                <CallNowButton className="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 shadow-md " />
-                <WhatsAppButton />
-                <BookAppointmentButton className="px-4 py-2 text-sm font-semibold bg-white text-gray-800 hover:bg-gray-100" />
+                <div className="flex gap-2 justify-center">
+                  <CallNowButton className="px-4 w-[40%] py-2 text-sm font-semibold bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 shadow-md " />
+                  <WhatsAppButton className="w-[40%]" />
+                </div>
+                <BookAppointmentButton className="px-4 w-[80%] mx-auto lg:mx-0 py-2 text-sm font-semibold bg-white text-gray-800 hover:bg-gray-100" />
               </motion.div>
 
               {/* Compact Highlights */}
@@ -600,7 +602,7 @@ export default function CompactHomeBanner() {
                   ))}
                 </div>
               </div>
-              
+
               {/* Dots indicator */}
               <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1">
                 {carouselImages.map((_, index) => (
