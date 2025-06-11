@@ -71,13 +71,13 @@ export function TrustedService() {
                 { icon: <Shield className="h-6 w-6" />, title: "Guaranteed Repairs", color: "text-red-500" },
                 { icon: <Leaf className="h-6 w-6" />, title: "Eco-Friendly", color: "text-teal-500" },
                 { icon: <Leaf className="h-6 w-6" />, title: "Hassle-Free Booking", color: "text-teal-500" },
-              ].map((feature, index) => (
+              ].map((feature, index) => ( 
                 <div 
                   key={index}
-                  className="p-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 hover:border-primary/20 group border border-primary"
+                  className="p-1 lg:p-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 hover:border-primary/20 group border border-primary"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`p-3 rounded-lg ${feature.color}/10 group-hover:bg-primary/10 transition-colors`}>
+                  <div className="flex items-center gap-2 lg:gap-4">
+                    <div className={`p-2 lg:p-3 rounded-lg ${feature.color}/10 group-hover:bg-primary/10 transition-colors`}>
                       <div className={feature.color}>
                         {feature.icon}
                       </div>
@@ -91,7 +91,7 @@ export function TrustedService() {
             </div>
 
             {/* Animated Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-6">
+            <div className="grid grid-cols-3 gap-2 pt-6">
               {[
                 { value: "15+", label: "Years", decoration: "🏆" },
                 { value: "10k+", label: "Clients", decoration: "🚗" },
@@ -101,10 +101,10 @@ export function TrustedService() {
                   key={index}
                   className="p-4 rounded-xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 text-center hover:shadow-lg transition-all border border-primary"
                 >
-                  <p className="text-3xl font-bold text-primary flex items-center justify-center gap-2">
+                  <p className="text-3xl font-bold text-primary flex items-center justify-center gap-1 lg:gap-3">
                     {stat.value} <span className="text-xl">{stat.decoration}</span>
                   </p>
-                  <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
+                  <p className="text-sm lg:text-md text-gray-600 mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>
