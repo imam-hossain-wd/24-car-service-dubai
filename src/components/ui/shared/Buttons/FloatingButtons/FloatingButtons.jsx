@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Phone, MessageCircle, NotebookPen, ArrowUp } from "lucide-react"
 import { useEffect, useState } from "react"
 import { BookAppointmentButton } from "../BookingAppointmentButton/BookingAppointmentButton"
+import Link from "next/link"
 
 export function FloatingButtons() {
   const [showScrollButton, setShowScrollButton] = useState(false)
@@ -80,35 +81,36 @@ export function FloatingButtons() {
       </div>
 
       {/* Mobile Layout */}
-<div className="fixed bottom-14 left-4 right-4 z-50 flex gap-2 md:hidden">
+<div className=" w-full mx-auto fixed bottom-14 right-0 z-50 flex gap-1 justify-center md:hidden">
   <Button 
     asChild
-    className="flex-1 gap-2 bg-green-600 hover:bg-[#128C7E]"
+    className=" bg-green-600 hover:bg-[#128C7E] text-[13px] "
   >
-    <a href="tel:+971568703512">
+    <Link href="tel:+971568703512">
       <Phone className="h-5 w-5" /> 
-      <span>Call Now</span>
-    </a>
+      <span className="">Call Now</span>
+    </Link>
   </Button>
   <BookAppointmentButton
-    className="flex-1 hover:bg-[#128C7E]"
+    className=" hover:bg-[#128C7E] "
   />
+
   <Button 
     asChild
-    className="flex-1 gap-2 bg-primary hover:bg-[#128C7E]"
+    className="bg-primary hover:bg-[#128C7E]"
   >
-    <a 
+    <Link 
       href="https://wa.me/971568703512" 
       target="_blank" 
       rel="noopener noreferrer"
     >
       <MessageCircle className="h-5 w-5" /> 
       <span>WhatsApp</span>
-    </a>
+    </Link>
   </Button>
 
   {/* Scroll to Top Button for Mobile */}
-  {showScrollButton && (
+  {/* {showScrollButton && (
     <Button
       onClick={scrollToTop}
       className="fixed right-7 bottom-32 h-10 w-10 rounded-full bg-[#25D366] hover:bg-[#128C7E] p-0 backdrop-blur-sm  md:hidden"
@@ -116,7 +118,7 @@ export function FloatingButtons() {
     >
       <ArrowUp className="h-5 w-5" />
     </Button>
-  )}
+  )} */}
 </div>
     </>
   )

@@ -1,4 +1,3 @@
-
 import Blogs from '@/components/view/Blogs/Blogs'
 import { FAQSection } from '@/components/view/FAQSection/FAQSection'
 import FeaturedServices from '@/components/view/FeaturedServices/FeaturedServices'
@@ -9,22 +8,26 @@ import { TrustedService } from '@/components/view/TrustedService/TrustedService'
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import React from 'react'
 import BlogPage from '../BlogPage/BlogPage'
-import GalleryPage from '../GalleryPage/GalleryPage'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
+import { GalleryCarousel } from '@/components/view/Gallery/GalleryCarousel'
+import VideoSlider from '@/components/view/VideoSlider/VideoSlider'
+import { PremiumServiceSlider } from '@/components/view/Card/ServiceScenarios'
+
+
 
 export default function HomePage() {
     return (
         <>
             <HomeBanner />
+            <PremiumServiceSlider />
             <FeaturedServices />
+            <GalleryCarousel />
+            <VideoSlider />
             <TrustedService />
-             <GalleryPage />
             <BlogPage />
             <WhoWeAre />
-           
-            {/* <Blogs /> */}
             <GetTouch />
-            <MapComponent/>
+            <MapComponent />
             <Reviews />
             <FAQSection />
         </>

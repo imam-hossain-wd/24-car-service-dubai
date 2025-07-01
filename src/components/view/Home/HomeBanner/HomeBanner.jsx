@@ -553,8 +553,19 @@ export default function CompactHomeBanner() {
                   <CallNowButton className="px-4 w-[40%] py-2 text-sm font-semibold bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 shadow-md " />
                   <WhatsAppButton className="w-[40%]" />
                 </div>
-                <BookAppointmentButton className="px-4 w-[80%] mx-auto lg:mx-0 py-2 text-sm font-semibold bg-white text-gray-800 hover:bg-gray-100" />
+                {/* <BookAppointmentButton className="px-4 w-[80%] mx-auto lg:mx-0 py-2 text-sm font-semibold bg-white text-gray-800 hover:bg-gray-100" /> */}
+                <BookAppointmentButton variant="white" size="lg" />
               </motion.div>
+
+              {/* <BookAppointmentButton />
+              <BookAppointmentButton size="sm" /> */}
+
+
+
+
+
+
+
 
               {/* Compact Highlights */}
               <motion.div
