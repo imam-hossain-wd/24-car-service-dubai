@@ -22,7 +22,7 @@ export function TrustedService() {
 
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* 3D Card with Parallax Effect */}
-          <div className="relative group h-[400px] lg:h-[500px] w-[90%] md:w-full mx-auto perspective-1000">
+          <div className="relative group h-[300px] lg:h-[500px] w-[90%] md:w-full mx-auto perspective-1000">
             <div className="relative h-full transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-12">
               <div className="absolute inset-0 -mt-5 lg:-mt-20 rounded-3xl shadow-2xl overflow-hidden border-2 border-white/10 bg-gradient-to-br from-gray-900 to-gray-800 backface-hidden">
                 <Image
@@ -61,7 +61,7 @@ export function TrustedService() {
             </p>
 
             {/* Hexagonal Grid Features */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-2 md:gap-4 ">
               {[
                 { icon: <BadgeCheck className="h-6 w-6" />, title: "Certified Technicians", color: "text-green-500" },
                 { icon: <Zap className="h-6 w-6" />, title: "On-Demand Service", color: "text-yellow-500" },
@@ -91,7 +91,7 @@ export function TrustedService() {
             </div>
 
             {/* Animated Stats */}
-            <div className="grid grid-cols-3 gap-2 pt-6">
+            <div className="grid grid-cols-3 gap-2 ">
               {[
                 { value: "15+", label: "Years", decoration: "🏆" },
                 { value: "10k+", label: "Clients", decoration: "🚗" },
@@ -101,8 +101,8 @@ export function TrustedService() {
                   key={index}
                   className="p-4 rounded-xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 text-center hover:shadow-lg transition-all border border-primary"
                 >
-                  <p className="text-3xl font-bold text-primary flex items-center justify-center gap-1 lg:gap-3">
-                    {stat.value} <span className="text-xl">{stat.decoration}</span>
+                  <p className="text-3xl font-bold text-primary flex flex-col items-center justify-center gap-1 lg:gap-3">
+                   <span className="text-xl">{stat.decoration} {stat.value} </span>
                   </p>
                   <p className="text-sm lg:text-md text-gray-600 mt-1">{stat.label}</p>
                 </div>
@@ -110,7 +110,7 @@ export function TrustedService() {
             </div>
 
             {/* Glowing CTA */}
-            <Button className="mt-8 h-14 px-8 text-lg font-medium rounded-xl bg-gradient-to-r from-primary to-green-600 hover:from-primary/90 hover:to-green-600/90 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all group">
+            <Button className=" h-14 px-8 text-lg font-medium rounded-xl bg-gradient-to-r from-primary to-green-600 hover:from-primary/90 hover:to-green-600/90 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all group">
               Explore Premium Services
               <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>

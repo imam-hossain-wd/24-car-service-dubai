@@ -1,6 +1,15 @@
-import GalleryPage from "@/pages/GalleryPage/GalleryPage";
-import React from "react";
+// import GalleryPage from "@/pages/GalleryPage/GalleryPage";
+// import React from "react";
+
+// export default function Gallery() {
+//   return <GalleryPage />;
+// }
+
+import React from 'react'
 
 export default function Gallery() {
-  return <GalleryPage />;
+  return (
+    <div>Gallery</div>
+  )
 }
+

@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <meta name="google-site-verification" content="BsO6PRJgg4HaeNY2nrVIOo5gNAbIu9_dlXNlO-XHY_U" />
+        <meta name="google-site-verification" content="0EZ3v7hLpAZDBl4powBmsZpjU6-masTneZBr6-Q8G3g" />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -38,8 +38,8 @@ export default function RootLayout({ children }) {
           {children}
           <SpeedInsights/>
           <Analytics />
-          <FloatingButtons />
-          <MobileBottomNav />
+          {/* <FloatingButtons />
+          <MobileBottomNav /> */}
           <Footer />
         </div>
       </body>

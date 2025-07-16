@@ -24,7 +24,7 @@ export default function GetTouch() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Our Location</h3>
-                <p className="text-gray-600">Al Quoz Industrial Area, Dubai, UAE</p>
+                <p className="text-gray-600">Al Mankhool , Dubai , UAE</p>
               </div>
             </div>
             
@@ -34,7 +34,7 @@ export default function GetTouch() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Email Us</h3>
-                <p className="text-gray-600">contact@24carservicedubai.com</p>
+                <p className="text-gray-600">24carservicedubai@gmail.com</p>
               </div>
             </div>
             
@@ -44,7 +44,7 @@ export default function GetTouch() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Call Us</h3>
-                <p className="text-gray-600">+971 56 870 3512 (24/7 Support)</p>
+                <p className="text-gray-600">+971 54 569 5980 (24/7 Support)</p>
               </div>
             </div>
           </div>

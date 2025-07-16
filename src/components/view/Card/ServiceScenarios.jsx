@@ -386,3 +386,31 @@ export function PremiumServiceSlider() {
     </div>
   )
 }
+
+
+
+
+  const services = [
+    {
+      title: "Emergency Roadside",
+      icon: <AlertTriangle className="w-6 h-6" />,
+    },
+    {
+      title: "At Your Office",
+      icon: <Building2 className="w-6 h-6" />,
+    },
+    {
+      title: "Home Breakdown",
+      icon: <Home className="w-6 h-6" />,
+    },
+    {
+      title: "Engine Crisis",
+      icon: <CarFront className="w-6 h-6" />,
+
+    },
+    {
+      title: "Scheduled Care",
+      icon: <CalendarCheck className="w-6 h-6" />,
+
+    }
+  ]

@@ -18,7 +18,7 @@ export function CallNowButton({ className = "", ...props }) {
       )}
       {...props}
     >
-      <a href="tel:+971568703512">
+      <a href="tel:+971545695980">
         <Phone className="h-6 w-6" />
         <span>Call Now</span>
       </a>

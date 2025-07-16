@@ -20,7 +20,7 @@ export function WhatsAppButton({ className = "", ...props }) {
       {...props}
     >
       <a
-        href="https://wa.me/971568703512"
+        href="https://wa.me/971545695980"
         target="_blank"
         rel="noopener noreferrer"
       >

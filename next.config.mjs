@@ -11,7 +11,7 @@ const nextConfig = {
     domains: [
       'img.freepik.com',
       'i.ibb.co', 
-      'example.com',
+      'res.cloudinary.com',
       '/www.freepik.com'
       // Add any other domains you need here
     ],

@@ -193,7 +193,7 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <Link href="tel:+971568703512" className="flex items-center gap-1 hover:underline">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+971 56 870 3512</span>
+                <span>+971 54 569 5980 </span>
               </Link>
               <Link href="mailto:24carservicedubai@gmail.com" className="flex items-center gap-1 hover:underline">
                 <Mail className="h-4 w-4 text-primary" />
@@ -201,7 +201,7 @@ export function Navbar() {
               </Link>
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Al Satwa, Dubai</span>
+                <span>Al Mankhool , Dubai - UAE</span>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -256,7 +256,7 @@ export function Navbar() {
               
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-xs font-medium">Al Satwa, Dubai</span>
+                <span className="text-xs font-medium">Al Mankhool - Dubai - United Arab Emirates</span>
               </div>
             </div>
           </div>
