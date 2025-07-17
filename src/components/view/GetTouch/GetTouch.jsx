@@ -6,7 +6,7 @@ import { Card , CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function GetTouch() {
   return (
-    <section className="py-8 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-8 md:py-12 bg-gradient-to-b from-gray-50 to-white">
     <div className="container mx-auto">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div className='w-[85%] mx-auto'>

@@ -178,6 +178,7 @@ import Image from 'next/image';
 import googleLogo from '../../../assets/googleLogo.png'
 import googleVerifiedBadge from '../../../assets/googleVerifiedBadge.png'
 import googleTextIcon from '../../../assets/googleTextIcon.png'
+import Link from 'next/link';
 
 const reviews = [
   {
@@ -259,7 +260,8 @@ export default function Reviews() {
 
             <div className="text-center">
               <button className="bg-primary hover:bg-green-600 text-white px-4 md:px-6 py-2 rounded-full text-[14px] md:text-lg font-medium transition-colors">
-                Review us on Google
+               <Link href="https://g.page/r/CdrwD2SVrLO7EAI/review">
+                Review us on Google</Link>
               </button>
             </div>
           </div>
@@ -343,7 +345,7 @@ export default function Reviews() {
                     </p>
                     <div className="flex items-center justify-between">
                       <a
-                        href="https://g.page/r/CdrwD2SVrLO7EAI/review"
+                        href="https://share.google/2cj4qTPpn0OHGc1zf"
                         className="text-primary hover:text-green-600 text-sm font-medium flex items-center gap-1 transition-colors"
                       >
                         Read full review <ChevronRight className="w-4 h-4" />
