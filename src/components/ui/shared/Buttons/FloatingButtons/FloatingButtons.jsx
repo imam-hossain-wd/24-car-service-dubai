@@ -91,9 +91,9 @@ export function FloatingButtons() {
       <span className="">Call Now</span>
     </Link>
   </Button>
-  <BookAppointmentButton
+  {/* <BookAppointmentButton
     className=" hover:bg-[#128C7E] "
-  />
+  /> */}
 
   <Button 
     asChild

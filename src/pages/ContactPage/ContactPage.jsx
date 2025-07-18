@@ -117,7 +117,7 @@ export default function ContactPage() {
 
       <div className="bg-white">
         {/* Enhanced Hero Section */}
-        <section className="relative h-[60vh] min-h-[300px] w-full overflow-hidden">
+        <section className="relative h-[50vh] md:h-[70vh] min-h-[200px] w-full overflow-hidden">
           {/* Background Image with Parallax Effect */}
           <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dmzcvexar/image/upload/v1752751674/24_car_service_contact_us_y2xjdv.webp')] bg-cover bg-center bg-no-repeat scale-110 animate-zoom-in-out"></div>
 
