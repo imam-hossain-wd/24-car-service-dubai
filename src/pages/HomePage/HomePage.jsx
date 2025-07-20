@@ -19,6 +19,7 @@ import { SeoHead } from '@/seo/SeoHead'
 import Script from 'next/script'
 import ServicesSection from '@/components/Services'
 import GMBReviews from '@/components/view/GmbReviews/GmbReviews'
+import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
 
 
 
@@ -64,6 +65,7 @@ export default function HomePage() {
             {/* <GMBReviews /> */}
             <Reviews />
             <FAQSection />
+            <ServiceAreas />
         </div>
     )
 }

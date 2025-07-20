@@ -1,88 +1,11 @@
-// import { Calendar, Clock, Mail, MapPin, Phone } from 'lucide-react'
-// import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-// import { Button } from '@/components/ui/button'
-// import { Input } from '@/components/ui/input'
-// import { Textarea } from '@/components/ui/textarea'
-// import GetTouch from '@/components/view/GetTouch/GetTouch'
-// import { getContactPageSchema } from '@/schemas/contactPageSchema'
-// import { SeoHead } from '@/seo/SeoHead'
-// import MapComponent from '@/components/ui/shared/Map/MapComponent'
 
-
-
-// export default function ContactPage() {
-
-//   const pageTitle = "Contact 24 Car Service Dubai | 24/7 Car Help";
-//   const pageDescription = "Need urgent car help in Dubai? Contact 24 Car Service Dubai anytime for 24/7 on-demand car repair, battery replacement, and roadside assistance. Call or WhatsApp now!";
-//   const pageKeywords = "contact car repair Dubai, mobile mechanic phone number, 24/7 roadside assistance, emergency car service contact Dubai";
-//   const pageCanonical = "https://24CarServiceDubai.com/contact";
-
-//   const contactPageSchema = getContactPageSchema();
-
-
-//   return (
-//     <div>
-//       <SeoHead
-//         title={pageTitle}
-//         description={pageDescription}
-//         keywords={pageKeywords}
-//         canonicalUrl={pageCanonical}
-//         schema={contactPageSchema} // Pass the ContactPage schema object
-//       />
-
-//       <div className="bg-white">
-
-//           <section className="relative h-[60vh] min-h-[500px] w-full bg-[image:linear-gradient(to_right,var(--tw-gradient-from)/10,var(--tw-gradient-to)/10),url('https://res.cloudinary.com/dmzcvexar/image/upload/v1752751674/24_car_service_contact_us_y2xjdv.webp')] bg-cover bg-center bg-no-repeat">
-//   {/* Rest of the code remains the same */}
-
-//   <div className="absolute inset-0 bg-black/20" />
-//           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center">
-//             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-//               Contact Our <span className="text-primary">Car Experts</span>
-//             </h1>
-//             <p className="mt-4 max-w-2xl text-lg text-white/90 sm:text-xl">
-//               24/7 professional support for all your vehicle needs in Dubai
-//             </p>
-//           </div>
-// </section>
-
-// <GetTouch />
-//         {/* </section> */}
-
-//          {/* Map Section */}
-//         <section className="py-16 bg-gray-50">
-//           <div className="container mx-auto">
-//             <div className="mx-auto max-w-4xl text-center mb-12">
-//               <h2 className="text-3xl font-bold sm:text-4xl mb-4">
-//                 Our <span className="text-primary">Service Center</span> in Dubai
-//               </h2>
-//               <p className="text-lg text-gray-600">
-//                 Visit our state-of-the-art facility in Al Quoz Industrial Area
-//               </p>
-//             </div>
-//             <MapComponent />  
-//           </div>
-//         </section>
-
-
-
-//       </div>
-//     </div>
-//   )
-// }
-
-
-import { Calendar, Clock, Mail, MapPin, Phone } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import GetTouch from '@/components/view/GetTouch/GetTouch'
 import { getContactPageSchema } from '@/schemas/contactPageSchema'
 import { SeoHead } from '@/seo/SeoHead'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
 import { WhatsAppButton } from '@/components/ui/shared/Buttons/WhatsAppButton/WhatsAppButton'
 import { CallNowButton } from '@/components/ui/shared/Buttons/CallNowButton/CallNowButton'
+import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
 
 export default function ContactPage() {
   const pageTitle = "Contact 24 Car Service Dubai | 24/7 Car Help";
@@ -91,19 +14,6 @@ export default function ContactPage() {
   const pageCanonical = "https://24CarServiceDubai.com/contact";
 
   const contactPageSchema = getContactPageSchema();
-
-  const serviceAreas = [
-    'Al Mankhool - Dubai, UAE',
-    'Al Karama - Dubai, UAE',
-    'Al Satwa - Dubai, UAE',
-    'Jumeirah - Dubai, UAE',
-    'Al Barsha - Dubai, UAE',
-    'Al Fahidi - Dubai, UAE',
-    'Al Jaddaf - Dubai, UAE',
-    'Al Jaffiliya - Dubai, UAE',
-    'Dubai Marina - Dubai, UAE',
-    'Downtown Dubai - Dubai, UAE'
-  ];
 
   return (
     <div>
@@ -153,46 +63,7 @@ export default function ContactPage() {
 
 
         {/* service areas */}
-
-        <section className=" bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold sm:text-3xl mb-3">
-                We Serve <span className="text-primary">All Dubai</span>
-              </h2>
-              <p className="text-gray-600 text-sm sm:text-base">
-                Fast mobile services across these locations:
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto">
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
-                {serviceAreas.map((area, index) => (
-                  <div
-                    key={index}
-                    className="group flex flex-col items-center justify-center p-3 sm:p-3 rounded-lg bg-gray-50 hover:bg-primary/5 transition-all border border-gray-200 hover:border-primary/30"
-                  >
-                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary mb-1.5" />
-                    <h3 className="text-xs sm:text-sm font-medium text-gray-800 text-center leading-tight">
-                      {area.split(' - ')[0]}
-                    </h3>
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-center mt-8">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-primary text-sm hover:bg-primary/10 border border-primary/20"
-                >
-                  Check Your Area
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <ServiceAreas />
         {/* service areas */}
 
 
