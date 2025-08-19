@@ -221,7 +221,7 @@ const reviews = [
 export default function Reviews() {
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-      <div className="w-[90%] mx-auto px-4 max-w-7xl ">
+      <div className="w-container md:w-[90%] mx-auto px-4 max-w-7xl ">
         <div className='mb-2'>
 
           <div className='text-center'>
@@ -241,17 +241,17 @@ export default function Reviews() {
                   width={1000}
                   height={1000}
                   quality={100}
-                  className="w-24 h-10"
+                  className="w-20 h-8 md:w-24 md:h-10"
                 />
-                <span className='font-bold text-[20px]'> Reviews</span>
+                <span className='font-bold text-sm md:text-[20px]'> Reviews</span>
 
 
               </div>
-              <div className="flex items-center gap-1 mt-1">
-                <span className="text-[22px] font-bold mr-1">4.9</span>
+              <div className="flex items-center gap-1 mt-1 px-1">
+                <span className="text-[16px] md:text-[22px] font-bold mr-1">4.9</span>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-500" />
+                    <Star key={i} className="h-4 w-4 md:h-6 md:w-6 fill-yellow-400 text-yellow-500" />
                   ))}
                 </div>
                 <span className="text-gray-600 text-md">(52)</span>
@@ -259,7 +259,7 @@ export default function Reviews() {
             </div>
 
             <div className="text-center">
-              <button className="bg-primary hover:bg-green-600 text-white px-4 md:px-6 py-2 rounded-full text-[14px] md:text-lg font-medium transition-colors">
+              <button className="bg-primary hover:bg-green-600 text-white px-4 md:px-6 py-2 rounded-full text-[13px] md:text-lg font-medium transition-colors">
                <Link href="https://g.page/r/CdrwD2SVrLO7EAI/review">
                 Review us on Google</Link>
               </button>

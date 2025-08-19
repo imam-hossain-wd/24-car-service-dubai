@@ -861,6 +861,129 @@
                     "answer": "Absolutely! We tailor services to your needs, whether you want performance tuning, aesthetic upgrades, or a full transformation."
                 }
             ]
+        },
+        {
+            "title": "Car Detailing Dubai",
+            "metaTitle": "DenamoCraft Custom Car Transformation Services in Dubai | Personalized Car Mods",
+            "metaDescription": "Transform your vehicle with DenamoCraft’s tailored car transformation services in Dubai. Expert custom modifications, styling, and performance upgrades.",
+            "features": [
+                "Custom modifications",
+                "Personalization",
+                "Unique feature installations",
+                "Aesthetic enhancements"
+            ],
+            "keywords": [
+                "car transformation Dubai",
+                "custom car modification",
+                "tailored car upgrades",
+                "car customization Dubai",
+                "DenamoCraft car mods"
+            ],
+            "slug": "denamocraft-tailored-car-transformation-dubai",
+            "service_image": "https://res.cloudinary.com/dthqxsg18/image/upload/v1753548020/Car_Detailing_sslrry.jpg",
+            "intro": {
+                "heading": "Unleash Your Vehicle’s Potential with DenamoCraft Tailored Car Transformation",
+                "subheading": "Custom Car Mods Crafted to Your Unique Style and Performance Needs",
+                "content": "At DenamoCraft, we specialize in transforming ordinary vehicles into personalized masterpieces. Whether you want enhanced aesthetics, improved performance, or both, our tailored car transformation service in Dubai delivers bespoke modifications designed to match your vision. From custom body kits to engine tuning, we bring innovation and craftsmanship together to make your car truly one-of-a-kind."
+            },
+            "whyChooseUs": {
+                "heading": "Why Choose DenamoCraft for Your Car Transformation?",
+                "points": [
+                    "✅ Personalized modifications tailored to your preferences",
+                    "✅ Skilled technicians with extensive customization experience",
+                    "✅ Use of premium quality parts and materials",
+                    "✅ Cutting-edge design and engineering solutions",
+                    "✅ Transparent pricing with no hidden costs",
+                    "✅ Reliable service with timely project delivery"
+                ]
+            },
+            "problemSignsSection": {
+                "heading": "When You Should Consider a Tailored Car Transformation",
+                "description": "Recognize the signs that your vehicle needs a customized upgrade to enhance its look, feel, or performance:",
+                "signs": [
+                    "🔧 Desire for unique vehicle styling that stands out",
+                    "🔧 Dissatisfaction with factory performance or handling",
+                    "🔧 Need for upgraded interior comfort and tech",
+                    "🔧 Wear or damage to original body parts needing replacement",
+                    "🔧 Preparing your car for special events or shows",
+                    "🔧 Wanting enhanced fuel efficiency or power with tuning"
+                ]
+            },
+            "ourProcess": {
+                "heading": "How Our Tailored Car Transformation Works",
+                "steps": [
+                    {
+                        "title": "Step 1: Consultation & Design",
+                        "description": "We collaborate to understand your vision and create a detailed modification plan."
+                    },
+                    {
+                        "title": "Step 2: Component Selection",
+                        "description": "Choose from premium parts and materials customized to your vehicle."
+                    },
+                    {
+                        "title": "Step 3: Custom Fabrication & Installation",
+                        "description": "Our skilled technicians perform precision work to bring your design to life."
+                    },
+                    {
+                        "title": "Step 4: Performance Tuning & Testing",
+                        "description": "Enhance vehicle performance with expert tuning and rigorous quality checks."
+                    },
+                    {
+                        "title": "Step 5: Final Review & Delivery",
+                        "description": "We ensure everything meets your expectations before handing over your transformed car."
+                    }
+                ]
+            },
+            "toolsOrProducts": {
+                "heading": "Premium Parts, Tools, and Brands We Use",
+                "brands": [
+                    "🔩 HKS performance tuning kits",
+                    "🔩 KW Suspension systems",
+                    "🔩 Brembo braking components",
+                    "🔩 3M automotive wraps and paints",
+                    "🔩 Sparco interior customization accessories"
+                ],
+                "note": "We source high-quality parts ensuring durability, performance, and style that matches your unique preferences."
+            },
+            "serviceCoverage": {
+                "heading": "Areas We Serve in Dubai",
+                "locations": [
+                    "📍 Al Satwa",
+                    "📍 Downtown Dubai",
+                    "📍 Jumeirah",
+                    "📍 Business Bay",
+                    "📍 Al Quoz",
+                    "📍 Dubai Marina"
+                ],
+                "note": "DenamoCraft offers city-wide custom car transformation services with flexible scheduling and on-demand consultations."
+            },
+            "ctaSection": {
+                "heading": "Ready for Your Tailored Car Transformation in Dubai?",
+                "description": "Contact us today to schedule your consultation and start creating the car you’ve always dreamed of.",
+                "buttonText": "Book Your Custom Car Transformation"
+            },
+            "faq": [
+                {
+                    "question": "How long does a tailored car transformation take?",
+                    "answer": "The timeline varies depending on the scope of modifications, typically ranging from a few days to several weeks. We provide a detailed estimate after consultation."
+                },
+                {
+                    "question": "Can you customize any car model?",
+                    "answer": "Yes, our experts can work on most car models and makes, tailoring modifications to fit your specific vehicle."
+                },
+                {
+                    "question": "Are your modifications safe and legal?",
+                    "answer": "All our modifications comply with Dubai’s vehicle safety and road regulations, ensuring your car remains safe and roadworthy."
+                },
+                {
+                    "question": "Do you offer warranty on custom parts?",
+                    "answer": "We provide warranty coverage on all parts and workmanship used in our car transformations. Specific details depend on the components installed."
+                },
+                {
+                    "question": "Can I choose only performance or only aesthetic upgrades?",
+                    "answer": "Absolutely! We tailor services to your needs, whether you want performance tuning, aesthetic upgrades, or a full transformation."
+                }
+            ]
         }
     ]
 }

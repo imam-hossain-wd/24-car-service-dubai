@@ -53,8 +53,8 @@ export default function HomePage() {
             )}
             <HomeBanner />
             {/* <PremiumServiceSlider /> */}
-            <ServicesSection />
-            {/* <FeaturedServices /> */}
+            {/* <ServicesSection /> */}
+            <FeaturedServices />
             {/* <GalleryCarousel />
             <VideoSlider /> */}
             <TrustedService />
