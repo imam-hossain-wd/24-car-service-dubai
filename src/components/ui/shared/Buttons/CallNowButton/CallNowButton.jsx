@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SiteConfig } from "@/config/site";
 
 
 function cn(...classes) {
@@ -18,7 +19,7 @@ export function CallNowButton({ className = "", ...props }) {
       )}
       {...props}
     >
-      <a href="tel:+971545695980">
+      <a href={SiteConfig.callLink}>
         <Phone className="h-6 w-6" />
         <span>Call Now</span>
       </a>

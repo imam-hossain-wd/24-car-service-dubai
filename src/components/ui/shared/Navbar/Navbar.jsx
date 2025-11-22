@@ -11,24 +11,21 @@ import {
 import { cn } from "@/lib/utils";
 import { SiteConfig } from "@/config/site";
 import { bandlogo } from "@/utils/assets";
-import Logo from "../Logo/Logo";
 import NavDrawer from "./NavDrawer";
+import Image from "next/image";
+import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/BookingAppointmentButton";
 
 
 
 
 const {
   email,
-  phoneNumber,
-  callNumber,
   location,
   socialLinks,
-  navItems
+  navItems,
+  callLink,
+  displayNumber
 } = SiteConfig;
-
-
-
-
 
 export function Navbar() {
   const pathname = usePathname();
@@ -40,9 +37,9 @@ export function Navbar() {
         <div className="hidden md:block border-b bg-primary/10 text-sm">
           <div className="container mx-auto py-2 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Link href={`tel:${callNumber}`} className="flex items-center gap-1 hover:underline">
+              <Link href={callLink} className="flex items-center gap-1 hover:underline">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>{phoneNumber}</span>
+                <span>{displayNumber}</span>
               </Link>
               <Link href={`mailto:${email}`} className="flex items-center gap-1 hover:underline">
                 <Mail className="h-4 w-4 text-primary" />
@@ -71,9 +68,10 @@ export function Navbar() {
 
 
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6">
-          {/* Logo on left side for all screens */}
+
           <div className="flex-1 md:flex-none">
-            <Logo />
+            {/* <Logo /> */}
+            <Image src={bandlogo.logo} width={180} height={150} alt="logo" />
           </div>
 
           {/* Desktop Navigation */}
@@ -94,10 +92,12 @@ export function Navbar() {
             ))}
           </nav>
 
+          <BookAppointmentButton />
+
 
 
           {/* Mobile Menu Button */}
-        <NavDrawer />
+          <NavDrawer />
         </div>
       </header>
     </>

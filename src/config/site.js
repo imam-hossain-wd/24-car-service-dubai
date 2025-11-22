@@ -30,21 +30,22 @@ export const siteConfig = {
 
 
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
-// contactLinks ,socialLinks , footerhrefs , navItems , services , serviceAreas , cordinate , location , whatsappNumber ,  callNumber , displayNumber , description , email , url , brandName , authorName
+
+
 export const SiteConfig = {
   authorName: "Md Saiful Islam",
   brandName: "24 Car Service Dubai",
   url: "https://24carservicedubai.com",
-  email: "24carservicedubai@gmail.com.com",
+  email: "24carservicedubai@gmail.com",
   description: "Your On-Demand Car Savior Anywhere, Anytime in Dubai!",
   displayNumber: "+971 54 569 5980",
-  callNumber: "+971545695980",
-  whatsappNumber: "+971545695980",
+  callLink: "tel:+971545695980",
+  whatsappLink: "https://wa.me/971545695980",
   location: "Al Mankhool , Dubai - UAE",
   cordinate: "25.2256355,55.1905546",
   serviceAreas: ["Al Mankhool", "Al Karama", "Al Satwa", "Al Barsha", "Al Fahidi", "Al Jaddaf", "Al Jaffiliya", "Dubai Marina", "Downtown Dubai", " Jumeirah"],
-  city:"Dubai",
-  country:"UAE",
+  city: "Dubai",
+  country: "UAE",
   services: [
     {
       title: "Car Battery Replacement Dubai",
@@ -83,8 +84,7 @@ export const SiteConfig = {
     { name: "Area We Serve", href: "/area-we-serve" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
-    { name: "Gellery", href: "/gellery" },
+    { name: "Blog", href: "/blog" }
   ],
   footerhrefs: [
     { title: "About Us", href: "/about" },
@@ -108,25 +108,8 @@ export const SiteConfig = {
 
 }
 
-const {
-  contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, cordinate, location, whatsappNumber, callNumber, displayNumber, description, email, url, brandName, authorName
-} = SiteConfig;
 
-// href={`tel:${callNumber}`}
-// href={`https://wa.me/${whatsappNumber}`}
+// contactLinks, socialLinks, footerhrefs, navItems, services, serviceAreas, cordinate, location, whatsappNumber, callNumber, displayNumber, description, email, url, brandName, authorName
 
 
-// 24 Car Repair Dubai – Your On-Demand Car Savior, Anytime, Anywhere in Dubai
-// At 24 Car Repair Dubai, we specialize in mobile, on-demand car repair and maintenance services throughout Dubai. With no physical garage, we bring expert mechanics directly to your location—whether you're at home, at work, or stranded on the road.
-
-// From battery replacement, brake pad repair, engine oil change, and AC servicing, to gearbox repairs and routine car maintenance, we’re equipped to handle it all—right where you are.
-
-// Our mission is simple: fast, reliable, and professional car repair service at your convenience, 24 hours a day, 7 days a week.
-// Trusted by Dubai residents for our quick response, transparent pricing, and expert care, we turn breakdowns into peace of mind—without you ever needing to visit a workshop.
-
-// 🔧 Serving major areas including Al Satwa, Jumeirah, Al Barsha, and more.
-// 📍 Based in Business Bay, Dubai
-// 📞 Call us anytime: +971 50 669 5990
-
-// No queues. No delays. Just expert service—delivered wherever you are.
 
