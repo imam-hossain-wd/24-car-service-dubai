@@ -44,7 +44,7 @@ export function BookAppointmentButton({
       <DrawerTrigger asChild>
         <Button
           className={cn(
-            "sm:w-full md:w-[200px]",
+            "md:w-[200px]",
             variantClasses[variant],
             sizeClasses[size],
             className

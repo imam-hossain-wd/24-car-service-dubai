@@ -9,6 +9,8 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { SiteConfig } from "@/config/site";
 import { usePathname } from "next/navigation";
 import Logo from "../Logo/Logo";
+import { bandlogo } from "@/utils/assets";
+import Image from "next/image";
 
 const {
     navItems
@@ -31,9 +33,9 @@ export default function NavDrawer() {
                 </SheetTrigger>
                 <SheetContent side="left" className="w-[300px] sm:w-[400px]">
                     {/* Centered Logo in mobile drawer */}
-                    <div className="flex border-b border-primary py-3">
-                        <div className="ml-5">
-                            <Logo />
+                    <div className="flex border-b border-primary py-2">
+                        <div className="-my-10">
+                            <Image src={bandlogo.logo} width={130} height={120} alt="logo" />
                         </div>
 
                     </div>
@@ -42,7 +44,7 @@ export default function NavDrawer() {
                         <p></p>
                     </SheetTitle>
 
-                    <nav className="grid gap-1 mt-1">
+                    <nav className="grid gap-1 -mt-8">
                         {navItems.map((item) => (
                             <SheetTrigger key={item.href} asChild>
                                 <Link

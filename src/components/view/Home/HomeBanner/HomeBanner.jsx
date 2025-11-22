@@ -79,11 +79,11 @@ export default function CompactHomeBanner() {
       {/* Content Container */}
       <div className="relative z-10 h-full flex  items-center py-6">
         <div className="container px-4 mx-auto">
-          <div className="flex flex-col-reverse gap-5 lg:flex-row justify-around items-center">
+          <div className="flex flex-col-reverse gap-4 lg:flex-row justify-around items-center">
             {/* Left Column - Main Content */}
             <div className="order-2 lg:order-1 p-2">
               {/* Emergency Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full mb-2 border border-white/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full mb-2 border border-white/20 -mt-8">
                 <Zap className="h-4 w-4 text-yellow-300" />
                 <span className="text-xs font-medium text-white">24/7 Emergency Car Service</span>
               </div>
@@ -96,12 +96,12 @@ export default function CompactHomeBanner() {
               </h1>
 
               {/* Description */}
-              <p className="text-lg text-white/90 mb-4 max-w-xl">
+              <p className="text-md md:text-lg text-white/90 mb-4 max-w-xl">
                 Fast, reliable service at your home , office or roadside  we come to you!
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-5">
+              <div className="flex flex-col sm:flex-row gap-3 -mb-2 md:mb-6">
                 <div className="flex justify-between gap-2">
                   <CallNowButton className="px-6 py-3 w-[48%]  text-base font-semibold bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 shadow-lg" />
                   <WhatsAppButton className="px-6 w-[48%] py-3 text-base font-semibold" />
@@ -110,13 +110,13 @@ export default function CompactHomeBanner() {
               </div>
 
               {/* Highlights */}
-              <div className="flex flex gap-3">
+              <div className="hidden md:flex gap-3">
                 {highlights.map((item, index) => (
-                  <div key={index} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <div key={index} className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-5 py-2">
                     <div className={`p-1.5 rounded-full ${item.background}`}>
-                      <item.icon className={`h-4 w-4 ${item.color}`} />
+                      <item.icon className={`h-8 w-8 ${item.color}`} />
                     </div>
-                    <span className="text-white text-xs font-medium">{item.text}</span>
+                    <span className="text-white text-sm font-medium">{item.text}</span>
                   </div>
                 ))}
               </div>
@@ -124,15 +124,15 @@ export default function CompactHomeBanner() {
 
             {/* Right Column - Service Items */}
             <div className="order-1 lg:order-2">
-              <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-5 ">
+              <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-5 ">
                 {services.map((service, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center gap-3 p-2 rounded-lg transition-all bg-white/70 "
+                    className="flex flex-col items-center gap-2 md:gap-3 p-2 rounded-lg transition-all bg-white/70 "
                   >
                     <div className="group-hover rounded-full bg-emerald-10 ">
 
-                      <Image className="w-14 h-14" src={service.icon} width={70} height={70} alt={service.title} />
+                      <Image className="w-10 h-10 md:w-14 md:h-14" src={service.icon} width={70} height={70} alt={service.title} />
                     </div>
                     <span className="font-medium text-center text-xs md:text-[14px]">{service.title}</span>
                   </div>

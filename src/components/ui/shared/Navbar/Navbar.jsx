@@ -93,9 +93,6 @@ export function Navbar() {
           </nav>
 
           <BookAppointmentButton />
-
-
-
           {/* Mobile Menu Button */}
           <NavDrawer />
         </div>
