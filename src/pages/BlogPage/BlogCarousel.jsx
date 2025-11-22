@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import blogData from '../../data/blogData'
+import Link from 'next/link';
 
 export default function BlogCarousel (){
   return (
@@ -37,20 +38,12 @@ export default function BlogCarousel (){
               <h2 className="text-lg font-bold text-gray-800 mb-2 hover:text-primary transition-colors">
                 <a href={`/blog/${blog.slug}`}>{blog.title}</a>
               </h2>
-              {/* <p className="text-gray-600 mb-4">{blog.excerpt}</p> */}
-              {/* <div className="flex flex-wrap gap-2 mb-4">
-                {blog.tags.map((tag) => (
-                  <span key={tag} className="px-3 py-1 bg-blue-100 text-primary text-xs rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div> */}
-              <a
+              <Link
                 href={`/blog/${blog.slug}`}
                 className="inline-block px-4 py-1 text-sm bg-primary text-white rounded-lg hover:bg-primary transition-colors"
               >
                 Read More
-              </a>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

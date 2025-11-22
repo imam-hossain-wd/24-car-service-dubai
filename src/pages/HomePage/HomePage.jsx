@@ -20,6 +20,7 @@ import Script from 'next/script'
 import ServicesSection from '@/components/Services'
 import GMBReviews from '@/components/view/GmbReviews/GmbReviews'
 import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
+import StillHaveAnyQuestions from '@/components/view/StillHaveAnyQuestions/StillHaveAnyQuestions'
 
 
 
@@ -58,14 +59,15 @@ export default function HomePage() {
             {/* <GalleryCarousel />
             <VideoSlider /> */}
             <TrustedService />
-            <BlogPage />
-            {/* <WhoWeAre /> */}
-            {/* <GetTouch /> */}
-            <MapComponent />
+            <WhoWeAre />
             {/* <GMBReviews /> */}
-            <Reviews />
-            <FAQSection />
             <ServiceAreas />
+            <GetTouch />
+            <MapComponent />
+            <FAQSection />
+            <Reviews />
+            <BlogPage />
+            <StillHaveAnyQuestions />
         </div>
     )
 }
