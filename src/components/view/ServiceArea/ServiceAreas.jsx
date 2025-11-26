@@ -26,7 +26,7 @@ export default function ServiceAreas() {
     ];
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 py-16 sm:py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 py-10 sm:py-24 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-200/20 rounded-full blur-3xl"></div>
@@ -45,32 +45,20 @@ export default function ServiceAreas() {
 
             <div className="container mx-auto px-4 max-w-7xl relative z-10">
                 {/* Enhanced Header Section */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-10">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-emerald-500/10 rounded-full border border-primary/20 mb-6">
                         <Zap className="w-4 h-4 text-primary" />
                         <span className="text-sm font-medium text-primary">
                             24/7 Emergency Service Coverage
                         </span>
                     </div>
-                    <h2 className="text-4xl font-bold sm:text-5xl lg:text-6xl mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                    <h2 className="text-4xl font-bold sm:text-5xl lg:text-5xl mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
                         Serving Every Corner of <span className="text-primary">{city}</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Premium mobile car repair services delivered directly to your location across all Dubai neighborhoods
                     </p>
                 </div>
-
-                {/* Stats Bar */}
-                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                    {stats.map((stat, index) => (
-                        <div key={index} className="text-center group">
-                            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
-                                <div className="text-2xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                                <div className="text-gray-600 font-medium">{stat.label}</div>
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
 
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Enhanced Service Areas Grid */}

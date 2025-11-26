@@ -1,119 +1,215 @@
 import Image from "next/image";
 import { 
   BadgeCheck, Zap, Clock, DollarSign, 
-  MessageCircle, Shield, Leaf, ChevronRight 
+ Shield, ChevronRight,
+  Star, Award, Users, CheckCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { images } from "@/utils/assets";
 
 export function TrustedService() {
   return (
-    <section className="py-16 md:py-10 bg-gradient-to-br from-gray-50 to-white">
-      <div className="container mx-auto px-4 max-w-7xl">
-        {/* Animated header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 mb-4 text-sm font-medium text-green-600 bg-green-100 rounded-full animate-pulse">
-            Dubai's Preferred Choice
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-primary">
-            Why Dubai Trusts <br/>
-            <span className="text-primary">24 Car Service</span>
-          </h2>
+    <section className="relative py-6 overflow-hidden bg-neutral-50">
+      {/* Advanced Background System */}
+      <div className="absolute inset-0">
+        {/* Static Gradient Mesh */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute w-[800px] h-[800px] -top-96 -left-96 bg-gradient-to-r from-primary/20 to-emerald-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute w-[600px] h-[600px] -bottom-48 -right-48 bg-gradient-to-l from-blue-500/15 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        {/* Geometric Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(90deg, #000 1px, transparent 1px),
+              linear-gradient(180deg, #000 1px, transparent 1px)
+            `,
+            backgroundSize: '120px 120px',
+            backgroundPosition: 'center center'
+          }}></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        {/* Ultra-Minimal Header */}
+        <div className="text-center mb-10">          
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+            <span className="">Why Dubai</span><br />
+            <span className="font-medium bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
+              Chooses Excellence
+            </span>
+          </h1>
+          
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            15 years of perfecting luxury automotive care with uncompromising standards and innovative solutions.
+          </p>
         </div>
 
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* 3D Card with Parallax Effect */}
-          <div className="relative group h-[300px] lg:h-[500px] w-[90%] md:w-full mx-auto perspective-1000">
-            <div className="relative h-full transition-all duration-700 transform-style-preserve-3d group-hover:rotate-y-12">
-              <div className="absolute inset-0 -mt-5 lg:-mt-20 rounded-3xl shadow-2xl overflow-hidden border-2 border-white/10 bg-gradient-to-br from-gray-900 to-gray-800 backface-hidden">
-                <Image
-                  src="https://img.freepik.com/free-photo/mechanic-man-uniform-holding-wrenches-auto-service-center-smiling-camera_496169-1000.jpg?t=st=1746875957~exp=1746879557~hmac=e38a8a718281435b7f985692e92bd36f91dbbdfecf814e46a1d851d650f05d67&w=996"
-                  alt="Luxury car service in Dubai"
-                  fill
-                  className=" opacity-70 w-[300px] h-[300px]"
-                  quality={100}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-8 flex flex-col justify-end">
-                  <div className="space-y-2 text-white">
-                    <div className="flex items-center gap-1">
-                      <div className="p-2 rounded-full bg-green-500/20">
-                        <BadgeCheck className="h-6 w-6 text-green-400" />
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          {/* Premium Visual Card */}
+          <div className="relative group">
+            {/* Main Image Container */}
+            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+              <Image
+                src={images.whychoosedubai}
+                width={600}
+                height={500}
+                className="w-full h-[500px] object-cover opacity-95"
+                priority
+              />
+              
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              
+              {/* Floating Trust Badges */}
+              <div className="absolute top-6 left-6">
+                <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Award className="h-4 w-4 text-white" />
+                  <span className="text-sm font-medium text-white">Certified Excellence</span>
+                </div>
+              </div>
+              
+              {/* Bottom Content */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="flex items-end justify-between">
+                  <div className="space-y-3 text-white">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-primary/20 rounded-xl backdrop-blur-sm">
+                        <BadgeCheck className="h-5 w-5 text-primary" />
                       </div>
-                      <span className="text-xl font-bold">Dubai's Most Trusted</span>
+                      <span className="text-lg font-semibold">Dubai's Most Trusted</span>
                     </div>
-                    <h3 className="text-3xl font-bold">Premium Car Care <br/>Redefined</h3>
-                    <div className="flex flex-wrap gap-4">
-                      {["10,000+ Cars Repaired", "4.9 ★ Google Rating", "98% Retention"].map((stat, i) => (
-                        <span key={i} className="px-3 py-1 text-sm bg-white/10 backdrop-blur-sm rounded-full">
-                          {stat}
-                        </span>
-                      ))}
-                    </div>
+                    <h3 className="text-3xl font-semibold leading-tight">
+                      Premium Automotive<br />Care Perfected
+                    </h3>
+                  </div>
+                  
+                  {/* Compact Stats */}
+                  <div className="text-right space-y-2">
+                    {["10K+ Repaired", "4.9 ★ Rating", "98% Client Retention"].map((stat, i) => (
+                      <div key={i} className="text-xs text-white/90 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/20">
+                        {stat}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
+            
+            {/* Decorative Corner Accents */}
+            <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-primary/30 rounded-tl-2xl"></div>
+            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-primary/30 rounded-br-2xl"></div>
           </div>
 
-          {/* Modern Feature Grid */}
-          <div className="space-y-8 mx-5">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              With 15+ years perfecting automotive excellence in Dubai, we combine cutting-edge technology with artisan craftsmanship for your luxury vehicle.
-            </p>
-
-            {/* Hexagonal Grid Features */}
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-2 md:gap-4 ">
+          {/* Premium Features Grid */}
+          <div className="space-y-5">
+            {/* Enhanced Stats Bar */}
+            <div className="grid grid-cols-3 gap-6">
               {[
-                { icon: <BadgeCheck className="h-6 w-6" />, title: "Certified Technicians", color: "text-green-500" },
-                { icon: <Zap className="h-6 w-6" />, title: "On-Demand Service", color: "text-yellow-500" },
-                { icon: <Clock className="h-6 w-6" />, title: "24/7 Availability", color: "text-blue-500" },
-                { icon: <DollarSign className="h-6 w-6" />, title: "Transparent Pricing", color: "text-emerald-500" },
-                { icon: <MessageCircle className="h-6 w-6" />, title: "Free Consultation", color: "text-purple-500" },
-                { icon: <Shield className="h-6 w-6" />, title: "Guaranteed Repairs", color: "text-red-500" },
-                { icon: <Leaf className="h-6 w-6" />, title: "Eco-Friendly", color: "text-teal-500" },
-                { icon: <Leaf className="h-6 w-6" />, title: "Hassle-Free Booking", color: "text-teal-500" },
-              ].map((feature, index) => ( 
+                { value: "15+", label: "Years Excellence", icon: Award, color: "text-primary" },
+                { value: "10K+", label: "Clients Served", icon: Users, color: "text-blue-500" },
+                { value: "24/7", label: "Always Available", icon: Clock, color: "text-emerald-500" },
+              ].map((stat, index) => (
                 <div 
                   key={index}
-                  className="p-1 lg:p-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 hover:border-primary/20 group border border-primary"
+                  className="relative p-2 rounded-2xl bg-white/80 backdrop-blur-sm border border-primary/30 transition-all duration-300 group hover:shadow-lg"
                 >
-                  <div className="flex items-center gap-2 lg:gap-4">
-                    <div className={`p-2 lg:p-3 rounded-lg ${feature.color}/10 group-hover:bg-primary/10 transition-colors`}>
-                      <div className={feature.color}>
-                        {feature.icon}
-                      </div>
+                  <div className="text-center">
+                    <div className={`p-2 rounded-xl ${stat.color}/50 inline-flex  group-hover:scale-110 transition-transform`}>
+                      <stat.icon className={`h-7 w-7 ${stat.color}`} />
                     </div>
-                    <h3 className="text-md font-semibold text-gray-800 group-hover:text-primary transition-colors">
-                      {feature.title}
-                    </h3>
+                    <div className="text-xl font-semibold text-gray-900 mb-1">{stat.value}</div>
+                    <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Animated Stats */}
-            <div className="grid grid-cols-3 gap-2 ">
+            {/* Advanced Feature Grid */}
+            <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "15+", label: "Years", decoration: "🏆" },
-                { value: "10k+", label: "Clients", decoration: "🚗" },
-                { value: "24/7", label: "Support", decoration: "⏱️" },
-              ].map((stat, index) => (
+                { 
+                  icon: BadgeCheck, 
+                  title: "Certified Master Technicians", 
+                  description: "ASE-certified experts with luxury brand specialization",
+                  color: "text-green-500",
+                  bgColor: "bg-green-500/10"
+                },
+                { 
+                  icon: Zap, 
+                  title: "On-Demand Mobile Service", 
+                  description: "Premium care delivered to your location in Dubai",
+                  color: "text-amber-500",
+                  bgColor: "bg-amber-500/10"
+                },
+                { 
+                  icon: Shield, 
+                  title: "Guaranteed Repairs", 
+                  description: "24-month warranty on all services and parts",
+                  color: "text-blue-500",
+                  bgColor: "bg-blue-500/10"
+                },
+                { 
+                  icon: DollarSign, 
+                  title: "Transparent Pricing", 
+                  description: "No hidden costs with upfront competitive pricing",
+                  color: "text-emerald-500",
+                  bgColor: "bg-emerald-500/10"
+                },
+              ].map((feature, index) => (
                 <div 
                   key={index}
-                  className="p-4 rounded-xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 text-center hover:shadow-lg transition-all border border-primary"
+                  className="group flex justify-center items-start gap-4 p-4 rounded-2xl bg-white/60 backdrop-blur-sm border border-primary/40 hover:bg-white/80 transition-all duration-300 cursor-pointer hover:shadow-md"
                 >
-                  <p className="text-3xl font-bold text-primary flex flex-col items-center justify-center gap-1 lg:gap-3">
-                   <span className="text-xl">{stat.decoration} {stat.value} </span>
-                  </p>
-                  <p className="text-sm lg:text-md text-gray-600 mt-1">{stat.label}</p>
+                  <div className={`p-3 rounded-xl ${feature.bgColor} group-hover:scale-105 transition-transform flex-shrink-0`}>
+                    <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-md font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                 </div>
               ))}
             </div>
 
-            {/* Glowing CTA */}
-            <Button className=" h-14 px-8 text-lg font-medium rounded-xl bg-gradient-to-r from-primary to-green-600 hover:from-primary/90 hover:to-green-600/90 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all group">
-              Explore Premium Services
-              <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            {/* Premium CTA Section */}
+            <div className="relative rounded-2xl bg-gradient-to-r from-primary/5 to-emerald-500/5 p-6 border border-primary/10">
+              <div className="flex items-center justify-between">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 text-primary" />
+                    <span className="text-sm font-semibold text-gray-900">Ready for Premium Care?</span>
+                  </div>
+                  <p className="text-sm text-gray-600">
+                    Experience Dubai's finest automotive service
+                  </p>
+                </div>
+                <Button className="h-12 px-8 bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 text-white font-semibold rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all group">
+                  Book Premium Service
+                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex items-center justify-center gap-8 ">
+              {[
+                { icon: CheckCircle, text: "Certified Excellence", color: "text-green-500" },
+                { icon: Shield, text: "Guaranteed Quality", color: "text-blue-500" },
+                { icon: Users, text: "10K+ Satisfied Clients", color: "text-primary" },
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <item.icon className={`h-4 w-4 ${item.color}`} />
+                  <span className="text-sm font-medium text-gray-600">{item.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

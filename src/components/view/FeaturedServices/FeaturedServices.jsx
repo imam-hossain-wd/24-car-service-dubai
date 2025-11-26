@@ -7,11 +7,11 @@ import { ServicesGrid } from "../Card/ServicesGrid";
 
 export default function FeaturedServices() {
   return (
-    <div className="container py-12 mx-auto">
-       <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 bg-primary/10 text-primary">
+    <div className="container py-8 mx-auto">
+       <div className="text-center mb-10">
+          {/* <Badge variant="outline" className="mb-4 bg-primary/10 text-primary">
             Our Services
-          </Badge>
+          </Badge> */}
           <h2 className="text-3xl font-bold sm:text-3xl md:text-5xl mb-4">
             Featured <span className="text-primary">Car Repair</span> Services
           </h2>
