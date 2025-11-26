@@ -26,7 +26,7 @@ export default function ServiceAreas() {
     ];
 
     return (
-        <section className="relative bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 py-10 sm:py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 py-10 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0">
                 <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-200/20 rounded-full blur-3xl"></div>

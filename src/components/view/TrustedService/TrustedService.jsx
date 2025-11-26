@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { 
-  BadgeCheck, Zap, Clock, DollarSign, 
- Shield, ChevronRight,
+import {
+  BadgeCheck, Zap, Clock, DollarSign,
+  Shield, ChevronRight,
   Star, Award, Users, CheckCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,7 +17,7 @@ export function TrustedService() {
           <div className="absolute w-[800px] h-[800px] -top-96 -left-96 bg-gradient-to-r from-primary/20 to-emerald-400/10 rounded-full blur-3xl"></div>
           <div className="absolute w-[600px] h-[600px] -bottom-48 -right-48 bg-gradient-to-l from-blue-500/15 to-transparent rounded-full blur-3xl"></div>
         </div>
-        
+
         {/* Geometric Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.015]">
           <div className="absolute inset-0" style={{
@@ -33,35 +33,35 @@ export function TrustedService() {
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Ultra-Minimal Header */}
-        <div className="text-center mb-10">          
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+        <div className="text-center mb-10">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3">
             <span className="">Why Dubai</span><br />
             <span className="font-medium bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
               Chooses Excellence
             </span>
           </h1>
-          
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+
+          <p className="text-sm px-5 md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             15 years of perfecting luxury automotive care with uncompromising standards and innovative solutions.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Premium Visual Card */}
-          <div className="relative group">
+          <div className="relative group ">
             {/* Main Image Container */}
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
               <Image
                 src={images.whychoosedubai}
                 width={600}
                 height={500}
-                className="w-full h-[500px] object-cover opacity-95"
+                className="w-full h-[400px] md:h-[500px] object-cover opacity-95"
                 priority
               />
-              
+
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              
+
               {/* Floating Trust Badges */}
               <div className="absolute top-6 left-6">
                 <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
@@ -69,7 +69,7 @@ export function TrustedService() {
                   <span className="text-sm font-medium text-white">Certified Excellence</span>
                 </div>
               </div>
-              
+
               {/* Bottom Content */}
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="flex items-end justify-between">
@@ -80,13 +80,13 @@ export function TrustedService() {
                       </div>
                       <span className="text-lg font-semibold">Dubai's Most Trusted</span>
                     </div>
-                    <h3 className="text-3xl font-semibold leading-tight">
+                    <h3 className="text-xl md:text-2xl font-semibold leading-tight">
                       Premium Automotive<br />Care Perfected
                     </h3>
                   </div>
-                  
+
                   {/* Compact Stats */}
-                  <div className="text-right space-y-2">
+                  <div className="text-right space-y-2 -mr-4 md:mr-0">
                     {["10K+ Repaired", "4.9 ★ Rating", "98% Client Retention"].map((stat, i) => (
                       <div key={i} className="text-xs text-white/90 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/20">
                         {stat}
@@ -96,7 +96,7 @@ export function TrustedService() {
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative Corner Accents */}
             <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-primary/30 rounded-tl-2xl"></div>
             <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-primary/30 rounded-br-2xl"></div>
@@ -105,13 +105,13 @@ export function TrustedService() {
           {/* Premium Features Grid */}
           <div className="space-y-5">
             {/* Enhanced Stats Bar */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-2 md:gap-6">
               {[
                 { value: "15+", label: "Years Excellence", icon: Award, color: "text-primary" },
                 { value: "10K+", label: "Clients Served", icon: Users, color: "text-blue-500" },
                 { value: "24/7", label: "Always Available", icon: Clock, color: "text-emerald-500" },
               ].map((stat, index) => (
-                <div 
+                <div
                   key={index}
                   className="relative p-2 rounded-2xl bg-white/80 backdrop-blur-sm border border-primary/30 transition-all duration-300 group hover:shadow-lg"
                 >
@@ -119,68 +119,68 @@ export function TrustedService() {
                     <div className={`p-2 rounded-xl ${stat.color}/50 inline-flex  group-hover:scale-110 transition-transform`}>
                       <stat.icon className={`h-7 w-7 ${stat.color}`} />
                     </div>
-                    <div className="text-xl font-semibold text-gray-900 mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                    <div className="text-lg md:text-xl font-semibold text-gray-900 mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-600 font-medium mb-1">{stat.label}</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Advanced Feature Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
               {[
-                { 
-                  icon: BadgeCheck, 
-                  title: "Certified Master Technicians", 
+                {
+                  icon: BadgeCheck,
+                  title: "Certified Master Technicians",
                   description: "ASE-certified experts with luxury brand specialization",
                   color: "text-green-500",
                   bgColor: "bg-green-500/10"
                 },
-                { 
-                  icon: Zap, 
-                  title: "On-Demand Mobile Service", 
+                {
+                  icon: Zap,
+                  title: "On-Demand Mobile Service",
                   description: "Premium care delivered to your location in Dubai",
                   color: "text-amber-500",
                   bgColor: "bg-amber-500/10"
                 },
-                { 
-                  icon: Shield, 
-                  title: "Guaranteed Repairs", 
+                {
+                  icon: Shield,
+                  title: "Guaranteed Repairs",
                   description: "24-month warranty on all services and parts",
                   color: "text-blue-500",
                   bgColor: "bg-blue-500/10"
                 },
-                { 
-                  icon: DollarSign, 
-                  title: "Transparent Pricing", 
+                {
+                  icon: DollarSign,
+                  title: "Transparent Pricing",
                   description: "No hidden costs with upfront competitive pricing",
                   color: "text-emerald-500",
                   bgColor: "bg-emerald-500/10"
                 },
               ].map((feature, index) => (
-                <div 
+                <div
                   key={index}
-                  className="group flex justify-center items-start gap-4 p-4 rounded-2xl bg-white/60 backdrop-blur-sm border border-primary/40 hover:bg-white/80 transition-all duration-300 cursor-pointer hover:shadow-md"
+                  className="group flex flex-col items-center text-center p-3 rounded-2xl bg-white/60 backdrop-blur-sm border border-primary/40 hover:bg-white/80 transition-all duration-300 cursor-pointer hover:shadow-md h-full min-h-[140px] flex justify-between"
                 >
-                  <div className={`p-3 rounded-xl ${feature.bgColor} group-hover:scale-105 transition-transform flex-shrink-0`}>
-                    <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                  <div className="flex flex-col items-center w-full">
+                    <div className={`p-3 rounded-xl ${feature.bgColor} group-hover:scale-105 transition-transform mb-3`}>
+                      <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                    </div>
+                    <div className="w-full">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors leading-tight">
+                        {feature.title}
+                      </h3>
+                      <p className="text-xs text-gray-600 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-md font-semibold text-gray-900 mb-1 group-hover:text-primary transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                 </div>
               ))}
             </div>
 
             {/* Premium CTA Section */}
             <div className="relative rounded-2xl bg-gradient-to-r from-primary/5 to-emerald-500/5 p-6 border border-primary/10">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col md:flex-row gap-3 items-center justify-between">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <Star className="h-4 w-4 text-primary" />
@@ -204,7 +204,7 @@ export function TrustedService() {
                 { icon: Shield, text: "Guaranteed Quality", color: "text-blue-500" },
                 { icon: Users, text: "10K+ Satisfied Clients", color: "text-primary" },
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div key={index} className="flex flex-col md:flex-row text-center items-center gap-2">
                   <item.icon className={`h-4 w-4 ${item.color}`} />
                   <span className="text-sm font-medium text-gray-600">{item.text}</span>
                 </div>

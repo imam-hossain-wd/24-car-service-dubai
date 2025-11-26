@@ -50,22 +50,22 @@ export const ServiceCard = ({ service }) => {
           {service?.features?.slice(0, 4).map((feature, i) => (
             <div key={i} className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-green-500" />
-              <span className="text-sm">{feature}</span>
+              <span className="text-[13px]">{feature}</span>
             </div>
           ))}
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex  gap-3 items-center justify-between">
           <Button
             variant="outline"
-            className="border-primary text-primary hover:bg-primary/10"
+            className="border-primary w-[47%] text-primary hover:bg-primary/10"
             asChild
           >
             <Link href={`/services/${service?.slug}`}>
               Details
             </Link>
           </Button>
-          <Button asChild>
+          <Button className="w-[47%]" asChild>
             <Link href="/contact">
               Book Now
             </Link>
