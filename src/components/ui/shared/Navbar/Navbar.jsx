@@ -69,9 +69,11 @@ export function Navbar() {
 
         <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6">
 
-          <div className="flex-1 md:flex-none">
+          <div className="flex-1 md:flex-none -ml-3 md:ml-0">
             {/* <Logo /> */}
-            <Image src={bandlogo.logo} width={180} height={150} alt="logo" />
+            <Link href="/">
+              <Image src={bandlogo.logo} width={160} height={140} alt="logo" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -92,7 +94,7 @@ export function Navbar() {
             ))}
           </nav>
 
-          <BookAppointmentButton />
+          <BookAppointmentButton  className="bg-primary"/>
           {/* Mobile Menu Button */}
           <NavDrawer />
         </div>

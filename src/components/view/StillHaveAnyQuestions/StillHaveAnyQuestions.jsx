@@ -8,7 +8,7 @@ export default function StillHaveAnyQuestions() {
         <div>
 
             <div className="w-full mx-auto">
-                <div className="relative bg-gradient-to-br from-primary/10 via-blue-100/20 to-emerald-100/20 dark:from-gray-800/50 dark:via-gray-900/50 dark:to-blue-900/30 p-8 border border-gray-200/50 dark:border-gray-800">
+                <div className="relative bg-primary/20 dark:from-gray-800/50 dark:via-gray-900/50 dark:to-blue-900/30 p-8 border border-gray-200/50 dark:border-gray-800">
                     <div className="relative z-10 text-center">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/80 dark:bg-gray-800/80 rounded-full border border-gray-200 dark:border-gray-700 mb-4">
                             <Star className="h-3 w-3 text-primary" />

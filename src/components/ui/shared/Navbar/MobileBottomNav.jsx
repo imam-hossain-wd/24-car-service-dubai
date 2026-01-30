@@ -1,155 +1,220 @@
-// "use client";
-
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-// import { Home, Wrench, Info, Mail, BookOpen, Image as ImageIcon } from "lucide-react";
-// import { cn } from "@/lib/utils";
-// import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/BookingAppointmentButton";
-
-
-// const mobileNavItems = [
-//   { name: "Home", href: "/", icon: Home },
-//   { name: "Services", href: "/services", icon: Wrench },
-//   { name: "About", href: "/about", icon: Info },
-//   { name: "Contact", href: "/contact", icon: Mail },
-//   { name: "Blog", href: "/blog", icon: BookOpen },
-//   { name: "Gallery", href: "/gallery", icon: ImageIcon },
-// ];
-
-// export function MobileBottomNav() {
-//   const pathname = usePathname();
-
-//   return (
-//     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-//       {/* Floating Action Button */}
-//       {/* <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-//         <BookAppointmentButton size="icon" className="rounded-full shadow-lg h-12 w-12">
-//           <span className="sr-only">Book Appointment</span>
-//         </BookAppointmentButton>
-//       </div> */}
-      
-//       {/* Navigation Bar */}
-      // <nav className="bg-white/95 backdrop-blur-md border-t shadow-lg">
-      //   <div className="flex justify-around items-center h-12">
-      //     {mobileNavItems.map((item) => (
-      //       <Link
-      //         key={item.href}
-      //         href={item.href}
-      //         className={cn(
-      //           "flex flex-col items-center justify-center w-full h-full transition-colors",
-      //           pathname === item.href ? "text-primary" : "text-gray-600"
-      //         )}
-      //       >
-      //         <item.icon
-      //           className={cn(
-      //             "h-5 w-5 transition-transform",
-      //             pathname === item.href && "scale-110"
-      //           )}
-      //         />
-      //         <span className="text-xs mt-0">{item.name}</span>
-      //         {pathname === item.href && (
-      //           <div className="w-1 h-1 rounded-full bg-primary " />
-      //         )}
-      //       </Link>
-      //     ))}
-      //   </div>
-      // </nav>
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Wrench, Info,NotebookPen, Mail, BookOpen, Image as ImageIcon, ArrowUp, Facebook, Instagram, Youtube } from "lucide-react";
+import { Wrench, Phone, MessageCircle, Image as ImageIcon, ArrowUp, NotebookPen, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { SiteConfig } from "@/config/site";
+import { AppointmentForm } from "@/components/Forms/AppointmentForm";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+
 
 const mobileNavItems = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "Services", href: "/services", icon: Wrench },
-  { name: "About", href: "/about", icon: Info },
-  { name: "Contact", href: "/contact", icon: Mail },
-  { name: "Blog", href: "/blog", icon: BookOpen },
-  { name: "Gallery", href: "/gallery", icon: ImageIcon },
+  {
+    name: "Home",
+    href: "/",
+    icon: Home,
+    bgColor: "bg-gradient-to-br from-orange-500 to-amber-500",
+    activeBgColor: "bg-gradient-to-br from-orange-600 to-amber-600",
+    type: "link"
+  },
+  {
+    name: "Services",
+    href: "/services",
+    icon: Wrench,
+    bgColor: "bg-gradient-to-br from-orange-500 to-amber-500",
+    activeBgColor: "bg-gradient-to-br from-orange-600 to-amber-600",
+    type: "link"
+  },
+  {
+    name: "Book Now",
+    href: "#",
+    icon: NotebookPen,
+    bgColor: "bg-gradient-to-br from-green-500 to-emerald-500",
+    activeBgColor: "bg-gradient-to-br from-green-600 to-emerald-600",
+    type: "drawer"
+  },
+  {
+    name: "Call",
+    href: SiteConfig.callLink,
+    icon: Phone,
+    bgColor: "bg-gradient-to-br from-blue-500 to-cyan-500",
+    activeBgColor: "bg-gradient-to-br from-blue-600 to-cyan-600",
+    type: "link"
+  },
+  {
+    name: "Whatsapp",
+    href: SiteConfig.whatsappLink,
+    icon: MessageCircle,
+    bgColor: "bg-gradient-to-br from-green-600 to-lime-500",
+    activeBgColor: "bg-gradient-to-br from-green-700 to-lime-600",
+    type: "link"
+  },
 ];
 
 export function MobileBottomNav() {
   const pathname = usePathname();
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
+      setShowScrollButton(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const activeItem = mobileNavItems.find(item => pathname === item.href);
+    setActiveTab(activeItem?.name || "");
+  }, [pathname]);
+
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-      {/* Floating Social Icons */}
-      <div className="absolute -top-32 right-4 flex flex-col gap-2">
-       
-
-        <Button className=" rounded-full">
-          <NotebookPen className="h-6 w-6 "/>
-        </Button>
-      </div>
-
-      {/* Scroll to Top Button */}
+    <div className="fixed -bottom-20 left-0 right-0 z-50">
+      {/* Floating Scroll to Top Button */}
       {showScrollButton && (
-        <Button 
+        <Button
           onClick={scrollToTop}
-          variant="ghost"
           size="icon"
-          className="absolute -top-18 right-4 rounded-full h-10 w-10 bg-primary backdrop-blur-md shadow-sm"
+          className="absolute -top-20 md:-top-40 right-4 animate-bounce rounded-full h-10 w-10 bg-primary shadow-xl border-0 hover:bg-primary/90 transition-all duration-300 hover:scale-110"
         >
-          <ArrowUp className="h-10 w-10 text-white " />
+          <ArrowUp className="h-6 w-6 text-white" />
         </Button>
       )}
 
-      {/* Navigation Bar */}
-      <nav className="bg-white/95 backdrop-blur-md border-t shadow-lg">
-        <div className="flex justify-around items-center h-12">
-          {mobileNavItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "flex flex-col items-center justify-center w-full h-full transition-colors",
-                pathname === item.href ? "text-primary" : "text-gray-600"
-              )}
-            >
-              <item.icon
+      {/* Modern Navigation Bar */}
+      <nav className="bg-white/90 backdrop-blur-xl border-t border-gray-200/60 shadow-2xl md:hidden">
+        <div className="flex justify-around items-center h-20 px-2">
+          {mobileNavItems.map((item) => {
+            const isActive = pathname === item.href;
+            const Icon = item.icon;
+
+            if (item.type === "drawer") {
+              return (
+                <Drawer key={item.name}>
+                  <DrawerTrigger asChild>
+                    <button
+                      className={cn(
+                        "flex flex-col items-center justify-center w-full h-full transition-all duration-300 relative group cursor-pointer",
+                        isActive ? "text-primary" : "text-gray-600 hover:text-gray-900"
+                      )}
+                    >
+                      {/* Animated Background Dot for Active State */}
+                      {isActive && (
+                        <div className="absolute -top-1 w-12 h-1 bg-primary rounded-full transition-all duration-300" />
+                      )}
+
+                      {/* Icon Container with Enhanced Styling */}
+                      <div className={cn(
+                        "relative p-2 rounded-2xl transition-all duration-300 group-hover:scale-110 group-active:scale-95",
+                        isActive
+                          ? item.activeBgColor + " shadow-lg scale-110"
+                          : item.bgColor + " opacity-90 hover:opacity-100",
+                        "flex items-center justify-center"
+                      )}>
+                        <Icon className="h-5 w-5 text-white" />
+
+                        {/* Ripple Effect on Active */}
+                        {isActive && (
+                          <div className="absolute inset-0 rounded-2xl bg-white/20 animate-ping" />
+                        )}
+                      </div>
+
+                      {/* Label with Better Typography */}
+                      <span className={cn(
+                        "text-xs font-medium mt-2 transition-all duration-300",
+                        isActive
+                          ? "text-primary scale-105 font-semibold"
+                          : "text-gray-600 group-hover:text-gray-900"
+                      )}>
+                        {item.name}
+                      </span>
+
+                      {/* Hover Effect Background */}
+                      <div className="absolute inset-0 rounded-xl bg-transparent group-hover:bg-gray-100/50 transition-colors duration-300 -z-10" />
+                    </button>
+                  </DrawerTrigger>
+                  <DrawerContent className="h-[85%]">
+                    <div className="mx-auto w-full max-w-2xl">
+                      <DrawerHeader>
+                        <DrawerTitle className="text-2xl">Book Your Service</DrawerTitle>
+                      </DrawerHeader>
+                      <div className="p-4 pb-4">
+                        <AppointmentForm />
+                      </div>
+                    </div>
+                  </DrawerContent>
+                </Drawer>
+              );
+            }
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
                 className={cn(
-                  "h-5 w-5 transition-transform",
-                  pathname === item.href && "scale-110"
+                  "flex flex-col items-center justify-center w-full h-full transition-all duration-300 relative group",
+                  isActive ? "text-primary" : "text-gray-600 hover:text-gray-900"
                 )}
-              />
-              <span className="text-xs mt-0">{item.name}</span>
-              {pathname === item.href && (
-                <div className="w-1 h-1 rounded-full bg-primary " />
-              )}
-            </Link>
-          ))}
+              >
+                {/* Animated Background Dot for Active State */}
+                {isActive && (
+                  <div className="absolute -top-1 w-12 h-1 bg-primary rounded-full transition-all duration-300" />
+                )}
+
+                {/* Icon Container with Enhanced Styling */}
+                <div className={cn(
+                  "relative p-2 rounded-2xl transition-all duration-300 group-hover:scale-110 group-active:scale-95",
+                  isActive
+                    ? item.activeBgColor + " shadow-lg scale-110"
+                    : item.bgColor + " opacity-90 hover:opacity-100",
+                  "flex items-center justify-center"
+                )}>
+                  <Icon className="h-5 w-5 text-white" />
+
+                  {/* Ripple Effect on Active */}
+                  {isActive && (
+                    <div className="absolute inset-0 rounded-2xl bg-white/20 animate-ping" />
+                  )}
+                </div>
+
+                {/* Label with Better Typography */}
+                <span className={cn(
+                  "text-xs font-medium mt-2 transition-all duration-300",
+                  isActive
+                    ? "text-primary scale-105 font-semibold"
+                    : "text-gray-600 group-hover:text-gray-900"
+                )}>
+                  {item.name}
+                </span>
+
+                {/* Hover Effect Background */}
+                <div className="absolute inset-0 rounded-xl bg-transparent group-hover:bg-gray-100/50 transition-colors duration-300 -z-10" />
+              </Link>
+            );
+          })}
         </div>
+
+        {/* Subtle Top Glow Effect */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300/50 to-transparent" />
       </nav>
+
+      {/* Safety Spacer for Content */}
+      <div className="h-20 bg-transparent md:hidden" />
     </div>
   );
 }

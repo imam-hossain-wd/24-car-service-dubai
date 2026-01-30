@@ -62,11 +62,11 @@ export default function HomePage() {
             <WhoWeAre />
             {/* <GMBReviews /> */}
             <ServiceAreas />
-            <GetTouch />
             <MapComponent />
-            <FAQSection />
-            <Reviews />
+            <GetTouch />
             <BlogPage />
+            <Reviews />
+            <FAQSection />
             <StillHaveAnyQuestions />
         </div>
     )

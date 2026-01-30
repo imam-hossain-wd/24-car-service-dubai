@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Users, Shield, Award, Clock } from "lucide-react";
-import whoweare from '../../../assets/images/gallery-3.jpg'
+import whoweare from '../../../assets/images/auto-repair-img.jpg'
 
 
 export function WhoWeAre() {
@@ -18,7 +18,7 @@ export function WhoWeAre() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-gray-600">
-              <span className="text-primary">24 Car Service Dubai</span> is a premier automotive service center with over a decade of
+              <span className="text-primary font-bold">24 Car Service Dubai</span> is a premier automotive service center with over a decade of
               experience serving Dubai's drivers. Our team of certified technicians delivers
               exceptional car care with honesty and expertise.
             </p>

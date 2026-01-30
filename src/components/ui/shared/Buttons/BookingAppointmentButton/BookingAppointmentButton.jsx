@@ -36,7 +36,7 @@ export function BookAppointmentButton({
   variant = "primary", // 'primary' | 'white' | 'outline'
   size = "md", // 'sm' | 'md' | 'lg'
   showIcon = true,
-  children = "Book Appointment",
+  children = "Book Now",
   ...props
 }) {
   return (
@@ -58,7 +58,7 @@ export function BookAppointmentButton({
       <DrawerContent className="h-[85%]">
         <div className="mx-auto w-full max-w-2xl">
           <DrawerHeader>
-            <DrawerTitle className="text-2xl">Book Your Service</DrawerTitle>
+            <DrawerTitle className="text-xl -mt-4 text-center">Book Your Service</DrawerTitle>
           </DrawerHeader>
           <div className="p-4 pb-4">
             <AppointmentForm />

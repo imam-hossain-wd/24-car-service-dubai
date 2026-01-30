@@ -187,7 +187,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold mb-4 ">
                 24 Car Service Dubai
               </h3>
               <p className="text-sm text-white/80 leading-relaxed">
@@ -197,8 +197,8 @@ export function Footer() {
               {/* Contact Info */}
               <div className="space-y-4 mt-6">
                 <div className="flex items-start gap-3 group cursor-pointer">
-                  <div className="p-2 bg-amber-400 rounded-lg group-hover:scale-110 transition-transform">
-                    <Phone className="h-4 w-4 text-[#00963B]" />
+                  <div className="p-2 bg-white/5 backdrop-blur-sm rounded-lg group-hover:scale-110 transition-transform">
+                    <Phone className="h-4 w-4 text-white" />
                   </div>
                   <div>
                     <Link
@@ -207,13 +207,13 @@ export function Footer() {
                     >
                       {phoneNumber}
                     </Link>
-                    <p className="text-xs text-white/60 mt-1">24/7 Emergency Support</p>
+                    <p className="text-xs text-white mt-1">24/7 Emergency Support</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 group cursor-pointer">
-                  <div className="p-2 bg-amber-400 rounded-lg group-hover:scale-110 transition-transform">
-                    <Mail className="h-4 w-4 text-[#00963B]" />
+                  <div className="p-2 bg-white/5 backdrop-blur-sm rounded-lg group-hover:scale-110 transition-transform">
+                    <Mail className="h-4 w-4 text-white" />
                   </div>
                   <Link
                     href="mailto:24carrepairdubai@gmail.com"
@@ -224,8 +224,8 @@ export function Footer() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-amber-400 rounded-lg">
-                    <MapPin className="h-4 w-4 text-[#00963B]" />
+                  <div className="p-2 bg-white/5 backdrop-blur-sm rounded-lg">
+                    <MapPin className="h-4 w-4 text-white" />
                   </div>
                   <p className="text-sm font-medium">Mobile Service Across Dubai</p>
                 </div>
@@ -235,7 +235,7 @@ export function Footer() {
 
           {/* Services Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold border-l-4 border-amber-400 pl-3 bg-white/5 py-2 rounded-r-lg">
+            <h3 className="text-lg font-bold border-l-4 bg-white/5 backdrop-blur-sm pl-3 bg-white/5 py-2 rounded-r-lg">
               Our Services
             </h3>
             <nav className="grid grid-cols-1 gap-3">
@@ -243,9 +243,9 @@ export function Footer() {
                 <Link
                   key={index}
                   href={service.href}
-                  className="text-sm text-white/80 hover:text-amber-400 transition-all duration-300 hover:translate-x-2 flex items-center gap-1 group p-2 rounded-lg hover:bg-white/5"
+                  className="text-sm text-white/80 hover:text-white transition-all duration-300 hover:translate-x-2 flex items-center gap-1 group p-2 rounded-lg hover:bg-white/5"
                 >
-                  <div className="w-2 h-2 bg-amber-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <div className="w-2 h-2 bg-white rounded-full group-hover:scale-150 transition-transform"></div>
                   {service.title}
                 </Link>
               ))}
@@ -254,7 +254,7 @@ export function Footer() {
 
           {/* Service Areas Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold border-l-4 border-amber-400 pl-3 bg-white/5 py-2 rounded-r-lg">
+            <h3 className="text-lg font-bold border-l-4 bg-white/5 backdrop-blur-sm pl-3 bg-white/5 py-2 rounded-r-lg">
               Service Areas
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -263,7 +263,7 @@ export function Footer() {
                   key={index} 
                   className="flex items-center gap-2 p-2 rounded-lg hover:bg-white/5 transition-all duration-300 group"
                 >
-                  <div className="w-1.5 h-1.5 bg-amber-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <div className="w-1.5 h-1.5 bg-white rounded-full group-hover:scale-150 transition-transform"></div>
                   <span className="text-sm text-white/80 group-hover:text-white">
                     {location}
                   </span>
@@ -275,7 +275,7 @@ export function Footer() {
           {/* Company & Social Links Column */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h3 className="text-lg font-bold border-l-4 border-amber-400 pl-3 bg-white/5 py-2 rounded-r-lg">
+              <h3 className="text-lg font-bold border-l-4 bg-white/5 backdrop-blur-sm pl-3 bg-white/5 py-2 rounded-r-lg">
                 Company
               </h3>
               <nav className="space-y-3">
@@ -283,9 +283,9 @@ export function Footer() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm text-white/80 hover:text-amber-400 transition-all duration-300 hover:translate-x-2 flex items-center gap-3 group p-2 rounded-lg hover:bg-white/5"
+                    className="text-sm text-white/80 hover:text-white transition-all duration-300 hover:translate-x-2 flex items-center gap-3 group p-2 rounded-lg hover:bg-white/5"
                   >
-                    <div className="w-2 h-2 bg-amber-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                    <div className="w-2 h-2 bg-white rounded-full group-hover:scale-150 transition-transform"></div>
                     {link.title}
                   </Link>
                 ))}

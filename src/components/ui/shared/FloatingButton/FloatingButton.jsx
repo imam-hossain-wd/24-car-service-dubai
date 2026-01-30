@@ -2,12 +2,12 @@
 import { SiteConfig } from "@/config/site";
 import { Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/BookingAppointmentButton";
 
 export function FloatingButton() {
-    const {
-     whatsappNumber, callNumber
-    } = SiteConfig;
-
+  const {
+    whatsappLink, callLink
+  } = SiteConfig;
 
 
   return (
@@ -15,16 +15,18 @@ export function FloatingButton() {
       <div className="flex h-12 w-full">
         {/* Call Now Button - 50% width */}
         <Link
-          href={`tel:${callNumber}`}
+          href={callLink}
           className="w-1/2 flex flex gap-3 items-center justify-center bg-rose-500 text-white font-medium hover:bg-rose-500/90 transition-colors"
         >
           <Phone className="h-5 w-5 mb-1" />
           <span className="text-sm">Call Now</span>
         </Link>
-        
+
+        <BookAppointmentButton className="w-[35%] h-full rounded-none bg-white text-black" />
+
         {/* WhatsApp Button - 50% width */}
         <Link
-          href={`https://wa.me/${whatsappNumber}`}
+          href={whatsappLink}
           className="w-1/2 flex gap-3 items-center justify-center bg-[#25D366] text-white font-medium hover:bg-[#25D366]/90 transition-colors"
         >
           <MessageCircle className="h-5 w-5 mb-1" />

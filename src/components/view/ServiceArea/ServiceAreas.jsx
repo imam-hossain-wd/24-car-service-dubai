@@ -45,17 +45,17 @@ export default function ServiceAreas() {
 
             <div className="container mx-auto px-4 max-w-7xl relative z-10">
                 {/* Enhanced Header Section */}
-                <div className="text-center mb-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-emerald-500/10 rounded-full border border-primary/20 mb-6">
+                <div className="text-center mb-5 md:mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-emerald-500/10 rounded-full border border-primary/20 mb-3 -mt-4">
                         <Zap className="w-4 h-4 text-primary" />
                         <span className="text-sm font-medium text-primary">
                             24/7 Emergency Service Coverage
                         </span>
                     </div>
-                    <h2 className="text-4xl font-bold sm:text-5xl lg:text-5xl mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                    <h2 className="text-3xl font-bold lg:text-5xl mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
                         Serving Every Corner of <span className="text-primary">{city}</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-md md: text-gray-600 max-w-3xl mx-auto leading-relaxed -mt-3">
                         Premium mobile car repair services delivered directly to your location across all Dubai neighborhoods
                     </p>
                 </div>
@@ -78,8 +78,8 @@ export default function ServiceAreas() {
 
                                     {/* Content */}
                                     <div className="relative z-10">
-                                        <div className="flex items-start justify-between mb-4">
-                                            <div className="flex items-center gap-3">
+                                        <div className="flex items-center justify-center md:justify-between mb-1">
+                                            <div className="flex flex-col md:flex-row justify-center items-center gap-1 -mt-3">
                                                 <div className={`p-2 rounded-xl transition-all duration-300 ${selectedArea === area
                                                         ? 'bg-primary text-white'
                                                         : 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white'
@@ -87,10 +87,10 @@ export default function ServiceAreas() {
                                                     <MapPin className="w-4 h-4" />
                                                 </div>
                                                 <div>
-                                                    <h3 className="font-semibold text-gray-900 group-hover:text-gray-950 transition-colors">
+                                                    <h3 className="font-semibold text-[15px] text-gray-900 group-hover:text-gray-950 transition-colors">
                                                         {area}
                                                     </h3>
-                                                    <p className="text-sm text-gray-500 group-hover:text-gray-600">
+                                                    <p className="text-xs text-gray-500 group-hover:text-gray-600">
                                                         {city}, {country}
                                                     </p>
                                                 </div>
@@ -101,7 +101,7 @@ export default function ServiceAreas() {
                                         </div>
 
                                         {/* Hover Indicator */}
-                                        <div className="flex items-center gap-2 text-xs text-gray-400 group-hover:text-primary transition-colors">
+                                        <div className="flex items-center -ml-2 -mb-2 md:ml-0 gap-2 text-xs text-gray-400 group-hover:text-primary transition-colors">
                                             <Navigation className="w-3 h-3" />
                                             <span>Click to select area</span>
                                         </div>
@@ -119,14 +119,14 @@ export default function ServiceAreas() {
                         <div className="sticky top-8 space-y-4">
                             {/* Operating Hours Card */}
                             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-5 text-white shadow-2xl">
-                                <div className="flex items-center gap-2 mb-4">
+                                <div className="flex items-center gap-2 mb-3">
                                     <div className="p-1.5 bg-primary/20 rounded-lg">
                                         <Clock className="w-4 h-4 text-primary" />
                                     </div>
                                     <h3 className="text-lg font-semibold">Operating Hours</h3>
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-1.5">
                                     {operatingHours.map((day, index) => (
                                         <div key={index} className="flex justify-between items-center py-1.5 border-b border-gray-700/50 last:border-b-0">
                                             <span className="text-gray-300 font-medium text-sm">{day.day}</span>
@@ -136,21 +136,6 @@ export default function ServiceAreas() {
                                             </span>
                                         </div>
                                     ))}
-                                </div>
-
-                                {/* Emergency Banner */}
-                                <div className="mt-4 bg-gradient-to-r from-primary/20 to-emerald-500/20 rounded-lg p-3 border border-primary/30">
-                                    <div className="flex items-center gap-1.5 mb-1.5">
-                                        <Shield className="w-3.5 h-3.5 text-primary" />
-                                        <p className="text-xs font-semibold text-white">Emergency Support</p>
-                                    </div>
-                                    <p className="text-xs text-gray-300 mb-2 leading-tight">
-                                        Immediate assistance available 24/7 across all areas
-                                    </p>
-                                    <Button className="w-full bg-primary hover:bg-primary/90 text-white h-8 text-sm">
-                                        <Phone className="w-3.5 h-3.5 mr-1.5" />
-                                        Emergency Call
-                                    </Button>
                                 </div>
                             </div>
 
@@ -176,23 +161,16 @@ export default function ServiceAreas() {
                 </div>
 
                 {/* Enhanced CTA Section */}
-                <div className="text-center mt-20">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-emerald-500/10 rounded-full border border-primary/20 mb-6">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium text-primary">
-                            Expanding Daily Across {city}
-                        </span>
-                    </div>
-
-                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                <div className="text-center mt-8">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 -mt-3">
                         Don't See Your Area Listed?
                     </h3>
-                    <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    <p className="text-sm px-5 text-gray-600 mb-8 max-w-2xl mx-auto">
                         We're constantly expanding our coverage to serve every neighborhood in Dubai.
                         Contact us to check availability in your specific location.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <div className="flex flex-col sm:flex-row justify-center gap-4 -mt-4">
                         <Button className="px-8 py-4 text-lg bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                             <MapPin className="w-5 h-5 mr-2" />
                             Check Your Area Coverage
@@ -201,12 +179,6 @@ export default function ServiceAreas() {
                             <Phone className="w-5 h-5 mr-2" />
                             Direct Contact
                         </Button>
-                    </div>
-
-                    {/* Trust Badge */}
-                    <div className="flex items-center justify-center gap-2 mt-8 text-sm text-gray-500">
-                        <Shield className="w-4 h-4 text-emerald-500" />
-                        <span>Trusted by 10,000+ Dubai residents</span>
                     </div>
                 </div>
             </div>

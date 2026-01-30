@@ -1,3 +1,6 @@
+
+import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
+
 export const FootersiteConfig = {
   name: "24 Car Service Dubai",
   description: "Your On-Demand Car Savior Anywhere, Anytime in Dubai!",
@@ -28,10 +31,6 @@ export const siteConfig = {
   },
 }
 
-
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
-
-
 export const SiteConfig = {
   authorName: "Md Saiful Islam",
   brandName: "24 Car Service Dubai",
@@ -43,7 +42,7 @@ export const SiteConfig = {
   whatsappLink: "https://wa.me/971545695980",
   location: "Al Mankhool , Dubai - UAE",
   cordinate: "25.2256355,55.1905546",
-  serviceAreas: ["Al Mankhool", "Al Karama", "Al Satwa", "Al Barsha", "Al Fahidi", "Al Jaddaf", "Al Jaffiliya", "Dubai Marina", "Downtown Dubai", " Jumeirah"],
+  serviceAreas: ["Al Mankhool", "Zaa'beel First", "Al Raffa", "Al Satwa", "Deira", "Al Hudaiba", " Jumeirah 1", " Jumeirah 2"," Jumeirah 3"," Dubai Silicon Oasis", " City Walk", "Dubai Marina", "Downtown Dubai","Al Jafiliya" ],
   city: "Dubai",
   country: "UAE",
   services: [

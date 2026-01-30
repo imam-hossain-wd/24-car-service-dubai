@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Wrench, Droplet, Fan, Battery, Settings } from "lucide-react";
+import { CheckCircle2, Wrench, Droplet, Fan, Battery, Settings, NotebookPen, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookAppointmentButton } from "@/components/ui/shared/Buttons/BookingAppointmentButton/BookingAppointmentButton";
 
 
 
@@ -23,7 +24,7 @@ export const ServiceCard = ({ service }) => {
   
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 border-2 border-primary">
-      <div className="relative h-44 overflow-hidden ">
+      <div className="relative h-44 overflow-hidden">
         <Image
           src={service?.service_image}
           alt='object'
@@ -46,7 +47,7 @@ export const ServiceCard = ({ service }) => {
       </div>
 
       <div className="p-6">
-        <div className="mb-4 space-y-2 ">
+        <div className="mb-4 space-y-2 -mt-3">
           {service?.features?.slice(0, 4).map((feature, i) => (
             <div key={i} className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -62,14 +63,17 @@ export const ServiceCard = ({ service }) => {
             asChild
           >
             <Link href={`/services/${service?.slug}`}>
+            <Info />
               Details
             </Link>
           </Button>
-          <Button className="w-[47%]" asChild>
-            <Link href="/contact">
+          <div className="w-[70%]">
+            {/* <Link href="/contact">
+            <NotebookPen/>
               Book Now
-            </Link>
-          </Button>
+            </Link> */}
+            <BookAppointmentButton className="w-36 md:w-30 bg-primary"/>
+          </div>
         </div>
       </div>
     </div>

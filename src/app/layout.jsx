@@ -9,6 +9,7 @@ import { Navbar } from "@/components/ui/shared/Navbar/Navbar";
 import { FloatingButtons } from "@/components/ui/shared/Buttons/FloatingButtons/FloatingButtons";
 import { MobileBottomNav } from "@/components/ui/shared/Navbar/MobileBottomNav";
 import { FloatingButton } from "@/components/ui/shared/FloatingButton/FloatingButton";
+import StructuredData from "@/seo/schemas/StructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,7 @@ export const metadata = {
   title: "Best Car Repair and Services in Dubai || 24 Car Service Dubai",
   description: "One of the best car repair and servicing company in dubai || 24 Car Service Dubai",
   verification: {
-    google: "0EZ3v7hLpAZDBl4powBmsZpjU6-masTneZBr6-Q8G3g"
+    google: "BsO6PRJgg4HaeNY2nrVIOo5gNAbIu9_dlXNlO-XHY_U"
   }
 };
 
@@ -34,14 +35,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData />
         <div>
           <Navbar />
           {children}
-          <SpeedInsights/>
+          <SpeedInsights />
           <Analytics />
           {/* <FloatingButtons /> */}
           <MobileBottomNav />
-          <FloatingButton />
+          {/* <FloatingButton /> */}
           <Footer />
         </div>
       </body>

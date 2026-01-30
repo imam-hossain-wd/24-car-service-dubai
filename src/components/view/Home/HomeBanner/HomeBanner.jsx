@@ -72,7 +72,7 @@ const services = [
 
 export default function CompactHomeBanner() {
   return (
-    <div className="relative overflow-hidden h-auto min-h-[70vh]">
+    <div className="relative overflow-hidden h-auto min-h-[50vh] md:min-h-[70vh]">
       {/* Modern Green Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-teal-600 to-green-700 z-0" />
 
@@ -96,17 +96,17 @@ export default function CompactHomeBanner() {
               </h1>
 
               {/* Description */}
-              <p className="text-md md:text-lg text-white/90 mb-4 max-w-xl">
+              <p className="text-md md:text-lg text-white/90  max-w-xl">
                 Fast, reliable service at your home , office or roadside  we come to you!
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 -mb-2 md:mb-6">
+              <div className="hidden md:flex flex-col sm:flex-row gap-2 md:gap-3 -my-2 md:my-2 md:mb-6">
                 <div className="flex justify-between gap-2">
                   <CallNowButton className="px-6 py-3 w-[48%]  text-base font-semibold bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 shadow-lg" />
                   <WhatsAppButton className="px-6 w-[48%] py-3 text-base font-semibold" />
                 </div>
-                <BookAppointmentButton variant="white" size="lg" className="py-6 px-8" />
+                <BookAppointmentButton variant="white" size="lg" className="py-5 md:py-6 px-8" />
               </div>
 
               {/* Highlights */}
@@ -123,7 +123,7 @@ export default function CompactHomeBanner() {
             </div>
 
             {/* Right Column - Service Items */}
-            <div className="order-1 lg:order-2">
+            <div className="order-1 lg:order-2 -mt-2">
               <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-5 ">
                 {services.map((service, index) => (
                   <div
@@ -132,7 +132,7 @@ export default function CompactHomeBanner() {
                   >
                     <div className="group-hover rounded-full bg-emerald-10 ">
 
-                      <Image className="w-10 h-10 md:w-14 md:h-14" src={service.icon} width={70} height={70} alt={service.title} />
+                      <Image className="w-11 h-11 md:w-18 md:h-18" src={service.icon} width={70} height={70} alt={service.title} />
                     </div>
                     <span className="font-medium text-center text-xs md:text-[14px]">{service.title}</span>
                   </div>
