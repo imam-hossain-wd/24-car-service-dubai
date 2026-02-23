@@ -15,7 +15,7 @@ export function WhatsAppButton({ className = "", ...props }) {
       asChild
       className={cn(
         "sm:w-[160px] md:w-[160px] gap-2 bg-[#25D366] hover:bg-[#128C7E]",
-        "py-2 text-sm md:py-4 md:text-base lg:py-6 lg:text-lg",
+        "py-2 text-sm md:py-4 md:text-base lg:py-5 lg:text-lg",
         className
       )}
       {...props}

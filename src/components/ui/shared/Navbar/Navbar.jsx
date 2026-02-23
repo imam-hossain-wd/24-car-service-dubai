@@ -13,7 +13,8 @@ import { SiteConfig } from "@/config/site";
 import { bandlogo } from "@/utils/assets";
 import NavDrawer from "./NavDrawer";
 import Image from "next/image";
-import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/BookingAppointmentButton";
+import { Button } from "../../button";
+// import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/BookingAppointmentButton";
 
 
 
@@ -23,7 +24,7 @@ const {
   location,
   socialLinks,
   navItems,
-  callLink,
+  numberCallLink,
   displayNumber
 } = SiteConfig;
 
@@ -37,7 +38,7 @@ export function Navbar() {
         <div className="hidden md:block border-b bg-primary/10 text-sm">
           <div className="container mx-auto py-2 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <Link href={callLink} className="flex items-center gap-1 hover:underline">
+              <Link href={numberCallLink} className="flex items-center gap-1 hover:underline">
                 <Phone className="h-4 w-4 text-primary" />
                 <span>{displayNumber}</span>
               </Link>
@@ -94,8 +95,13 @@ export function Navbar() {
             ))}
           </nav>
 
-          <BookAppointmentButton  className="bg-primary"/>
+          {/* <BookAppointmentButton  className="bg-primary"/> */}
           {/* Mobile Menu Button */}
+
+        <Link href="/book-appointment">
+          <Button>
+            Book Appointment
+          </Button></Link>
           <NavDrawer />
         </div>
       </header>

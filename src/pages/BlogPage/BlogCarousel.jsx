@@ -3,8 +3,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import blogData from '../../data/blogData'
 import Link from 'next/link';
+import { blogs } from '@/data/blogs';
 
 export default function BlogCarousel (){
   return (
@@ -21,7 +21,7 @@ export default function BlogCarousel (){
         1280: { slidesPerView: 3 },
       }}
     >
-      {blogData.blogs.map((blog) => (
+      {blogs.map((blog) => (
         <SwiperSlide key={blog.id}>
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full mb-3  mx-auto">
             <img

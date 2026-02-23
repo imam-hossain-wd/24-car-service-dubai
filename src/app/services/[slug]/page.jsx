@@ -1,12 +1,15 @@
 
 import ServiceDetailsPage from '@/pages/ServicePage/ServiceDetailsPage'
-import servicesData from '../../../data/services.json'
+import { notFound } from 'next/navigation'
+import { services } from '@/data/services';
 
 
 export default async function ServiceDetailPage({ params }) {
-  const service = servicesData.services.find(
-    (s) => s.slug === params.slug
-  ) 
+
+  const { slug } = await params;
+  const service = services.find((s) => s?.slug === slug)
+
+  console.log(service, 'service detail page--')
 
   if (!service) {
     return notFound()

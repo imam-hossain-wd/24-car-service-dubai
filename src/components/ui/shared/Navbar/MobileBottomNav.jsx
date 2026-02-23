@@ -36,7 +36,7 @@ const mobileNavItems = [
   },
   {
     name: "Book Now",
-    href: "#",
+    href: "/book-appointment",
     icon: NotebookPen,
     bgColor: "bg-gradient-to-br from-green-500 to-emerald-500",
     activeBgColor: "bg-gradient-to-br from-green-600 to-emerald-600",
@@ -44,7 +44,7 @@ const mobileNavItems = [
   },
   {
     name: "Call",
-    href: SiteConfig.callLink,
+    href: SiteConfig.numberCallLink,
     icon: Phone,
     bgColor: "bg-gradient-to-br from-blue-500 to-cyan-500",
     activeBgColor: "bg-gradient-to-br from-blue-600 to-cyan-600",
@@ -52,7 +52,7 @@ const mobileNavItems = [
   },
   {
     name: "Whatsapp",
-    href: SiteConfig.whatsappLink,
+    href: SiteConfig.whatsappCallLink,
     icon: MessageCircle,
     bgColor: "bg-gradient-to-br from-green-600 to-lime-500",
     activeBgColor: "bg-gradient-to-br from-green-700 to-lime-600",
@@ -164,7 +164,7 @@ export function MobileBottomNav() {
 
             return (
               <Link
-                key={item.href}
+                key={item.name}
                 href={item.href}
                 className={cn(
                   "flex flex-col items-center justify-center w-full h-full transition-all duration-300 relative group",

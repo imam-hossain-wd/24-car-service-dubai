@@ -1,79 +1,288 @@
+// 'use client'
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import { CheckCircle2, Wrench, Droplet, Fan, Battery, Settings, NotebookPen, Info } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+
+
+
+
+// const getServiceIcon = (title) => {
+//   if (title.includes("Battery")) return <Battery className="h-8 w-8 text-yellow-500" />;
+//   if (title.includes("AC")) return <Fan className="h-8 w-8 text-blue-500" />;
+//   if (title.includes("Oil")) return <Droplet className="h-8 w-8 text-green-500" />;
+//   if (title.includes("Brake")) return <Wrench className="h-8 w-8 text-red-500" />;
+//   if (title.includes("Radiator")) return <Droplet className="h-8 w-8 text-blue-500" />;
+//   if (title.includes("Engine")) return <Settings className="h-8 w-8 text-purple-500" />;
+//   if (title.includes("ABS")) return <Wrench className="h-8 w-8 text-orange-500" />;
+//   if (title.includes("DenamoCraft")) return <Wrench className="h-8 w-8 text-primary" />;
+//   return <Wrench className="h-8 w-8 text-primary" />;
+// };
+
+// export const ServiceCard = ({ service }) => {
+
+//   return (
+//     <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 border-2 border-primary">
+//       <div className="relative h-44 overflow-hidden">
+//         <Image
+//           src={service?.service_image}
+//           alt='object'
+//           // alt={service.title}
+//           fill
+//           className="object-cover  transition-transform duration-500 group-hover:scale-105"
+//           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//         />
+//         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+//         <div className="absolute bottom-4 left-4 right-4">
+//           <div className="flex  items-center gap-3">
+//             <div className="rounded-lg bg-white p-2 shadow-sm">
+//               {getServiceIcon(service?.title)}
+//             </div>
+//             <h3 className="text-md font-bold text-white line-clamp-3">
+//               {service.title}
+//             </h3>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="p-6">
+//         <div className="mb-4 space-y-2 -mt-3">
+//           {service?.features?.slice(0, 4).map((feature, i) => (
+//             <div key={i} className="flex items-center gap-2">
+//               <CheckCircle2 className="h-4 w-4 text-green-500" />
+//               <span className="text-[13px]">{feature}</span>
+//             </div>
+//           ))}
+//         </div>
+
+//         <div className="flex  gap-3 items-center justify-between">
+//           <Button
+//             variant="outline"
+//             className="border-primary w-[47%] text-primary hover:bg-primary/10"
+//             asChild
+//           >
+//             <Link href={`/services/${service?.slug}`}>
+//             <Info />
+//               Details
+//             </Link>
+//           </Button>
+//           <div className="w-[70%]">
+//             {/* <Link href="/contact">
+//             <NotebookPen/>
+//               Book Now
+//             </Link> */}
+//             {/* <BookAppointmentButton className="w-36 md:w-30 bg-primary"/> */}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
 'use client'
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Wrench, Droplet, Fan, Battery, Settings, NotebookPen, Info } from "lucide-react";
+import {
+  CheckCircle2,
+  Wrench,
+  Droplet,
+  Fan,
+  Battery,
+  Settings,
+  NotebookPen,
+  Info,
+  Clock,
+  Shield,
+  Star,
+  ArrowRight,
+  Calendar,
+  Sparkles
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BookAppointmentButton } from "@/components/ui/shared/Buttons/BookingAppointmentButton/BookingAppointmentButton";
+import { cn } from "@/lib/utils";
 
+// Enhanced icon mapping with better visual hierarchy
+const getServiceIcon = (title, className = "h-6 w-6") => {
+  const iconProps = { className: cn(className, "transition-transform duration-300 group-hover:scale-110") };
 
-
-const getServiceIcon = (title) => {
-  if (title.includes("Battery")) return <Battery className="h-8 w-8 text-yellow-500" />;
-  if (title.includes("AC")) return <Fan className="h-8 w-8 text-blue-500" />;
-  if (title.includes("Oil")) return <Droplet className="h-8 w-8 text-green-500" />;
-  if (title.includes("Brake")) return <Wrench className="h-8 w-8 text-red-500" />;
-  if (title.includes("Radiator")) return <Droplet className="h-8 w-8 text-blue-500" />;
-  if (title.includes("Engine")) return <Settings className="h-8 w-8 text-purple-500" />;
-  if (title.includes("ABS")) return <Wrench className="h-8 w-8 text-orange-500" />;
-  if (title.includes("DenamoCraft")) return <Wrench className="h-8 w-8 text-primary" />;
-  return <Wrench className="h-8 w-8 text-primary" />;
+  if (title.includes("Battery")) return <Battery {...iconProps} className={cn(iconProps.className, "text-amber-500")} />;
+  if (title.includes("AC") || title.includes("Air")) return <Fan {...iconProps} className={cn(iconProps.className, "text-sky-500")} />;
+  if (title.includes("Oil")) return <Droplet {...iconProps} className={cn(iconProps.className, "text-emerald-500")} />;
+  if (title.includes("Brake")) return <Wrench {...iconProps} className={cn(iconProps.className, "text-rose-500")} />;
+  if (title.includes("Radiator")) return <Droplet {...iconProps} className={cn(iconProps.className, "text-blue-500")} />;
+  if (title.includes("Engine")) return <Settings {...iconProps} className={cn(iconProps.className, "text-violet-500")} />;
+  if (title.includes("ABS")) return <Wrench {...iconProps} className={cn(iconProps.className, "text-orange-500")} />;
+  if (title.includes("DenamoCraft")) return <Sparkles {...iconProps} className={cn(iconProps.className, "text-primary")} />;
+  return <Wrench {...iconProps} className={cn(iconProps.className, "text-primary")} />;
 };
 
-export const ServiceCard = ({ service }) => {
-  
+// Service badge component for better visual hierarchy
+const ServiceBadge = ({ children, className }) => (
+  <span className={cn(
+    "inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-white/90 backdrop-blur-sm shadow-sm",
+    className
+  )}>
+    {children}
+  </span>
+);
+
+export const ServiceCard = ({ service, priority = false }) => {
+  // Default image if none provided
+  const imageUrl = service?.service_image || '/images/default-service.jpg';
+
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all hover:shadow-xl hover:-translate-y-1 border-2 border-primary">
-      <div className="relative h-44 overflow-hidden">
+    <div className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-gray-100/80 hover:border-primary/20">
+
+      {/* Premium Gradient Overlay on Hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl pointer-events-none" />
+
+      {/* Image Container with Modern Design */}
+      <div className="relative h-48 sm:h-52 md:h-56 lg:h-48 xl:h-52 overflow-hidden">
+        {/* Background Image */}
         <Image
-          src={service?.service_image}
-          alt='object'
-          // alt={service.title}
+          src={imageUrl}
+          alt={service?.title || "Car service"}
           fill
-          className="object-cover  transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          priority={priority}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4">
-          <div className="flex  items-center gap-3">
-            <div className="rounded-lg bg-white p-2 shadow-sm">
-              {getServiceIcon(service?.title)}
+
+        {/* Multi-layer Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+        {/* Top Badges */}
+        <div className="absolute top-3 left-3 right-3 flex justify-between items-start">
+          <ServiceBadge className="bg-primary text-white border-0 shadow-lg">
+            <Star className="h-3 w-3 fill-white" />
+            Popular
+          </ServiceBadge>
+          <ServiceBadge className="bg-white/95 text-gray-700 border border-gray-200">
+            <Clock className="h-3 w-3 text-primary" />
+            24/7 Available
+          </ServiceBadge>
+        </div>
+
+        {/* Title Section - Modern Card Header */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <div className="flex items-end gap-3">
+            {/* Icon Circle with Glass Effect */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/20 rounded-xl blur-md group-hover:blur-lg transition-all duration-500" />
+              <div className="relative bg-white/95 backdrop-blur-md p-2.5 rounded-xl shadow-xl border border-white/50 group-hover:scale-110 transition-transform duration-300">
+                {getServiceIcon(service?.title, "h-6 w-6 sm:h-7 sm:w-7")}
+              </div>
             </div>
-            <h3 className="text-md font-bold text-white line-clamp-3">
+
+            {/* Title */}
+            <h3 className="text-md md:text-lg font-bold text-white leading-tight flex-1">
               {service.title}
             </h3>
           </div>
         </div>
       </div>
 
-      <div className="p-6">
-        <div className="mb-4 space-y-2 -mt-3">
+      {/* Content Section */}
+      <div className="p-4 sm:p-5 md:p-4">
+        {/* Features List with Modern Design */}
+        <div className="space-y-1.5 mb-3">
           {service?.features?.slice(0, 4).map((feature, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-green-500" />
-              <span className="text-[13px]">{feature}</span>
+            <div key={i} className="flex items-start gap-2.5 group/feature">
+              <div className="mt-0.5 relative">
+                <div className="absolute inset-0 bg-green-500/20 rounded-full blur-sm group-hover/feature:blur-md transition-all" />
+                <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 relative z-10 group-hover/feature:scale-110 transition-transform" />
+              </div>
+              <span className="text-xs sm:text-sm text-gray-600 group-hover/feature:text-gray-900 transition-colors flex-1 leading-relaxed">
+                {feature}
+              </span>
             </div>
           ))}
         </div>
 
-        <div className="flex  gap-3 items-center justify-between">
+        {/* Price or Additional Info (Optional) */}
+        {service?.price && (
+          <div className="mb-4 flex items-center justify-between bg-gray-50 p-2 rounded-lg border border-gray-100">
+            <span className="text-xs text-gray-500">Starting from</span>
+            <span className="text-lg font-bold text-primary">{service.price}</span>
+          </div>
+        )}
+
+        {/* Action Buttons - Modern Split Design */}
+        <div className="flex gap-3">
           <Button
             variant="outline"
-            className="border-primary w-[47%] text-primary hover:bg-primary/10"
+            className="flex-1 border-gray-200 hover:border-primary bg-white hover:bg-primary/5 text-gray-700 hover:text-primary transition-all duration-300 group/btn h-9"
             asChild
           >
-            <Link href={`/services/${service?.slug}`}>
-            <Info />
-              Details
+            <Link href={`/services/${service?.slug}`} className="flex items-center justify-center gap-2">
+              <Info className="h-4 w-4 group-hover/btn:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm font-medium">Details</span>
             </Link>
           </Button>
-          <div className="w-[70%]">
-            {/* <Link href="/contact">
-            <NotebookPen/>
-              Book Now
-            </Link> */}
-            <BookAppointmentButton className="w-36 md:w-30 bg-primary"/>
+
+          <Button
+            className="flex-[1.5] bg-primary hover:bg-primary/90 text-white shadow-md hover:shadow-xl transition-all duration-300 group/btn h-9"
+            asChild
+          >
+            <Link href="/book-appointment" className="flex items-center justify-center gap-2">
+              <Calendar className="h-4 w-4 group-hover/btn:rotate-12 transition-transform" />
+              <span className="text-xs sm:text-sm font-medium">Book Now</span>
+              <ArrowRight className="h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </div>
+
+        {/* Trust Badge (Optional) */}
+        {/* <div className="mt-4 flex items-center gap-3 text-[10px] sm:text-xs text-gray-400 border-t border-gray-100 pt-3">
+          <div className="flex items-center gap-1">
+            <Shield className="h-3 w-3 text-primary" />
+            <span>Warranty Included</span>
           </div>
+          <div className="flex items-center gap-1">
+            <Clock className="h-3 w-3 text-primary" />
+            <span>Same Day Service</span>
+          </div>
+        </div> */}
+      </div>
+
+      {/* Premium Corner Accent */}
+      <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">
+        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary/20 to-transparent rotate-45 translate-x-8 -translate-y-8 group-hover:translate-x-6 group-hover:-translate-y-6 transition-transform duration-700" />
+      </div>
+    </div>
+  );
+};
+
+// Optional: Grid Container Component for better organization
+export const ServiceGrid = ({ children, className }) => {
+  return (
+    <div className={cn(
+      "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6",
+      className
+    )}>
+      {children}
+    </div>
+  );
+};
+
+// Optional: Skeleton Loader for better UX
+export const ServiceCardSkeleton = () => {
+  return (
+    <div className="rounded-2xl bg-white shadow-lg border border-gray-100 overflow-hidden animate-pulse">
+      <div className="h-48 bg-gray-200" />
+      <div className="p-5 space-y-4">
+        <div className="h-4 bg-gray-200 rounded w-3/4" />
+        <div className="space-y-2">
+          {[1, 2, 3].map(i => (
+            <div key={i} className="h-3 bg-gray-200 rounded w-full" />
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <div className="h-10 bg-gray-200 rounded flex-1" />
+          <div className="h-10 bg-gray-200 rounded flex-[1.5]" />
         </div>
       </div>
     </div>

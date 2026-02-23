@@ -1,7 +1,7 @@
 'use client'
 import Head from 'next/head';
 import BlogCarousel from './BlogCarousel';
-// import dynamic from 'next/dynamic';
+
 
 
 // const BlogCarousel = dynamic(() => import('@/pages/BlogPage/BlogCarousel'), { ssr: false });

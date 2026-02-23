@@ -2,7 +2,7 @@
 import { SiteConfig } from "@/config/site";
 import { Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
-import { BookAppointmentButton } from "../Buttons/BookingAppointmentButton/BookingAppointmentButton";
+
 
 export function FloatingButton() {
   const {
@@ -22,7 +22,7 @@ export function FloatingButton() {
           <span className="text-sm">Call Now</span>
         </Link>
 
-        <BookAppointmentButton className="w-[35%] h-full rounded-none bg-white text-black" />
+        {/* <BookAppointmentButton className="w-[35%] h-full rounded-none bg-white text-black" /> */}
 
         {/* WhatsApp Button - 50% width */}
         <Link
