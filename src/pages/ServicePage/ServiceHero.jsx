@@ -1,15 +1,13 @@
 // components/view/ServicesHero/ServicesHero.tsx
 import React from "react";
-import Link from "next/link";
-import { Wrench, Clock, Shield, Star, Phone, MapPin, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Wrench, Clock, Shield, Star } from "lucide-react";
+
 
 export default function ServicesHero() {
   return (
     <><section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
           {/* Background Pattern */}
           <div className="absolute inset-0">
-              {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=" />60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div> */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
       </div><div className="container relative z-10 mx-auto px-4 py-8">
               <div className="max-w-4xl mx-auto text-center">
@@ -54,26 +52,6 @@ export default function ServicesHero() {
                           <span className="text-sm">4.9/5 Rating</span>
                       </div>
                   </div>
-
-                  {/* CTA Buttons */}
-                  {/* <div className="flex flex-wrap items-center justify-center gap-4">
-                      <Button
-                          size="lg"
-                          className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0 shadow-lg shadow-emerald-500/25 hover:shadow-xl transition-all duration-300 px-8 h-14 text-base"
-                      >
-                          <Phone className="mr-2 h-5 w-5" />
-                          Call for Emergency
-                      </Button>
-
-                      <Button
-                          size="lg"
-                          variant="outline"
-                          className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/30 px-8 h-14 text-base"
-                      >
-                          View All Services
-                          <ChevronRight className="ml-2 h-5 w-5" />
-                      </Button>
-                  </div> */}
               </div>
           </div>
     </section>

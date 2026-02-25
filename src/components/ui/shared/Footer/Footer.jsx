@@ -272,7 +272,7 @@ function FooterLinks({ title, icon: Icon, items, type }) {
           const label =
             type === "services"
               ? item.name
-              : item.title || item.name;
+              : item.name;
 
           return (
             <Link

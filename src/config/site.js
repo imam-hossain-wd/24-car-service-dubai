@@ -133,6 +133,30 @@ export const SiteConfig = {
       slug: "/services/car-battery-replacement-dubai",
     },
     {
+      name: "Car Jump Start Service Dubai",
+      slug: "/services/Car Jump Start Service Dubai",
+    },
+      {
+      name: "Car AC Repair Dubai",
+      slug: "/services/car-ac-repair-dubai",
+    },
+      {
+      name: "Alternator Repair Dubai",
+      slug: "/services/alternator-repair-dubai",
+    },
+        {
+      name: "Car Starter Motor Repair Dubai",
+      slug: "/services/car-starter-motor-repair-dubai",
+    },
+        {
+      name: "Car Raditor Repair Dubai",
+      slug: "/services/car-radiator-repair-and-replacement-dubai",
+    },
+        {
+      name: "Fuel Pump Repair Dubai",
+      slug: "/services/fuel-pump-repair-dubaii",
+    },
+    {
       name: "Car Brake Pad Repair Dubai",
       slug: "/services/car-brake-pad-repair-dubai",
     },
@@ -141,21 +165,37 @@ export const SiteConfig = {
       slug: "/services/engine-oil-change-dubai",
     },
     {
-      name: "Air Conditioner Repair Dubai",
-      slug: "/services/air-conditioner-repair-dubai",
-    },
-    {
-      name: "Car Radiator Service Dubai",
-      slug: "/services/car-radiator-service-dubai",
-    },
-    {
-      name: "Gearbox Repair & Service Dubai",
-      slug: "/services/gearbox-repair-service-dubai",
-    },
-    {
       name: "Car Maintenance",
       slug: "/services/car-maintenance-dubai",
     },
+    {
+      name: "ABS System Repair Dubai",
+      slug: "/services/abs-system-repair-dubai",
+    },
+  
+    {
+      name: "Auto Repair Service Dubai",
+      slug: "/services/auto-repair-service-dubai",
+    },
+    {
+      name: "Car Mechanic Service Dubai",
+      slug: "/services/car-mechanic-service-dubai",
+    },
+    {
+      name: "Emergency Car Repair Dubai",
+      slug: "/services/emergency-car-repair-dubai",
+    },
+    
+    {
+      name: "Onsite Car Repair Dubai",
+      slug: "/services/onsite-car-repair-dubai",
+    },
+
+    {
+      name: "Oil Change Service Dubai",
+      slug: "/services/oil-change-service-dubai",
+    }
+  
   ],
 
   navItems: [

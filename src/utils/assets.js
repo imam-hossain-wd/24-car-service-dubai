@@ -23,7 +23,7 @@ import onsiteCarRepair from '../assets/services/onsite-car-repair.jpg'
 import carDetailing  from '../assets/services/car-detailing.jpg'
 import transmission from '../assets/services/transmission.jpg'
 import engineOil from '../assets/services/engine-oil.jpg'
-import gearOil from '../assets/services/gear-oil.jpg'
+import carMaintenance from '../assets/services/car-maintenance.jpg'
 
 
 export const images = {
@@ -50,7 +50,8 @@ export const services = {
     carDetailing,
     transmission,
     engineOil,
-    gearOil
+    // gearOil,
+    carMaintenance
 
 }
 
