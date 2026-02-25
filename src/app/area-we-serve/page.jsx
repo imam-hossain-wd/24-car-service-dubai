@@ -12,6 +12,16 @@
 import ServiceAreas from "@/components/view/ServiceArea/ServiceAreas";
 import { Button } from "@/components/ui/button";
 import { MapPin, ShieldCheck, Clock, Phone } from "lucide-react";
+import { SiteConfig } from "@/config/site";
+
+export const metadata = {
+  title: "Areas We Serve in Dubai | Mobile Car Repair Near You",
+  description: "24 Car Service Dubai provides 24/7 mobile car repair across all areas of Dubai including Al Mankhool, Deira, Dubai Marina, Downtown and more. Fast onsite service near you.",
+  alternates: {
+    canonical: `${SiteConfig.url}/area-we-serve`,
+  },
+};
+
 
 export default function AreasWeServe() {
   return (
@@ -23,7 +33,7 @@ export default function AreasWeServe() {
             Areas We <span className="text-yellow-300">Proudly Serve</span>
           </h1>
           <p className="text-lg text-white/90 mb-8">
-            24 Car Service Dubai provides fast, reliable, and 24/7 on-demand car repair 
+            24 Car Service Dubai provides fast, reliable, and 24/7 on-demand car repair
             and maintenance services across all neighborhoods in Dubai.
           </p>
           <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold">

@@ -4,12 +4,15 @@ import { notFound } from 'next/navigation'
 import { services } from '@/data/services';
 
 
-export default async function ServiceDetailPage({ params }) {
 
+export const metadata = {
+  title: "",
+  description: "",
+};
+
+export default async function ServiceDetailPage({ params }) {
   const { slug } = await params;
   const service = services.find((s) => s?.slug === slug)
-
-  console.log(service, 'service detail page--')
 
   if (!service) {
     return notFound()

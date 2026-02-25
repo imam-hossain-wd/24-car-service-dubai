@@ -17,13 +17,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Best Car Repair and Services in Dubai || 24 Car Service Dubai",
-  description: "One of the best car repair and servicing company in dubai || 24 Car Service Dubai",
-  verification: {
-    google: "BsO6PRJgg4HaeNY2nrVIOo5gNAbIu9_dlXNlO-XHY_U"
-  }
-};
+// export const metadata = {
+//   title: "Best Car Repair and Services in Dubai || 24 Car Service Dubai",
+//   description: "One of the best car repair and servicing company in dubai || 24 Car Service Dubai",
+//   verification: {
+//     google: "BsO6PRJgg4HaeNY2nrVIOo5gNAbIu9_dlXNlO-XHY_U"
+//   }
+// };
 
 export default function RootLayout({ children }) {
   return (
