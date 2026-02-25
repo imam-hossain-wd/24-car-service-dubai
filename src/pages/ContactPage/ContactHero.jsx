@@ -19,11 +19,11 @@ export default function ContactHero() {
       <div className="container relative z-10 h-full mx-auto px-4">
         <div className="flex h-full flex-col justify-center max-w-3xl">
           {/* Brand Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#007A55]/20 backdrop-blur-sm px-4 py-2 rounded-full border border-[#007A55]/30 mb-6 w-fit">
+          {/* <div className="inline-flex items-center gap-2 bg-[#007A55]/20 backdrop-blur-sm px-4 py-2 rounded-full border border-[#007A55]/30 mb-6 w-fit mt-10">
             <Shield className="h-4 w-4 text-[#007A55]" />
             <span className="text-sm font-semibold text-white">Saiful Car Repair & Battery Fixing Dubai</span>
             <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full text-white">24 Car Service Dubai</span>
-          </div>
+          </div> */}
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
@@ -32,7 +32,7 @@ export default function ContactHero() {
           </h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
+          <p className="text-md text-white/90 mb-6 leading-relaxed">
             Saiful Car Repair & Battery Fixing Dubai (24 Car Service Dubai) is available 24/7 
             to assist you anywhere in the city. Whether you need car battery replacement, 
             emergency jump start, AC repair, or onsite mechanical service, our mobile 
@@ -60,29 +60,6 @@ export default function ContactHero() {
               </div>
               <p className="text-white/80 text-sm">Open 24 Hours — Saturday to Friday</p>
             </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <CallNowButton />
-            <WhatsAppButton />
-            <Button 
-              variant="outline" 
-              className="bg-transparent border-white text-white hover:bg-white/10 h-12 px-6"
-            >
-              <Mail className="mr-2 h-4 w-4" />
-              Email Us
-            </Button>
-          </div>
-
-          {/* Trust Badge */}
-          <div className="flex items-center gap-4 mt-6">
-            <div className="flex items-center gap-1">
-              {[1,2,3,4,5].map((star) => (
-                <Star key={star} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
-              ))}
-            </div>
-            <span className="text-white/80 text-sm">Trusted by 5000+ customers across Dubai</span>
           </div>
         </div>
       </div>
