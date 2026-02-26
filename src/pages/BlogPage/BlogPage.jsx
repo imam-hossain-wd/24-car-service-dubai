@@ -58,6 +58,7 @@ import {
   AlertCircle
 } from "lucide-react";
 import { blogs } from "@/data/blogs";
+import BlogHero from "@/components/view/Hero/BlogHero";
 
 // Category icons mapping
 const categoryIcons = {
@@ -84,87 +85,10 @@ export default function BlogPage() {
   return (
     <main className="bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0">
-          {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div> */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400"></div>
-      </div>
-
-      <div className="container relative mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 mb-6">
-            <BookOpen className="h-4 w-4 text-emerald-400" />
-            <span className="text-sm font-medium text-white/90">
-              Expert Automotive Knowledge
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Car Repair{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              Blog & Guides
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Expert advice, maintenance tips, and guides to keep your car running smoothly
-            in Dubai's challenging climate.
-          </p>
-
-          {/* Stats */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mt-8">
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-emerald-400/10 rounded-lg">
-                <BookOpen className="h-5 w-5 text-emerald-400" />
-              </div>
-              <div className="text-left">
-                <div className="text-2xl font-bold text-white">{blogs.length}+</div>
-                <div className="text-xs text-white/60">Expert Articles</div>
-              </div>
-            </div>
-            <div className="w-px h-8 bg-white/20"></div>
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-emerald-400/10 rounded-lg">
-                <User className="h-5 w-5 text-emerald-400" />
-              </div>
-              <div className="text-left">
-                <div className="text-2xl font-bold text-white">5+</div>
-                <div className="text-xs text-white/60">Expert Authors</div>
-              </div>
-            </div>
-            <div className="w-px h-8 bg-white/20"></div>
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-emerald-400/10 rounded-lg">
-                <TrendingUp className="h-5 w-5 text-emerald-400" />
-              </div>
-              <div className="text-left">
-                <div className="text-2xl font-bold text-white">10k+</div>
-                <div className="text-xs text-white/60">Monthly Readers</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mt-10">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search articles, guides, or topics..."
-                className="w-full h-14 pl-14 pr-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-emerald-400/50 focus:bg-white/10 transition-colors"
-              />
-              <Search className="absolute left-5 top-1/2 -translate-y-1/2 h-5 w-5 text-white/40" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+ <BlogHero/>
 
       {/* Categories Section */ }
-  <section className="py-12 border-b border-slate-200">
+  {/* <section className="py-12 border-b border-slate-200">
     <div className="container mx-auto px-4">
       <div className="flex flex-wrap items-center justify-center gap-3">
         <span className="text-sm font-medium text-slate-600 mr-2">Popular Topics:</span>
@@ -185,7 +109,7 @@ export default function BlogPage() {
         })}
       </div>
     </div>
-  </section>
+  </section> */}
 
   {/* Featured Article Section */ }
   <section className="py-16">

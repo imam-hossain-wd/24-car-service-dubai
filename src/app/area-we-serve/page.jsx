@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, ShieldCheck, Clock, Phone } from "lucide-react";
 import { SiteConfig } from "@/config/site";
 import ServiceAreasSchema from "@/seo/schemas/ServiceAreasSchema";
+import AreasHero from "@/components/view/Hero/AreasHero";
 
 export const metadata = {
   title: "Areas We Serve in Dubai | Mobile Car Repair Near You",
@@ -22,22 +23,8 @@ export default function AreasWeServe() {
       <ServiceAreasSchema />
       <main className="bg-white">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-primary/90 to-primary/70 text-white py-20">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Areas We <span className="text-yellow-300">Proudly Serve</span>
-            </h1>
-            <p className="text-lg text-white/90 mb-8">
-              24 Car Service Dubai provides fast, reliable, and 24/7 on-demand car repair
-              and maintenance services across all neighborhoods in Dubai.
-            </p>
-            <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold">
-              <Phone className="w-5 h-5 mr-2" /> Call Now for Instant Help
-            </Button>
-          </div>
-          {/* Subtle background overlay */}
-          <div className="absolute inset-0 bg-black/20" />
-        </section>
+       
+       <AreasHero />
 
         {/* Service Areas Component */}
         <section className="py-16">

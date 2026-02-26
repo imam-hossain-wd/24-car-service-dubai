@@ -1,12 +1,12 @@
-
 import { ServiceCard } from "@/components/view/Card/ServiceCard";
+import ServicesHero from "@/components/view/Hero/ServicesHero";
 import { services } from "@/data/services";
-import ServicesHero from "./ServiceHero";
+
 
 export default function ServicePage() {
   return (
     <div>
-        <ServicesHero />
+      <ServicesHero />
       <div className="container py-12 mx-auto">
 
         <div className="mb-12 text-center">

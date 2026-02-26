@@ -1,25 +1,24 @@
 // components/view/ServiceArea/ServiceAreas.tsx
 "use client"
-
 import { Button } from '@/components/ui/button'
 import { SiteConfig } from '@/config/site';
-import { MapPin, Clock, Phone, Navigation, Star, Zap, CheckCircle } from 'lucide-react'
+import { MapPin, Clock, Phone, Zap } from 'lucide-react'
 import { useState } from 'react';
 import Link from 'next/link';
 
 export default function ServiceAreas() {
-    const { serviceAreas, city, country } = SiteConfig;
+    const { serviceAreas, city, country, operatingHours } = SiteConfig;
     const [selectedArea, setSelectedArea] = useState("");
 
-    const operatingHours = [
-        { day: 'Saturday', hours: '24 Hours' },
-        { day: 'Sunday', hours: '24 Hours' },
-        { day: 'Monday', hours: '24 Hours' },
-        { day: 'Tuesday', hours: '24 Hours' },
-        { day: 'Wednesday', hours: '24 Hours' },
-        { day: 'Thursday', hours: '24 Hours' },
-        { day: 'Friday', hours: '24 Hours' }
-    ];
+    // const operatingHours = [
+    //     { day: 'Saturday', hours: '24 Hours' },
+    //     { day: 'Sunday', hours: '24 Hours' },
+    //     { day: 'Monday', hours: '24 Hours' },
+    //     { day: 'Tuesday', hours: '24 Hours' },
+    //     { day: 'Wednesday', hours: '24 Hours' },
+    //     { day: 'Thursday', hours: '24 Hours' },
+    //     { day: 'Friday', hours: '24 Hours' }
+    // ];
 
     const stats = [
         { value: '15min', label: 'Avg. Response Time' },
@@ -86,8 +85,8 @@ export default function ServiceAreas() {
                                         <h3 className="font-semibold text-sm text-gray-900">
                                             {area.name}
                                         </h3>
-                                        <p className="text-xs text-gray-500 mt-1">
-                                            {city}
+                                        <p className="text-xs text-gray-500">
+                                            {city} , UAE
                                         </p>
                                     </div>
                                 </div>

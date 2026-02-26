@@ -1,3 +1,4 @@
+import BatteryReplacementSchema from "@/seo/schemas/services/BatteryReplacementSchema";
 import { locations } from "../serviceArea";
 
 export const batteryreplacement = {

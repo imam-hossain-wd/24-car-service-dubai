@@ -1,14 +1,19 @@
-
 import ServiceDetailsPage from '@/pages/ServicePage/ServiceDetailsPage'
 import { notFound } from 'next/navigation'
-import { services } from '@/data/services';
+import { services } from '@/data/services'
+import ServiceSchema from '@/components/schemas/ServiceSchema'
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const service = services.find((s) => s?.slug === slug);
 
+  if (!service) return {};
 
-export const metadata = {
-  title: "",
-  description: "",
-};
+  return {
+    title: service.metaTitle,
+    description: service.metaDescription,
+  };
+}
 
 export default async function ServiceDetailPage({ params }) {
   const { slug } = await params;
@@ -18,5 +23,8 @@ export default async function ServiceDetailPage({ params }) {
     return notFound()
   }
 
-  return <ServiceDetailsPage service={service} />
+  return <>
+    <ServiceSchema service={service} />
+    <ServiceDetailsPage service={service} />
+  </>
 }

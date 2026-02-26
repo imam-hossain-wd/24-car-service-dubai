@@ -23,21 +23,11 @@ export function Footer() {
     services,
     footerhrefs,
     socialLinks,
-    location
+    location,
+    gbp
   } = SiteConfig;
 
-  // GBP Information
-  const gbp = {
-    name: "Saiful Car Repair & Battery Fixing Dubai",
-    brand: "24 Car Service Dubai",
-    address: "Al Mankhool, Dubai, United Arab Emirates",
-    phone: "+971545695980",
-    website: "https://www.24carservicedubai.com",
-    cid: "13525343863552602330",
-    rating: "4.9",
-    reviews: "500+",
-    mapLink: "https://maps.app.goo.gl/XawQTNC8rP9Yy88o8"
-  };
+
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-950 via-[#007A55] to-[#00943B] text-white overflow-hidden">
@@ -272,7 +262,7 @@ function FooterLinks({ title, icon: Icon, items, type }) {
           const label =
             type === "services"
               ? item.name
-              : item.name;
+              : item.name || item.title;
 
           return (
             <Link

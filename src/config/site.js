@@ -12,7 +12,6 @@ export const SiteConfig = {
   whatsappCallLink: "https://wa.me/971545695980",
   location: "Al Mankhool , Dubai - UAE",
   coordinate: "25.2256355,55.1905546",
-
   // Google Business Profile Information
   gbp: {
     name: "Saiful Car Repair & Battery Fixing Dubai",
@@ -126,7 +125,6 @@ export const SiteConfig = {
 
   city: "Dubai",
   country: "UAE",
-
   services: [
     {
       name: "Car Battery Replacement Dubai",
@@ -136,23 +134,23 @@ export const SiteConfig = {
       name: "Car Jump Start Service Dubai",
       slug: "/services/Car Jump Start Service Dubai",
     },
-      {
+    {
       name: "Car AC Repair Dubai",
       slug: "/services/car-ac-repair-dubai",
     },
-      {
+    {
       name: "Alternator Repair Dubai",
       slug: "/services/alternator-repair-dubai",
     },
-        {
+    {
       name: "Car Starter Motor Repair Dubai",
       slug: "/services/car-starter-motor-repair-dubai",
     },
-        {
+    {
       name: "Car Raditor Repair Dubai",
       slug: "/services/car-radiator-repair-and-replacement-dubai",
     },
-        {
+    {
       name: "Fuel Pump Repair Dubai",
       slug: "/services/fuel-pump-repair-dubaii",
     },
@@ -172,7 +170,7 @@ export const SiteConfig = {
       name: "ABS System Repair Dubai",
       slug: "/services/abs-system-repair-dubai",
     },
-  
+
     {
       name: "Auto Repair Service Dubai",
       slug: "/services/auto-repair-service-dubai",
@@ -185,17 +183,14 @@ export const SiteConfig = {
       name: "Emergency Car Repair Dubai",
       slug: "/services/emergency-car-repair-dubai",
     },
-    
     {
       name: "Onsite Car Repair Dubai",
       slug: "/services/onsite-car-repair-dubai",
     },
-
     {
       name: "Oil Change Service Dubai",
       slug: "/services/oil-change-service-dubai",
     }
-  
   ],
 
   navItems: [
@@ -229,8 +224,6 @@ export const SiteConfig = {
   ],
 };
 
-
-// import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 
 // export const SiteConfig = {
 //   authorName: "Md Saiful Islam",

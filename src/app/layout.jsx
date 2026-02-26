@@ -25,14 +25,12 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StructuredData />
+        <SpeedInsights />
+        <Analytics />
         <div>
           <Navbar />
           {children}
-          <SpeedInsights />
-          <Analytics />
-          {/* <FloatingButtons /> */}
           <MobileBottomNav />
-          {/* <FloatingButton /> */}
           <Footer />
         </div>
       </body>

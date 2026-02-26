@@ -5,6 +5,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import Link from 'next/link';
 import { blogs } from '@/data/blogs';
+import Image from 'next/image';
 
 export default function BlogCarousel() {
   return (
@@ -38,7 +39,10 @@ export default function BlogCarousel() {
             {blogs.map((blog) => (
               <SwiperSlide key={blog.id}>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full mb-3  mx-auto">
-                  <img
+                  <Image
+                    width={200}
+                    height={200}
+                    quality={100}
                     src={blog.image}
                     alt={blog.title}
                     className="w-full h-40 object-cover"

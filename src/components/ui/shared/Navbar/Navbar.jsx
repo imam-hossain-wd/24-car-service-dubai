@@ -100,7 +100,7 @@ export function Navbar() {
 
         <Link href="/book-appointment">
           <Button>
-            Book Appointment
+            Book Now
           </Button></Link>
           <NavDrawer />
         </div>
