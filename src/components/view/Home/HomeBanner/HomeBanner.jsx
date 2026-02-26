@@ -258,9 +258,7 @@ const homebanner = images.homebannere
 export default function HomeBanner() {
   return (
     <div className="relative overflow-hidden h-auto min-h-[50vh] md:min-h-[70vh]">
-      {/* Background Image - Similar to Contact Hero */}
       <div className="absolute inset-0">
-        {/* <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dmzcvexar/image/upload/v1752751674/24_car_service_contact_us_y2xjdv.webp')] bg-cover bg-center bg-no-repeat scale-110"></div> */}
         <div className="absolute inset-0">
           <Image
             src={homebanner}

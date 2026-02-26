@@ -8,15 +8,12 @@ import Reviews from '@/components/view/Reviews/Reviews'
 import { TrustedService } from '@/components/view/TrustedService/TrustedService'
 import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import React from 'react'
-import BlogPage from '../BlogPage/BlogPage'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
-import { PremiumServiceSlider } from '@/components/view/Card/ServiceScenarios'
-import { getLocalBusinessSchema } from '@/schemas/localBusinessSchema'
-import { getOrganizationSchema } from '@/schemas/organizationSchema'
-import ServicesSection from '@/components/Services'
-import GMBReviews from '@/components/view/GmbReviews/GmbReviews'
 import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
 import StillHaveAnyQuestions from '@/components/view/StillHaveAnyQuestions/StillHaveAnyQuestions'
+import BlogCarousel from '../BlogPage/BlogCarousel'
+import { PremiumServiceSlider } from '@/components/view/PremiumServiceSlider/PremiumServiceSlider'
+
 
 
 
@@ -26,8 +23,7 @@ export default function HomePage() {
     return (
         <div>
             <HomeBanner />
-            {/* <PremiumServiceSlider /> */}
-            {/* <ServicesSection /> */}
+            <PremiumServiceSlider />
             <FeaturedServices />
             {/* <GalleryCarousel />
             <VideoSlider /> */}
@@ -36,7 +32,8 @@ export default function HomePage() {
             {/* <GMBReviews /> */}
             <MapComponent />
             <GetTouch />
-            <BlogPage />
+            <BlogCarousel />
+            {/* <BlogPage /> */}
             <Reviews />
             <FAQSection />
             <ServiceAreas />

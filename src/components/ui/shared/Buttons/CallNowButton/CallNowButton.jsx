@@ -19,7 +19,7 @@ export function CallNowButton({ className = "", ...props }) {
       )}
       {...props}
     >
-      <a href={SiteConfig.callLink}>
+      <a href={SiteConfig.numberCallLink}>
         <Phone className="h-6 w-6" />
         <span>Call Now</span>
       </a>

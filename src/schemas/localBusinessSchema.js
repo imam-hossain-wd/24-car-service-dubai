@@ -9,7 +9,7 @@ export const getLocalBusinessSchema = () => {
     "url": "https://24CarServiceDubai.com/",
     "telephone": "+971568703512",
     "email": "mailto:carrepairsdubai@gmail.com",
-    "priceRange": "$$", // Adjust based on your pricing (e.g., $, $$, $$$)
+    "priceRange": "$$", 
     "description": "Your On-Demand Car Savior Anywhere, Anytime! We provide unparalleled 24/7 on-demand car services throughout Dubai, offering immediate, reliable, and professional assistance for all car repair and maintenance needs.",
     "address": {
       "@type": "PostalAddress",

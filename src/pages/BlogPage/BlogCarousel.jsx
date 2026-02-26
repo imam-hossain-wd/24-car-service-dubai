@@ -6,49 +6,67 @@ import 'swiper/css';
 import Link from 'next/link';
 import { blogs } from '@/data/blogs';
 
-export default function BlogCarousel (){
+export default function BlogCarousel() {
   return (
-    <Swiper
-      modules={[Autoplay]}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      loop={true}
-      spaceBetween={30}
-      breakpoints={{
-        320: { slidesPerView: 1 },
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-        1280: { slidesPerView: 3 },
-      }}
-    >
-      {blogs.map((blog) => (
-        <SwiperSlide key={blog.id}>
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full mb-3  mx-auto">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-6">
-              <div className="flex items-center text-sm text-gray-500 mb-2">
-                <span>{blog.date}</span>
-                <span className="mx-2">•</span>
-                <span>{blog.author}</span>
-              </div>
-              <h2 className="text-lg font-bold text-gray-800 mb-2 hover:text-primary transition-colors">
-                <a href={`/blog/${blog.slug}`}>{blog.title}</a>
-              </h2>
-              <Link
-                href={`/blog/${blog.slug}`}
-                className="inline-block px-4 py-1 text-sm bg-primary text-white rounded-lg hover:bg-primary transition-colors"
-              >
-                Read More
-              </Link>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+
+    <div className="bg-gray-50 py-4 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+            Car Repair <span className="text-primary">Blog</span>
+          </h1>
+          <p className="mt-4 text-xl text-gray-600">
+            Expert tips to keep your car running smoothly in Dubai’s heat.
+          </p>
+        </div>
+
+        <div className='w-[90%] mx-auto'>
+          {/* <BlogCarousel /> */}
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            spaceBetween={30}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 3 },
+            }}
+          >
+            {blogs.map((blog) => (
+              <SwiperSlide key={blog.id}>
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full mb-3  mx-auto">
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-6">
+                    <div className="flex items-center text-sm text-gray-500 mb-2">
+                      <span>{blog.date}</span>
+                      <span className="mx-2">•</span>
+                      <span>{blog.author}</span>
+                    </div>
+                    <h2 className="text-lg font-bold text-gray-800 mb-2 hover:text-primary transition-colors">
+                      <a href={`/blog/${blog.slug}`}>{blog.title}</a>
+                    </h2>
+                    <Link
+                      href={`/blog/${blog.slug}`}
+                      className="inline-block px-4 py-1 text-sm bg-primary text-white rounded-lg hover:bg-primary transition-colors"
+                    >
+                      Read More
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </div>
+
   );
 }
 

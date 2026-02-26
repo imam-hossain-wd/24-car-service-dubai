@@ -1,46 +1,30 @@
 // components/view/ContactHero/ContactHero.tsx
-import Link from 'next/link'
-import { Phone, Mail, MapPin, Clock, MessageCircle, Shield, Star } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { CallNowButton } from '@/components/ui/shared/Buttons/CallNowButton/CallNowButton'
-import { WhatsAppButton } from '@/components/ui/shared/Buttons/WhatsAppButton/WhatsAppButton'
+
+import { MapPin, Clock } from 'lucide-react'
 
 export default function ContactHero() {
   return (
-    <section className="relative h-[60vh] md:h-[70vh] min-h-[500px] w-full overflow-hidden">
-      {/* Background Image */}
+    <section className="relative h-[60vh] md:h-[60vh] min-h-[450px] w-full overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dmzcvexar/image/upload/v1752751674/24_car_service_contact_us_y2xjdv.webp')] bg-cover bg-center bg-no-repeat scale-110"></div>
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="container relative z-10 h-full mx-auto px-4">
         <div className="flex h-full flex-col justify-center max-w-3xl">
-          {/* Brand Badge */}
-          {/* <div className="inline-flex items-center gap-2 bg-[#007A55]/20 backdrop-blur-sm px-4 py-2 rounded-full border border-[#007A55]/30 mb-6 w-fit mt-10">
-            <Shield className="h-4 w-4 text-[#007A55]" />
-            <span className="text-sm font-semibold text-white">Saiful Car Repair & Battery Fixing Dubai</span>
-            <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full text-white">24 Car Service Dubai</span>
-          </div> */}
-
-          {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             Need Fast & Reliable{' '}
             <span className="text-[#007A55]">Car Repair</span> in Dubai?
           </h1>
-
-          {/* Description */}
           <p className="text-md text-white/90 mb-6 leading-relaxed">
-            Saiful Car Repair & Battery Fixing Dubai (24 Car Service Dubai) is available 24/7 
-            to assist you anywhere in the city. Whether you need car battery replacement, 
-            emergency jump start, AC repair, or onsite mechanical service, our mobile 
+            Saiful Car Repair & Battery Fixing Dubai (24 Car Service Dubai) is available 24/7
+            to assist you anywhere in the city. Whether you need car battery replacement,
+            emergency jump start, AC repair, or onsite mechanical service, our mobile
             technicians are ready to reach your location quickly.
           </p>
 
           {/* Contact Info Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-2">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-[#007A55] rounded-lg">

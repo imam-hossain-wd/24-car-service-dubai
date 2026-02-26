@@ -69,18 +69,6 @@ export default function StructuredData() {
                         "closes": "00:00"
                     }
                 ],
-                // "areaServed": [
-                //     { "@type": "City", "name": "Dubai" },
-                //     { "@type": "Neighborhood", "name": "Al Satwa" },
-                //     { "@type": "Neighborhood", "name": "Jumeirah" },
-                //     { "@type": "Neighborhood", "name": "Al Bada'a" },
-                //     { "@type": "Neighborhood", "name": "Al Jaddaf" },
-                //     { "@type": "Neighborhood", "name": "Al Karama" },
-                //     { "@type": "Neighborhood", "name": "Oud Metha" },
-                //     { "@type": "Neighborhood", "name": "Al Mankhool" },
-                //     { "@type": "Neighborhood", "name": "Al Jaffiliya" },
-                //     { "@type": "Neighborhood", "name": "Downtown Dubai" }
-                // ],
                 "areaServed": [
                     { "@type": "City", "name": "Dubai" },
                     { "@type": "AdministrativeArea", "name": "Al Mankhool" },

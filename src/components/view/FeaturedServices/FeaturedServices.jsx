@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function FeaturedServices() {
   return (
-    <div className="container py-4 md:py-8 mx-auto">
+    <div className="container py-6 mx-auto">
       <div className="text-center mb-6">
         {/* <Badge variant="outline" className="mb-4 bg-primary/10 text-primary">
             Our Services

@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteConfig } from "@/config/site";
+import Link from "next/link";
 
 
 function cn(...classes) {
@@ -20,14 +21,14 @@ export function WhatsAppButton({ className = "", ...props }) {
       )}
       {...props}
     >
-      <a
-        href={SiteConfig.whatsappLink}
+      <Link
+        href={SiteConfig.whatsappCallLink}
         target="_blank"
         rel="noopener noreferrer"
       >
         <MessageCircle className="h-6 w-6" />
         <span>WhatsApp</span>
-      </a>
+      </Link>
     </Button>
   );
 }
