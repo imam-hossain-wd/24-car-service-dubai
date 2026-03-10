@@ -3,6 +3,7 @@ import { blogImages } from "@/utils/assets";
 export const blogs = [
     {
         "id": 1,
+        "cardTitle":"Car Ac Repair",
         "slug": "car-ac-repair-dubai",
         "title": "Expert Car AC Repair in Dubai – Fast Mobile Cooling Service",
         "excerpt": "Car AC not cooling in Dubai heat? Discover fast mobile AC repair, gas refill and compressor fixes by certified technicians available 24/7.",
@@ -16,6 +17,7 @@ export const blogs = [
     },
     {
         "id": 2,
+        "cardTitle":"Car Battery Replacement",
         "slug": "car-battery-replacement-dubai",
         "title": "24/7 Car Battery Replacement in Dubai – Fast Mobile Installation",
         "excerpt": "Dead car battery in Dubai? Get quick mobile battery replacement at your location with warranty and professional installation.",
@@ -29,6 +31,7 @@ export const blogs = [
     },
     {
         "id": 3,
+        "cardTitle":"Engine Diagnostic",
         "slug": "engine-diagnostic-service-dubai",
         "title": "Car Engine Diagnostic Service in Dubai – Accurate Fault Detection",
         "excerpt": "Check engine light on? Get advanced mobile engine diagnostics in Dubai to detect problems early and avoid costly repairs.",
@@ -43,6 +46,7 @@ export const blogs = [
     {
         "id": 4,
         "slug": "radiator-repair-dubai",
+        "cardTitle":"Car Raditor Repair",
         "title": "Car Radiator Repair in Dubai – Stop Engine Overheating Fast",
         "excerpt": "Car overheating in Dubai? Get expert radiator repair and coolant system service at your location with fast mobile mechanics.",
         "content": "Engine overheating is a serious issue that can cause costly damage if not addressed quickly. At **24 Car Service Dubai**, we provide expert radiator repair in Dubai with fast mobile response across the city.\n\nYour radiator plays a critical role in maintaining proper engine temperature. When it fails, your engine can overheat within minutes — especially in Dubai’s hot climate.\n\n### Signs of Radiator Problems\n- Rising temperature gauge\n- Coolant leaks under the car\n- Steam from the hood\n- Low coolant warning\n- Sweet smell from engine bay\n\n### Our Radiator Service Includes\n- Leak detection and repair\n- Radiator flushing\n- Coolant replacement\n- Fan and thermostat check\n- Radiator replacement if needed\n\nWe use high-quality coolant and parts to ensure long-term cooling efficiency.\n\n### Why Choose Our Mobile Radiator Repair\n- Fast onsite service in Dubai\n- Experienced cooling system specialists\n- Genuine parts warranty\n- Same-day repair available\n\nDriving with an overheating engine can cause head gasket failure and severe engine damage.\n\n**Book your radiator repair in Dubai today and protect your engine from overheating.**",
@@ -56,6 +60,7 @@ export const blogs = [
     {
         "id": 5,
         "slug": "brake-pad-replacement-dubai",
+        "cardTitle":"Brake Pad Replacement",
         "title": "Brake Pad Replacement in Dubai – Mobile Brake Service 24/7",
         "excerpt": "Worn or noisy brakes? Get professional brake pad replacement in Dubai with fast mobile mechanics and genuine parts.",
         "content": "Your vehicle’s braking system is critical for safety. Worn brake pads can increase stopping distance and damage expensive brake components. At **24 Car Service Dubai**, we provide professional brake pad replacement in Dubai with convenient mobile service.\n\n### Signs You Need Brake Pad Replacement\n- Squeaking or grinding noise\n- Vibrations when braking\n- Longer stopping distance\n- Brake warning light\n- Thin brake pad thickness\n\nIgnoring worn pads can damage rotors and increase repair costs.\n\n### Our Brake Service Process\n1. Complete brake inspection\n2. Removal of worn pads\n3. Installation of premium brake pads\n4. Rotor condition check\n5. Road test for safety\n\nWe use high-quality ceramic and OEM brake pads suitable for Dubai driving conditions.\n\n### Why Drivers Choose Us\n- Certified brake specialists\n- Same-day mobile service\n- Genuine parts warranty\n- Transparent pricing\n- 24/7 availability in Dubai\n\nFor maximum safety, brake pads should be inspected regularly, especially in heavy city traffic.\n\n**Book your brake pad replacement in Dubai today for safe and smooth stopping performance.**",
@@ -69,6 +74,7 @@ export const blogs = [
     {
         "id": 6,
         "slug": "car-alternator-repair-dubai",
+        "cardTitle":"Car Alternator Repair",
         "title": "Car Alternator Repair in Dubai – Fix Charging Problems Fast",
         "excerpt": "Battery keeps dying? Get expert alternator repair in Dubai with fast mobile diagnostics and same-day service anywhere in the city.",
         "content": "If your car battery keeps draining or your dashboard shows a charging warning light, your alternator may be failing. At **24 Car Service Dubai**, we provide professional alternator repair in Dubai with fast mobile response to get your vehicle back on the road quickly.\n\nThe alternator is responsible for charging your battery and powering your vehicle’s electrical systems. When it fails, your car may suddenly stall or refuse to start.\n\n### Common Signs of Alternator Failure\n- Battery warning light on dashboard\n- Dim or flickering headlights\n- Electrical accessories malfunctioning\n- Burning smell from engine bay\n- Car stalls while driving\n\n### Our Alternator Repair Process\n1. Complete charging system test\n2. Alternator output check\n3. Belt and wiring inspection\n4. Repair or replacement as needed\n5. Final system verification\n\nWe use high-quality replacement parts and ensure proper voltage output for long-term reliability.\n\n### Why Choose Our Mobile Alternator Service\n- Fast onsite repair anywhere in Dubai\n- Certified auto electricians\n- Genuine parts warranty\n- Same-day service available\n\nIgnoring alternator issues can leave you stranded without warning.\n\n**Book your alternator repair in Dubai today for fast and reliable mobile service.**",
@@ -82,6 +88,7 @@ export const blogs = [
     {
         "id": 7,
         "slug": "car-starter-motor-repair-dubai",
+        "cardTitle":"Starter Motor Repair",
         "title": "Starter Motor Repair in Dubai – Car Not Starting Fix",
         "excerpt": "Car won’t start? Get fast starter motor repair in Dubai with mobile mechanics available 24/7 at your location.",
         "content": "When your car refuses to start and you hear clicking sounds, the starter motor may be the problem. **24 Car Service Dubai** offers expert starter motor repair in Dubai with quick mobile assistance wherever you are.\n\nThe starter motor is essential for engine ignition. A faulty unit can leave your vehicle completely immobile.\n\n### Warning Signs of Starter Motor Problems\n- Clicking noise when turning key\n- Engine not cranking\n- Intermittent starting issues\n- Smoke from starter area\n- Dashboard lights on but engine dead\n\n### Our Mobile Starter Repair Service\n1. Starting system diagnosis\n2. Battery and alternator check\n3. Starter motor testing\n4. Repair or replacement\n5. Final start verification\n\nWe ensure your vehicle starts smoothly and reliably.\n\n### Why Dubai Drivers Trust Us\n- Rapid mobile response\n- Experienced technicians\n- Warranty on parts\n- 24/7 emergency service\n\nStarter problems rarely fix themselves and usually worsen over time.\n\n**Schedule your starter motor repair in Dubai today and avoid unexpected breakdowns.**",
@@ -95,6 +102,7 @@ export const blogs = [
     {
         "id": 8,
         "slug": "mobile-car-mechanic-dubai",
+        "cardTitle":"Car Mechanic",
         "title": "Mobile Car Mechanic in Dubai – Onsite Auto Repair Service",
         "excerpt": "Need a mechanic at your location? Discover the benefits of mobile car repair services in Dubai available 24/7.",
         "content": "Modern drivers in Dubai prefer convenience, and mobile car repair has become the smart alternative to traditional garages. **24 Car Service Dubai** provides professional mobile car mechanic services across Dubai, saving you time, towing costs, and stress.\n\n### What Is Mobile Car Repair?\nA mobile mechanic comes directly to your home, office, or roadside location to diagnose and fix your vehicle. Most common repairs can be completed onsite the same day.\n\n### Services We Perform Onsite\n- Battery replacement\n- Jump start service\n- AC repair\n- Brake service\n- Oil change\n- Minor mechanical repairs\n\n### Benefits of Choosing a Mobile Mechanic\n- No towing required\n- Faster service\n- Convenient scheduling\n- Transparent pricing\n- Emergency roadside support\n\nOur technicians are fully equipped with professional tools to handle most repairs anywhere in Dubai.\n\n### When Should You Call a Mobile Mechanic?\n- Car won’t start\n- Warning lights appear\n- AC stops cooling\n- Battery keeps dying\n- Minor repairs needed quickly\n\n**Book a trusted mobile car mechanic in Dubai today and experience hassle-free auto repair at your location.**",
@@ -108,6 +116,7 @@ export const blogs = [
     {
         "id": 9,
         "slug": "car-oil-change-dubai-guide",
+        "cardTitle":"Oil Change Guide",
         "title": "Engine Oil Change in Dubai – When and Why It Matters",
         "excerpt": "Not sure when to change engine oil in Dubai? Learn the warning signs, intervals and benefits of regular oil service.",
         "content": "Regular engine oil changes are essential for keeping your vehicle running smoothly in Dubai’s demanding driving conditions. At **24 Car Service Dubai**, we provide fast mobile oil change services designed to protect your engine and improve performance.\n\n### Why Engine Oil Is Important\nEngine oil lubricates moving parts, reduces friction, removes heat, and prevents internal engine wear. Over time, oil breaks down and becomes contaminated.\n\n### Signs You Need an Oil Change\n- Engine oil warning light\n- Dark or dirty oil\n- Engine running rough\n- Reduced fuel efficiency\n- Knocking engine noise\n\n### Recommended Oil Change Interval\nIn Dubai conditions, most vehicles should change oil every:\n- 5,000–7,000 km for conventional oil\n- 8,000–10,000 km for synthetic oil\n\n### Our Mobile Oil Change Service\n- Genuine engine oil\n- New oil filter\n- Fluid level check\n- Basic vehicle inspection\n- Onsite service anywhere in Dubai\n\nRegular oil service helps extend engine life and maintain fuel efficiency.\n\n**Book your engine oil change in Dubai today for smooth and reliable driving.**",
@@ -121,6 +130,7 @@ export const blogs = [
     {
         "id": 10,
         "slug": "emergency-car-repair-dubai",
+        "cardTitle":"Emergancy Car Repair",
         "title": "Emergency Car Repair in Dubai – What To Do During a Breakdown",
         "excerpt": "Car broken down in Dubai? Follow these expert steps and get fast emergency mobile repair anywhere in the city.",
         "content": "Vehicle breakdowns can happen anytime, especially in Dubai’s extreme weather and heavy traffic. Knowing what to do during an emergency can keep you safe and reduce damage to your vehicle.\n\n**24 Car Service Dubai** provides 24/7 emergency car repair in Dubai with fast mobile response wherever you are.\n\n### Immediate Steps During a Breakdown\n1. Move your vehicle to a safe location\n2. Turn on hazard lights\n3. Stay clear of traffic\n4. Call a trusted mobile mechanic\n\n### Common Causes of Sudden Breakdowns\n- Dead battery\n- Alternator failure\n- Overheating engine\n- Starter motor failure\n- Fuel system issues\n\n### How Our Emergency Service Helps\n- Rapid mobile response\n- Onsite diagnostics\n- Immediate minor repairs\n- Battery jump start\n- Safe recovery guidance\n\nOur goal is to get you back on the road as quickly and safely as possible.\n\n### Why Choose Our 24/7 Emergency Team\n- Available day and night\n- Fast arrival across Dubai\n- Experienced technicians\n- Transparent pricing\n\nBreakdowns are stressful, but help is always nearby.\n\n**Save our number and book emergency car repair in Dubai for immediate roadside assistance.**",

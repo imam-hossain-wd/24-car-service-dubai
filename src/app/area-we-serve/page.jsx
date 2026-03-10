@@ -7,6 +7,7 @@ import { MapPin, ShieldCheck, Clock, Phone } from "lucide-react";
 import { SiteConfig } from "@/config/site";
 import ServiceAreasSchema from "@/seo/schemas/ServiceAreasSchema";
 import AreasHero from "@/components/view/Hero/AreasHero";
+import AppBreadcrumb from "@/components/ui/shared/AppBreadcrumb/AppBreadcrumb";
 
 export const metadata = {
   title: "Mobile Car Repair Service Areas in Dubai",
@@ -16,18 +17,19 @@ export const metadata = {
   },
 };
 
-
+  const items = [
+  { label: "Home", href: "/" },
+  { label: "Area We Serve", href: "/area-we-serve" }
+];
 
 
 export default function AreasWeServe() {
   return (
     <section>
+      <AppBreadcrumb items={items} />
       <ServiceAreasSchema />
       <main className="bg-white">
-        {/* Hero Section */}
-       
-       <AreasHero />
-
+        <AreasHero />
         {/* Service Areas Component */}
         <section className="py-16">
           <div className="container mx-auto px-4">

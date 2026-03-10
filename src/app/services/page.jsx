@@ -1,3 +1,5 @@
+
+import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb';
 import { SiteConfig } from '@/config/site';
 import ServicePage from '@/pages/ServicePage/ServicePage'
 import ServicesPageSchema from '@/seo/schemas/ServicesPageSchema';
@@ -11,8 +13,14 @@ export const metadata = {
   },
 };
 
+  const items = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" }
+];
+
 export default function Service() {
   return <>
+    <AppBreadcrumb items={items} />
     <ServicesPageSchema />
     <ServicePage />
   </>

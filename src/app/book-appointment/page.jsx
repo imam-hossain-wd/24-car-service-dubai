@@ -1,3 +1,4 @@
+import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb';
 import { SiteConfig } from '@/config/site';
 import BookingPage from '@/pages/BookingPage/BookingPage'
 import React from 'react'
@@ -10,7 +11,14 @@ export const metadata = {
         canonical: `${SiteConfig.url}/book-appointment`,
     },
 };
+  const items = [
+  { label: "Home", href: "/" },
+  { label: "Book Appointment", href: "/book-appointment" }
+];
 
 export default function BookAppointment() {
-    return <BookingPage />
+    return <>
+        <AppBreadcrumb items={items} />
+        <BookingPage />
+    </>
 }

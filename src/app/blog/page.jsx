@@ -1,4 +1,5 @@
 
+import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb';
 import { SiteConfig } from '@/config/site';
 import BlogPage from '@/pages/BlogPage/BlogPage'
 
@@ -11,6 +12,14 @@ export const metadata = {
   },
 };
 
+  const items = [
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" }
+];
+
 export default function Blog() {
-  return <BlogPage />
+  return <>
+    <AppBreadcrumb items={items} />
+    <BlogPage />
+  </>
 }

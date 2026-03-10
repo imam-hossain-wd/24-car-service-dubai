@@ -11,15 +11,29 @@ import BlogCarousel from '../BlogPage/BlogCarousel'
 import ServiceAreas from '../ContactPage/ServiceAreas'
 import HomeHero from '@/components/view/Hero/HomeHero'
 import FaqStructuredData from '@/seo/schemas/FaqStructuredData'
-
-
-
+import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb'
+import { BookOpen, FileText, Home } from 'lucide-react'
 
 
 export default function HomePage() {
 
+    const breadcrumbItems = [
+        {
+            label: 'Blog',
+            href: '/blog',
+            icon: <BookOpen className="h-4 w-4 text-emerald-600" />
+        },
+        {
+            label: 'All Articles',
+            href: '/articles',
+            icon: <FileText className="h-4 w-4 text-emerald-600" />
+        },
+    ];
+
+
     return (
         <div>
+        <AppBreadcrumb />
             <FaqStructuredData />
             <HomeHero />
             {/* <PremiumServiceSlider /> */}
