@@ -15,28 +15,31 @@ import homebannere from '../assets/images/gallery-3.jpg';
 import whoweare from '../assets/images/Who we are.jpg';
 import contact from '../assets/banner/a-man-closing-the-engine-of-a-car.jpg';
 import about from '../assets/banner/auto-mechanic-are-repair-and-maintenance-auto-engine-is-problems-at-car-repair-shop.jpg';
-import blog from '../assets/banner/automobile-computer-diagnosis-two-car-mechanic-engineers-looking-for-engine-failure-on.avif';
+import blog from '../assets/banner/mechanic-working-on-car-transmission.jpg';
 import areas from '../assets/banner/car-maintenance-and-repair-mechanic-writing-checklist-paper-on-clipboard.jpg';
 import service from '../assets/banner/cars-open-bonnet-with-laptop-placed-next-to-engine-in-the-auto-repair-shop.jpg';
 
 
 // service Images
-import jumpStart from '../assets/services/instant-jump-start-service-near-me-city-state.png'
-import acRepair from '../assets/services/car-ac-service.png'
-import absSystem from '../assets/services/abs-system.png'
+import carBatteryService from '../assets/services/car-battery-replacement-dubai-mobile-service.jpg'
+import jumpStart from '../assets/services/car-jump-start-service-dubai-emergency-boost.jpg'
+import acRepair from '../assets/services/car-ac-repair-dubai-air-conditioning-service.jpg'
+import absSystem from '../assets/services/abs-system-repair-dubai-anti-lock-brake-service.jpg'
+import radiatorService from '../assets/services/car-radiator-repair-replacement-dubai-cooling-service.jpg'
 import carElectricalRepair from '../assets/services/car-electrical-repair.jpg'
-import fuelPump from '../assets/services/fuel-pump-on-repairs.jpg'
-import starterMotor from '../assets/services/starter-motor-repair.jpg'
-import alternator from '../assets/services/alternator-repair.jpg'
-import emergancyCarRepair from '../assets/services/emergancy-car-repair.jpg'
-import carMechanicService from '../assets/services/car-mechanic-service.jpg'
-import onsiteCarRepair from '../assets/services/onsite-car-repair.jpg'
-import carDetailing  from '../assets/services/car-detailing.jpg'
-import transmission from '../assets/services/transmission.jpg'
-import engineOil from '../assets/services/engine-oil.jpg'
-import carMaintenance from '../assets/services/car-maintenance.jpg'
+import fuelPump from '../assets/services/fuel-pump-repair-dubai-engine-fuel-system-service.jpg'
+import brakepadService from '../assets/services/car-brake-pad-repair-dubai-service.jpg'
+import starterMotor from '../assets/services/car-starter-motor-repair-dubai-self-starter-service.jpg'
+import alternator from '../assets/services/alternator-repair-dubai-charging-system-service.jpg'
+import emergancyCarRepair from '../assets/services/emergency-car-repair-dubai.jpg'
+import carMechanicService from '../assets/services/car-mechanic-service-dubai.jpg'
+import onsiteCarRepair from '../assets/services/onsite-car-repair-dubai.jpg'
+import carDetailing from '../assets/services/car-detailing-dubai.jpg'
+import transmission from '../assets/services/car-transmission-repair-dubai.jpg'
+import engineOil from '../assets/services/oil-change-service-dubai.jpg'
+import carMaintenance from '../assets/services/car-maintenance-service-dubai.jpg'
+import acGasRefill from '../assets/services/car-ac-gas-refill-dubai.jpg';
 // Blogs Images
-import acGasRefill from '../assets/services/car-ac-gas-refill.jpg';
 import carBatteryReplacement from '../assets/blogs/car-battery-replacement.jpg';
 import engineDiagnosic from '../assets/blogs/engine-diagnosic.jpg';
 import oilChange from '../assets/blogs/car-engine-oil-change.jpg';
@@ -61,6 +64,8 @@ export const images = {
 }
 
 
+
+
 export const blogImages = {
     caracRepair,
     carBatteryReplacement,
@@ -77,7 +82,7 @@ export const blogImages = {
 
 
 
-export const bandlogo= {
+export const bandlogo = {
     logo
 }
 
@@ -96,19 +101,22 @@ export const services = {
     transmission,
     engineOil,
     carMaintenance,
-    acGasRefill
+    acGasRefill,
+    carBatteryService,
+    radiatorService,
+    brakepadService
 
 }
 
 
 export const homeicons = {
-appointment,
-company,
-house,
-installation,
-maintenance,
-roadside,
-spare,
-monitoring
+    appointment,
+    company,
+    house,
+    installation,
+    maintenance,
+    roadside,
+    spare,
+    monitoring
 
 }

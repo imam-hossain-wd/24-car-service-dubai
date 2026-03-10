@@ -1,22 +1,46 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+
+//   eslint: {
+//     ignoreDuringBuilds: true,
+//     ignoreBuildErrors: true,
+//   },
+//   images: {
+//     domains: [
+//       'img.freepik.com',
+//       'i.ibb.co',
+//       'res.cloudinary.com',
+//       '/www.freepik.com'
+//     ],
+//   },
+// };
+
+// export default nextConfig;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
-     eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
+  eslint: {
     ignoreDuringBuilds: true,
     ignoreBuildErrors: true,
   },
   images: {
     domains: [
       'img.freepik.com',
-      'i.ibb.co', 
+      'i.ibb.co',
       'res.cloudinary.com',
-      '/www.freepik.com'
-      // Add any other domains you need here
+      'www.freepik.com' 
     ],
   },
-  // You can add other Next.js config options here if needed
+ 
+  async redirects() {
+    return [
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -9,12 +9,14 @@ import ServiceAreasSchema from "@/seo/schemas/ServiceAreasSchema";
 import AreasHero from "@/components/view/Hero/AreasHero";
 
 export const metadata = {
-  title: "Areas We Serve in Dubai | Mobile Car Repair Near You",
-  description: "24 Car Service Dubai provides 24/7 mobile car repair across all areas of Dubai including Al Mankhool, Deira, Dubai Marina, Downtown and more. Fast onsite service near you.",
+  title: "Mobile Car Repair Service Areas in Dubai",
+  description: "24 Car Service Dubai provides 24/7 fast and reliable mobile car repair and mechanic services across Dubai. Our expert technicians serve Al Mankhool, Deira, Dubai Marina,Downtown, Jumeirah, Zabeel, Al Raffa and nearby areas with 24/7 roadside assistance and onsite car repair.",
   alternates: {
     canonical: `${SiteConfig.url}/area-we-serve`,
   },
 };
+
+
 
 
 export default function AreasWeServe() {

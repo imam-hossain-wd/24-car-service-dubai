@@ -1,3 +1,4 @@
+import { services } from "@/utils/assets";
 import { locations } from "../serviceArea";
 
 export const raditorRepair = {
@@ -12,7 +13,7 @@ export const raditorRepair = {
     ],
     "metaDescription": "Get professional car radiator repair and replacement services in Dubai. Fast, affordable, and reliable cooling system solutions. Call us now for a free quote!",
     "slug": "car-radiator-repair-and-replacement-dubai",
-    "service_image": "https://i.ibb.co/2FQ8kvb/Screenshot-2023-09-21-at-20-46-23-Premium-Photo-Car-radiator-isolated-on-white-background-3d-render.png",
+    "service_image": services.radiatorService,
     "intro": {
         "heading": "Professional Car Radiator Repair and Replacement in Dubai",
         "subheading": "Keep Your Engine Cool and Running Smoothly",

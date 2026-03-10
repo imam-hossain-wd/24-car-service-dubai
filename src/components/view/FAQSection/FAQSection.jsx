@@ -1,5 +1,5 @@
 'use client'
-import { Clock, Sparkles } from "lucide-react"
+import { Clock, Info, Sparkles, MessageCircleQuestionMark } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { useState, useMemo } from "react"
 import { cn } from "@/lib/utils"
@@ -90,7 +90,8 @@ export function FAQSection() {
                       <AccordionTrigger className="flex w-full items-center justify-between p-4 text-left hover:no-underline [&[data-state=open]>svg:rotate-180">
                         <div className="flex items-center gap-3 flex-1">
                           <div className="p-2 rounded-lg bg-primary/10 text-primary transition-all duration-300 flex-shrink-0 data-[state=open]:bg-primary data-[state=open]:text-white">
-                            {faq.icon}
+                            {/* {faq.icon} */}
+                            <Info />
                           </div>
                           <div className="flex-1 text-left">
                             <h3 className="text-base font-semibold text-gray-900 dark:text-white pr-4">

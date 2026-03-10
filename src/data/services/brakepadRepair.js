@@ -1,3 +1,5 @@
+import { services } from "@/utils/assets";
+
 export const brakePadRepair = {
     "title": "Car Brake Pad Repair and Replacement in Dubai – Affordable & Professional Service",
     "cardTitle": "Car Brake Pad Repair",
@@ -10,7 +12,7 @@ export const brakePadRepair = {
         "Responsive braking"
     ],
     "slug": "car-brake-pad-repair-and-replacement-dubai",
-    "service_image": "https://i.ibb.co/ZG4zrfm/car-break-pad-repair.png",
+    "service_image": services.brakepadService,
     "intro": {
         "heading": "Reliable Car Brake Pad Repair and Replacement in Dubai",
         "subheading": "Stay Safe on the Roads with Timely Brake Service",

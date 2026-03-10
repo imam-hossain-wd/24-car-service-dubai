@@ -2,6 +2,8 @@ import ServiceDetailsPage from '@/pages/ServicePage/ServiceDetailsPage'
 import { notFound } from 'next/navigation'
 import { services } from '@/data/services'
 import ServiceSchema from '@/components/schemas/ServiceSchema'
+import { SiteConfig } from '@/config/site';
+
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -12,13 +14,15 @@ export async function generateMetadata({ params }) {
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    alternates: {
+      canonical: `${SiteConfig.url}/services/${slug}`,
+    },
   };
 }
 
 export default async function ServiceDetailPage({ params }) {
   const { slug } = await params;
   const service = services.find((s) => s?.slug === slug)
-
   if (!service) {
     return notFound()
   }

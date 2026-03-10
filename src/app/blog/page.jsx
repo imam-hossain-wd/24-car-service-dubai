@@ -4,14 +4,12 @@ import BlogPage from '@/pages/BlogPage/BlogPage'
 
 
 export const metadata = {
-  title: "Car Repair Blog Dubai | Auto Tips & Maintenance Guide",
-  description: "Read expert car repair tips, battery care guides, AC maintenance advice and roadside help articles from 24 Car Service Dubai. Stay updated with professional auto insights.",
+  title: "Dubai Car Repair Blog | Mobile Mechanic Tips & Vehicle Guides",
+  description: "Read the 24 Car Service Dubai blog for expert car repair tips, vehicle maintenance guides, battery care advice, and mobile mechanic insights. Stay updated with professional auto service knowledge for drivers in Dubai.",
   alternates: {
     canonical: `${SiteConfig.url}/blog`,
   },
 };
-
-
 
 export default function Blog() {
   return <BlogPage />

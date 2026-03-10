@@ -10,7 +10,7 @@ export default function ServicePage() {
       <div className="container py-12 mx-auto">
 
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight">Our Services</h1>
+          <h2 className="text-4xl font-bold tracking-tight">Our Services</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             Professional automotive services tailored to your needs
           </p>

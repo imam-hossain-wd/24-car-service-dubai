@@ -55,6 +55,7 @@ export function TrustedService() {
                 src={images.whychoosedubai}
                 width={600}
                 height={500}
+                alt="24 car repair trusted car service "
                 className="w-full h-[400px] md:h-[500px] object-cover opacity-95"
                 priority
               />

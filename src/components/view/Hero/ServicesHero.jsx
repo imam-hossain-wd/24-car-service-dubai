@@ -10,17 +10,17 @@ export default function ServicesHero() {
   return (
     <section className="relative h-[50vh] md:h-[50vh] min-h-[400px] w-full overflow-hidden">
       {/* Background Image - Same as contact/blog page */}
-       <div className="absolute inset-0">
-                <Image
-                  src={serviceBanner}
-                  alt="Car Service Background"
-                  fill
-                  className="object-cover object-center scale-110"
-                  priority
-                  quality={100}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
-              </div>
+      <div className="absolute inset-0">
+        <Image
+          src={serviceBanner}
+          alt="Car Service Background"
+          fill
+          className="object-cover object-center scale-110"
+          priority
+          quality={100}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+      </div>
 
       {/* Content */}
       <div className="container relative z-10 h-full mx-auto px-4">
@@ -33,12 +33,19 @@ export default function ServicesHero() {
             </span>
           </div>
 
+          {/* Expert Car Repair Services Dubai | Mobile Mechanic & Roadside Assistance */}
+
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+            Expert{" "}
+            <span className="text-emerald-400">Car Repair & Mobile </span>{" "}
+            Mechanic Services Dubai
+          </h1>
+          {/* <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
             Expert{" "}
             <span className="text-emerald-400">Car Repair</span>{" "}
             & Maintenance
-          </h1>
+          </h1> */}
 
           {/* Description */}
           <p className="text-base text-white/80 mb-5 max-w-xl leading-relaxed">
@@ -54,18 +61,18 @@ export default function ServicesHero() {
               </div>
               <span className="text-sm text-white/90">24/7 Emergency</span>
             </div>
-            
+
             <div className="w-px h-5 bg-white/20"></div>
-            
+
             <div className="flex items-center gap-2">
               <div className="p-1.5 bg-emerald-500/20 rounded-lg">
                 <Shield className="h-4 w-4 text-emerald-400" />
               </div>
               <span className="text-sm text-white/90">Certified Experts</span>
             </div>
-            
+
             <div className="w-px h-5 bg-white/20"></div>
-            
+
             <div className="flex items-center gap-2">
               <div className="p-1.5 bg-emerald-500/20 rounded-lg">
                 <Star className="h-4 w-4 text-emerald-400" />
@@ -76,7 +83,7 @@ export default function ServicesHero() {
 
           {/* Service Categories - Quick filters like blog search */}
           <div className="flex flex-wrap gap-2">
-            {["Emergency", "Battery", "AC", "Engine", "Brakes", "Maintenance"].map((service, index) => (
+            {["Emergency", "Onsite", "Roadsite", "Professional Mechanic"].map((service, index) => (
               <button
                 key={index}
                 className="px-3 py-1.5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-xs text-white/70 hover:text-white hover:bg-white/10 hover:border-emerald-400/30 transition-colors"

@@ -1,5 +1,5 @@
-import BatteryReplacementSchema from "@/seo/schemas/services/BatteryReplacementSchema";
 import { locations } from "../serviceArea";
+import { services } from "@/utils/assets";
 
 export const batteryreplacement = {
     "title": "Car Battery Replacement Dubai – Fast Mobile Battery Service 24/7",
@@ -13,7 +13,7 @@ export const batteryreplacement = {
         "Complete charging system check"
     ],
     "slug": "car-battery-replacement-dubai",
-    "service_image": "https://i.ibb.co/D4qgrX2/car-bettery-repair-replace.webp",
+    "service_image": services.carBatteryService,
     "intro": {
         "heading": "Professional Car Battery Replacement Service in Dubai",
         "subheading": "Dead Battery? Get Fast Mobile Replacement Anywhere in Dubai",

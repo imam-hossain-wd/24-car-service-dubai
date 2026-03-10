@@ -116,9 +116,9 @@ export default function HomeHero() {
 
               {/* Main Title */}
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-2">
-                <span className="text-transparent bg-clip-text bg-primary">
-                  Best Car Repair & Mechanic Servicing
-                </span> in Dubai
+                <span className="">
+                  Best <span className="text-transparent bg-clip-text bg-primary">Car Repair & Mobile Mechanic </span>
+                </span>  Services in Dubai
               </h1>
 
               {/* Description */}

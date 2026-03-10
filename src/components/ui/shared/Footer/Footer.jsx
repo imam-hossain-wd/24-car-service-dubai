@@ -192,7 +192,7 @@ export function Footer() {
         {/* ================= COPYRIGHT ================= */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-white/60">
-            © {new Date().getFullYear()} {gbp.name}. All rights reserved.
+            © {new Date().getFullYear()} 24 Car Repair Dubai - {gbp.name}. All rights reserved.
           </p>
 
           <div className="flex gap-6">

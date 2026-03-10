@@ -31,9 +31,11 @@ export default function AboutHero() {
 
           {/* Main heading */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
-            Dubai's Premier{" "}
-            <span className="text-emerald-400">24/7 Mobile</span> Car Service
+           About 24 Car Service Dubai –{" "}
+            <span className="text-emerald-400">Trusted Mobile Car Repair & Mechanic Service</span>
           </h1>
+
+          {/* About 24 Car Service Dubai – Trusted Mobile Car Repair & Mechanic Service */}
 
           {/* Subheading */}
           <p className="text-base text-white/80 mb-5 max-w-xl leading-relaxed">
@@ -54,7 +56,7 @@ export default function AboutHero() {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex flex-wrap gap-4 text-sm text-white/80">
+          {/* <div className="flex flex-wrap gap-4 text-sm text-white/80">
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-400" />
               <span>100+ Certified Techs</span>
@@ -67,7 +69,7 @@ export default function AboutHero() {
               <CheckCircle className="w-4 h-4 text-emerald-400" />
               <span>90% Same-Day</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

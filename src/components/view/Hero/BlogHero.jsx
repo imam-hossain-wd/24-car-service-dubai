@@ -32,9 +32,9 @@ export default function BlogHero() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
-            Car Repair{" "}
-            <span className="text-emerald-400">Blog & Guides</span>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+           <span className="text-emerald-400">Car Repair Blog – </span> 
+            <span >Expert Auto Tips & Guides in Dubai</span>
           </h1>
 
           {/* Description */}
@@ -81,7 +81,7 @@ export default function BlogHero() {
           </div>
 
           {/* Search Bar - Compact */}
-          <div className="max-w-md">
+          {/* <div className="max-w-md">
             <div className="relative">
               <input
                 type="text"
@@ -90,7 +90,7 @@ export default function BlogHero() {
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-white/50" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
