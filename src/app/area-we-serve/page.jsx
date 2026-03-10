@@ -8,6 +8,7 @@ import { SiteConfig } from "@/config/site";
 import ServiceAreasSchema from "@/seo/schemas/ServiceAreasSchema";
 import AreasHero from "@/components/view/Hero/AreasHero";
 import AppBreadcrumb from "@/components/ui/shared/AppBreadcrumb/AppBreadcrumb";
+import BreadcrumbSchema from "@/seo/schemas/BreadcrumbSchema";
 
 export const metadata = {
   title: "Mobile Car Repair Service Areas in Dubai",
@@ -26,6 +27,7 @@ export const metadata = {
 export default function AreasWeServe() {
   return (
     <section>
+      <BreadcrumbSchema items={items} />
       <AppBreadcrumb items={items} />
       <ServiceAreasSchema />
       <main className="bg-white">

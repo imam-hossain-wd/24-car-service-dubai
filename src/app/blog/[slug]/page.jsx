@@ -4,6 +4,7 @@ import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb';
 import { SiteConfig } from '@/config/site';
 import { blogs } from '@/data/blogs';
 import BlogDetailPage from '@/pages/BlogPage/BlogDetailPage';
+import BreadcrumbSchema from '@/seo/schemas/BreadcrumbSchema';
 import { notFound } from 'next/navigation';
 
 
@@ -35,6 +36,8 @@ export default async function ServiceDetailPage({ params }) {
     { label: blog?.cardTitle, href: blog?.slug }
   ];
 
-  return <>    <AppBreadcrumb items={items} />
+  return <>    
+  <BreadcrumbSchema items={items} />
+  <AppBreadcrumb items={items} />
     <BlogDetailPage blog={blog} /> </>
 }

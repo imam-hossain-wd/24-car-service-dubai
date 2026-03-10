@@ -1,6 +1,7 @@
 import AppBreadcrumb from "@/components/ui/shared/AppBreadcrumb/AppBreadcrumb";
 import { SiteConfig } from "@/config/site";
 import ContactPage from "@/pages/ContactPage/ContactPage";
+import BreadcrumbSchema from "@/seo/schemas/BreadcrumbSchema";
 
 
 export const metadata = {
@@ -10,7 +11,7 @@ export const metadata = {
     canonical: `${SiteConfig.url}/contact`
   },
 };
-  const items = [
+const items = [
   { label: "Home", href: "/" },
   { label: "Contact", href: "/contact" }
 ];
@@ -18,7 +19,8 @@ export const metadata = {
 
 export default function Contact() {
   return <>
-  <AppBreadcrumb items={items} />
+    <BreadcrumbSchema items={items} />
+    <AppBreadcrumb items={items} />
     <ContactPage />
   </>
 }

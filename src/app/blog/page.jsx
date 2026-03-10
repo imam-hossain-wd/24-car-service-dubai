@@ -2,6 +2,7 @@
 import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb';
 import { SiteConfig } from '@/config/site';
 import BlogPage from '@/pages/BlogPage/BlogPage'
+import BreadcrumbSchema from '@/seo/schemas/BreadcrumbSchema';
 
 
 export const metadata = {
@@ -19,6 +20,7 @@ export const metadata = {
 
 export default function Blog() {
   return <>
+  <BreadcrumbSchema items={items} />
     <AppBreadcrumb items={items} />
     <BlogPage />
   </>

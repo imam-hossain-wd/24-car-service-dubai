@@ -4,6 +4,7 @@ import { services } from '@/data/services'
 import ServiceSchema from '@/components/schemas/ServiceSchema'
 import { SiteConfig } from '@/config/site';
 import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb';
+import BreadcrumbSchema from '@/seo/schemas/BreadcrumbSchema';
 
 
 export async function generateMetadata({ params }) {
@@ -29,12 +30,13 @@ export default async function ServiceDetailPage({ params }) {
   }
 
   const items = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: service?.cardTitle || 'Service Details' }
-];
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: service?.cardTitle || 'Service Details' }
+  ];
 
   return <>
+    <BreadcrumbSchema items={items} />
     <AppBreadcrumb items={items} />
     <ServiceSchema service={service} />
     <ServiceDetailsPage service={service} />
