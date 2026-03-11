@@ -5,21 +5,10 @@ import Link from 'next/link';
 import {
   Phone,
   MessageCircle,
-  Star,
   Shield,
   Clock,
-  Wrench,
-  Battery,
-  Thermometer,
-  Gauge,
-  AlertCircle,
   Award,
-  Truck,
   Users,
-  CheckCircle,
-  ChevronRight,
-  PhoneCall,
-  Navigation
 } from 'lucide-react';
 import ServiceAreaIntro from '@/components/view/ServiceArea/ServiceAreaIntro';
 import AreaServices from '@/components/view/ServiceArea/AreaServices';
@@ -39,30 +28,6 @@ export default function ServiceAreaDetailPage({ area }) {
     <main className="bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
       <ServiceAreaHero area={area} />
-
-      {/* Trust Badges - Floating bar */}
-      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-3 text-sm overflow-x-auto hide-scrollbar">
-            <div className="flex items-center gap-2 text-emerald-600 shrink-0">
-              <Shield className="h-4 w-4" />
-              <span className="font-medium whitespace-nowrap">24/7 Emergency</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600 shrink-0">
-              <Clock className="h-4 w-4" />
-              <span className="font-medium whitespace-nowrap">30 Min Response</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600 shrink-0">
-              <Users className="h-4 w-4" />
-              <span className="font-medium whitespace-nowrap">10+ Experts</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600 shrink-0">
-              <Award className="h-4 w-4" />
-              <span className="font-medium whitespace-nowrap">5 Yrs Warranty</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8 lg:py-12">
@@ -87,10 +52,10 @@ export default function ServiceAreaDetailPage({ area }) {
             {/* Quick Contact Card - Sticky */}
             <div className="sticky top-24 space-y-6">
               {/* Why Choose Us - In Sidebar */}
-              <AreaWhyChooseUs area={area} />
+              {/* <AreaWhyChooseUs area={area} /> */}
 
               {/* Landmarks */}
-              <AreaLandmarks area={area} />
+              {/* <AreaLandmarks area={area} /> */}
 
               {/* Map */}
               {/* <AreaMap area={area} /> */}
@@ -138,14 +103,14 @@ export default function ServiceAreaDetailPage({ area }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AutoRepair",
-            "name": `24 Car Service Dubai - ${area.name}`,
-            "description": area.meta.description,
+            "name": `24 Car Service Dubai - ${area?.name}`,
+            "description": area?.meta?.description,
             "areaServed": {
               "@type": "City",
-              "name": area.name,
+              "name": area?.name,
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": area.name,
+                "addressLocality": area?.name,
                 "addressRegion": "Dubai",
                 "addressCountry": "AE"
               }

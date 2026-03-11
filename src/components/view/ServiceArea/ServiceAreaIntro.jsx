@@ -12,7 +12,7 @@ export default function ServiceAreaIntro({ area }) {
         </div>
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
-            {area.intro.heading}
+            {area?.intro?.heading}
           </h2>
           <div className="h-1 w-20 bg-emerald-500 rounded"></div>
         </div>
@@ -20,7 +20,7 @@ export default function ServiceAreaIntro({ area }) {
 
       <div className="prose prose-lg max-w-none">
         <p className="text-slate-600 leading-relaxed mb-6">
-          {area.intro.content}
+          {area?.intro?.content}
         </p>
       </div>
 
@@ -32,7 +32,7 @@ export default function ServiceAreaIntro({ area }) {
           </div>
           <div>
             <h4 className="font-semibold text-slate-800">Local Experts</h4>
-            <p className="text-sm text-slate-600">Based in {area.name} area</p>
+            <p className="text-sm text-slate-600">Based in {area?.name} area</p>
           </div>
         </div>
         <div className="flex items-start gap-3">

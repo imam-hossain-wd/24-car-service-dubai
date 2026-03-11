@@ -29,9 +29,9 @@ const sampleReviews = [
 ];
 
 export default function AreaReviews({ area }) {
-  const reviews = sampleReviews.map(review => ({
+  const reviews = sampleReviews?.map(review => ({
     ...review,
-    comment: review.comment.replace('{area}', area.name)
+    comment: review?.comment?.replace('{area}', area.name)
   }));
 
   return (
@@ -39,7 +39,7 @@ export default function AreaReviews({ area }) {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
-            Customer Reviews in {area.name}
+            Customer Reviews in {area?.name}
           </h2>
           <div className="flex items-center justify-center gap-2">
             <div className="flex">
@@ -53,29 +53,29 @@ export default function AreaReviews({ area }) {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {reviews.map((review, index) => (
+          {reviews?.map((review, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-slate-200">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-emerald-50 rounded-full">
                   <User className="h-5 w-5 text-emerald-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-800">{review.name}</h4>
+                  <h4 className="font-semibold text-slate-800">{review?.name}</h4>
                   <div className="flex items-center gap-2">
                     <div className="flex">
-                      {[...Array(review.rating)].map((_, i) => (
+                      {[...Array(review?.rating)].map((_, i) => (
                         <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <span className="text-xs text-slate-500">{review.date}</span>
+                    <span className="text-xs text-slate-500">{review?.date}</span>
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-slate-600 mb-4">{review.comment}</p>
+              <p className="text-sm text-slate-600 mb-4">{review?.comment}</p>
               <div className="flex items-center gap-4 text-xs text-slate-500">
                 <button className="flex items-center gap-1 hover:text-emerald-600">
                   <ThumbsUp className="h-3 w-3" />
-                  Helpful ({review.helpful})
+                  Helpful ({review?.helpful})
                 </button>
                 <button className="flex items-center gap-1 hover:text-emerald-600">
                   <MessageCircle className="h-3 w-3" />

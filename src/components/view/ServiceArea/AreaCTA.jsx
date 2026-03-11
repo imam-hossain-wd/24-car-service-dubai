@@ -16,12 +16,12 @@ export default function AreaCTA({ area }) {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            {area.cta.heading}
+            {area?.cta?.heading}
           </h2>
           
           {/* Description */}
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {area.cta.description}
+            {area?.cta?.description}
           </p>
 
           {/* CTA Buttons */}
@@ -31,7 +31,7 @@ export default function AreaCTA({ area }) {
               className="inline-flex items-center justify-center gap-2 bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl"
             >
               <Phone className="h-5 w-5" />
-              {area.cta.buttonText}
+              {area?.cta?.buttonText}
               <ArrowRight className="h-5 w-5" />
             </Link>
             <Link

@@ -23,7 +23,7 @@ export default function AreaWhyChooseUs({ area }) {
       </div>
 
       <div className="space-y-3">
-        {area.whyChooseUs.map((reason, index) => (
+        {area?.whyChooseUs?.map((reason, index) => (
           <div key={index} className="flex items-start gap-3 group">
             <div className="p-1 bg-emerald-50 rounded-full group-hover:bg-emerald-100 transition-colors">
               <CheckCircle className="h-4 w-4 text-emerald-600" />

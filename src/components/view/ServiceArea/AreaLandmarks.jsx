@@ -18,7 +18,7 @@ export default function AreaLandmarks({ area }) {
       </p>
 
       <div className="space-y-3">
-        {area.landmarks.map((landmark, index) => (
+        {area?.landmarks?.map((landmark, index) => (
           <div key={index} className="flex items-center gap-3 group">
             <div className="p-1.5 bg-slate-100 rounded-lg group-hover:bg-emerald-50 transition-colors">
               <MapPin className="h-4 w-4 text-slate-500 group-hover:text-emerald-600" />

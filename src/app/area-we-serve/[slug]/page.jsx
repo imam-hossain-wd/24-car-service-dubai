@@ -43,7 +43,7 @@ import { BookOpen, MapPin } from 'lucide-react';
 export default async function AreaWeServeDetail({ params }) {
   const { slug } = await params
   
-  const area = serviceAreas.find((s) => s.slug === slug);
+  const area = serviceAreas?.find((s) => s?.slug === slug);
 
   if (!area) {
     return notFound()
@@ -52,7 +52,7 @@ export default async function AreaWeServeDetail({ params }) {
   const items = [
     { label: "Home", href: "/", icon: <BookOpen className="h-4 w-4" /> },
     { label: "Service Areas", href: "/areas", icon: <MapPin className="h-4 w-4" /> },
-    { label: area.name, icon: <MapPin className="h-4 w-4" /> }
+    { label: area?.name, icon: <MapPin className="h-4 w-4" /> }
   ];
 
   return (

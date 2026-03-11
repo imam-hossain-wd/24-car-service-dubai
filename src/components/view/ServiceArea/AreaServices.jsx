@@ -36,7 +36,7 @@ export default function AreaServices({ area }) {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
-            Our Services in {area.name}
+            Our Services in {area?.name}
           </h2>
           <div className="h-1 w-20 bg-emerald-500 rounded"></div>
         </div>
@@ -46,7 +46,7 @@ export default function AreaServices({ area }) {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {area.services.map((service, index) => (
+        {area?.services?.map((service, index) => (
           <div
             key={index}
             className="group flex items-start gap-3 p-4 rounded-xl border border-slate-200 hover:border-emerald-200 hover:bg-emerald-50/50 transition-all cursor-pointer"
@@ -70,7 +70,7 @@ export default function AreaServices({ area }) {
       <div className="mt-6 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
         <p className="text-sm text-slate-600">
           <span className="font-semibold text-emerald-600">All services include:</span> Free diagnostics, 
-          genuine parts, and 12-month warranty on repairs. Mobile mechanic arrives at your location in {area.name}.
+          genuine parts, and 12-month warranty on repairs. Mobile mechanic arrives at your location in {area?.name}.
         </p>
       </div>
     </section>

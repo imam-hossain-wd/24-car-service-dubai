@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Wrench, Phone, MessageCircle, Image as ImageIcon, ArrowUp, NotebookPen, Home } from "lucide-react";
@@ -7,14 +6,6 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SiteConfig } from "@/config/site";
-import { AppointmentForm } from "@/components/Forms/AppointmentForm";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 
 
 const mobileNavItems = [
@@ -90,7 +81,7 @@ export function MobileBottomNav() {
         <Button
           onClick={scrollToTop}
           size="icon"
-          className="absolute -top-20 md:-top-40 right-4 animate-bounce rounded-full h-10 w-10 bg-primary shadow-xl border-0 hover:bg-primary/90 transition-all duration-300 hover:scale-110"
+          className="absolute -top-24 md:-top-52 right-4 animate-bounce rounded-full h-10 w-10 bg-primary shadow-xl border-0 hover:bg-primary/90 transition-all duration-300 hover:scale-110"
         >
           <ArrowUp className="h-6 w-6 text-white" />
         </Button>
@@ -99,69 +90,9 @@ export function MobileBottomNav() {
       {/* Modern Navigation Bar */}
       <nav className="bg-white/90 backdrop-blur-xl border-t border-gray-200/60 shadow-2xl md:hidden">
         <div className="flex justify-around items-center h-20 px-2">
-          {mobileNavItems.map((item) => {
-            const isActive = pathname === item.href;
-            const Icon = item.icon;
-
-            if (item.type === "drawer") {
-              return (
-                <Drawer key={item.name}>
-                  <DrawerTrigger asChild>
-                    <button
-                      className={cn(
-                        "flex flex-col items-center justify-center w-full h-full transition-all duration-300 relative group cursor-pointer",
-                        isActive ? "text-primary" : "text-gray-600 hover:text-gray-900"
-                      )}
-                    >
-                      {/* Animated Background Dot for Active State */}
-                      {isActive && (
-                        <div className="absolute -top-1 w-12 h-1 bg-primary rounded-full transition-all duration-300" />
-                      )}
-
-                      {/* Icon Container with Enhanced Styling */}
-                      <div className={cn(
-                        "relative p-2 rounded-2xl transition-all duration-300 group-hover:scale-110 group-active:scale-95",
-                        isActive
-                          ? item.activeBgColor + " shadow-lg scale-110"
-                          : item.bgColor + " opacity-90 hover:opacity-100",
-                        "flex items-center justify-center"
-                      )}>
-                        <Icon className="h-5 w-5 text-white" />
-
-                        {/* Ripple Effect on Active */}
-                        {isActive && (
-                          <div className="absolute inset-0 rounded-2xl bg-white/20 animate-ping" />
-                        )}
-                      </div>
-
-                      {/* Label with Better Typography */}
-                      <span className={cn(
-                        "text-xs font-medium mt-2 transition-all duration-300",
-                        isActive
-                          ? "text-primary scale-105 font-semibold"
-                          : "text-gray-600 group-hover:text-gray-900"
-                      )}>
-                        {item.name}
-                      </span>
-
-                      {/* Hover Effect Background */}
-                      <div className="absolute inset-0 rounded-xl bg-transparent group-hover:bg-gray-100/50 transition-colors duration-300 -z-10" />
-                    </button>
-                  </DrawerTrigger>
-                  <DrawerContent className="h-[85%]">
-                    <div className="mx-auto w-full max-w-2xl">
-                      <DrawerHeader>
-                        <DrawerTitle className="text-2xl">Book Your Service</DrawerTitle>
-                      </DrawerHeader>
-                      <div className="p-4 pb-4">
-                        <AppointmentForm />
-                      </div>
-                    </div>
-                  </DrawerContent>
-                </Drawer>
-              );
-            }
-
+          {mobileNavItems?.map((item) => {
+            const isActive = pathname === item?.href;
+            const Icon = item?.icon;
             return (
               <Link
                 key={item.name}
@@ -171,12 +102,26 @@ export function MobileBottomNav() {
                   isActive ? "text-primary" : "text-gray-600 hover:text-gray-900"
                 )}
               >
-                {/* Animated Background Dot for Active State */}
+
                 {isActive && (
                   <div className="absolute -top-1 w-12 h-1 bg-primary rounded-full transition-all duration-300" />
                 )}
+                <div className={cn(
+                  "relative p-2 rounded-2xl transition-all duration-300 group-hover:scale-110 group-active:scale-95",
+                  isActive
+                    ?  "bg-primary shadow-lg scale-110"
+                    : "bg-primary opacity-90 hover:opacity-100",
+                  "flex items-center justify-center"
+                )}>
+                  <Icon className="h-5 w-5 text-white" />
 
-                {/* Icon Container with Enhanced Styling */}
+                  {isActive && (
+                    <div className="absolute inset-0 rounded-2xl bg-white/20 animate-ping" />
+                  )}
+                </div>
+                {/* {isActive && (
+                  <div className="absolute -top-1 w-12 h-1 bg-primary rounded-full transition-all duration-300" />
+                )}
                 <div className={cn(
                   "relative p-2 rounded-2xl transition-all duration-300 group-hover:scale-110 group-active:scale-95",
                   isActive
@@ -186,11 +131,12 @@ export function MobileBottomNav() {
                 )}>
                   <Icon className="h-5 w-5 text-white" />
 
-                  {/* Ripple Effect on Active */}
                   {isActive && (
                     <div className="absolute inset-0 rounded-2xl bg-white/20 animate-ping" />
                   )}
-                </div>
+                </div> */}
+
+
 
                 {/* Label with Better Typography */}
                 <span className={cn(

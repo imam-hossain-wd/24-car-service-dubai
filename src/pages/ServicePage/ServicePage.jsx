@@ -7,7 +7,7 @@ export default function ServicePage() {
   return (
     <div>
       <ServicesHero />
-      <div className="container py-12 mx-auto">
+      <div className="w-[90%] py-12 mx-auto">
 
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold tracking-tight">Our Services</h2>
