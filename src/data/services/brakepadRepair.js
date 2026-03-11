@@ -1,4 +1,5 @@
 import { services } from "@/utils/assets";
+import { locations } from "../serviceArea";
 
 export const brakePadRepair = {
     "title": "Car Brake Pad Repair and Replacement in Dubai – Affordable & Professional Service",
@@ -21,12 +22,12 @@ export const brakePadRepair = {
     "whyChooseUs": {
         "heading": "Why Choose Us for Car Brake Pad Repair and Replacement?",
         "points": [
-            "✅ 24/7 mobile brake service across Dubai",
-            "✅ Experienced, certified brake technicians",
-            "✅ Genuine parts and premium brake pads used",
-            "✅ Transparent pricing with no hidden charges",
-            "✅ Fast response and same-day repair",
-            "✅ Warranty on parts and labor"
+            "24/7 mobile brake service across Dubai",
+            "Experienced, certified brake technicians",
+            "Genuine parts and premium brake pads used",
+            "Transparent pricing with no hidden charges",
+            "Fast response and same-day repair",
+            "Warranty on parts and labor"
         ]
     },
     "problemSignsSection": {
@@ -79,14 +80,7 @@ export const brakePadRepair = {
     },
     "serviceCoverage": {
         "heading": "Areas We Serve in Dubai",
-        "locations": [
-            "📍 Al Satwa",
-            "📍 Downtown Dubai",
-            "📍 Jumeirah",
-            "📍 Business Bay",
-            "📍 Al Quoz",
-            "📍 Dubai Marina"
-        ],
+        "locations": locations,
         "note": "We provide city-wide service and emergency support throughout Dubai."
     },
     "ctaSection": {

@@ -25,7 +25,6 @@ export const SiteConfig = {
     reviews: "500+",
     verified: true
   },
-
   serviceAreas: [
     {
       name: "Al Mankhool",

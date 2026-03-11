@@ -8,11 +8,12 @@ import { WhoWeAre } from '@/components/view/WhoWeAre/WhoWeAre'
 import MapComponent from '@/components/ui/shared/Map/MapComponent'
 import StillHaveAnyQuestions from '@/components/view/StillHaveAnyQuestions/StillHaveAnyQuestions'
 import BlogCarousel from '../BlogPage/BlogCarousel'
-import ServiceAreas from '../ContactPage/ServiceAreas'
+// import ServiceAreas from '../ContactPage/ServiceAreas'
 import HomeHero from '@/components/view/Hero/HomeHero'
 import FaqStructuredData from '@/seo/schemas/FaqStructuredData'
 import AppBreadcrumb from '@/components/ui/shared/AppBreadcrumb/AppBreadcrumb'
 import { BookOpen, FileText, Home } from 'lucide-react'
+import ServiceAreas from '@/components/view/ServiceArea/ServiceAreas'
 
 
 export default function HomePage() {
@@ -45,9 +46,12 @@ export default function HomePage() {
             <BlogCarousel />
             <Reviews />
             <FAQSection />
-            {/* <ServiceAreas /> */}
             <ServiceAreas />
+            {/* <ServiceAreas /> */}
             <StillHaveAnyQuestions />
         </div>
     )
 }
+
+
+           

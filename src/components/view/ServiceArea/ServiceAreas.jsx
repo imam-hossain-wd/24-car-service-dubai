@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { SiteConfig } from '@/config/site';
 import { MapPin, Clock, Phone, Navigation, Star, Zap, CheckCircle } from 'lucide-react'
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function ServiceAreas() {
@@ -75,9 +76,8 @@ export default function ServiceAreas() {
                     <div className="flex-1">
                         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
                             {serviceAreas.map((area, index) => (
-                                <div
+                                <Link href={area.href}
                                     key={area.slug}
-                                    onClick={() => setSelectedArea(area.slug)}
                                     className={` relative overflow-hidden p-6 rounded-2xl bg-white/80 backdrop-blur-sm border-primary border-1 transition-all duration-500 cursor-pointer `}
                                 >
                                     {/* Animated Background */}
@@ -113,7 +113,7 @@ export default function ServiceAreas() {
                                     </div>
 
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

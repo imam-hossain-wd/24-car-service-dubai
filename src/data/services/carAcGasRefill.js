@@ -1,4 +1,5 @@
 import { services } from "@/utils/assets";
+import { locations } from "../serviceArea";
 
 export const carAcGasRefill = {
     "title": "Car AC Gas Refill Dubai – Fast Car AC Recharge Service",
@@ -79,14 +80,7 @@ export const carAcGasRefill = {
     },
     "serviceCoverage": {
         "heading": "Areas We Serve in Dubai",
-        "locations": [
-            "📍 Al Satwa",
-            "📍 Downtown Dubai",
-            "📍 Jumeirah",
-            "📍 Business Bay",
-            "📍 Al Quoz",
-            "📍 Dubai Marina"
-        ],
+        "locations": locations,
         "note": "Our mobile AC gas refill service is available across all areas of Dubai."
     },
     "ctaSection": {

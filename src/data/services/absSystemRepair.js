@@ -1,4 +1,5 @@
 import { services } from "@/utils/assets";
+import { locations } from "../serviceArea";
 
 export const absSystemRepair = {
     "title": "ABS System Repair Dubai – Expert Anti-Lock Braking Services",
@@ -79,14 +80,7 @@ export const absSystemRepair = {
     },
     "serviceCoverage": {
         "heading": "Areas We Serve in Dubai",
-        "locations": [
-            "📍 Al Satwa",
-            "📍 Downtown Dubai",
-            "📍 Jumeirah",
-            "📍 Business Bay",
-            "📍 Al Quoz",
-            "📍 Dubai Marina"
-        ],
+        "locations": locations,
         "note": "We provide city-wide ABS repair and emergency support across Dubai."
     },
     "ctaSection": {

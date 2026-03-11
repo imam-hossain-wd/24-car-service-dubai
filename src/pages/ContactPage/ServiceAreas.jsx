@@ -9,17 +9,6 @@ import Link from 'next/link';
 export default function ServiceAreas() {
     const { serviceAreas, city, country, operatingHours } = SiteConfig;
     const [selectedArea, setSelectedArea] = useState("");
-
-    // const operatingHours = [
-    //     { day: 'Saturday', hours: '24 Hours' },
-    //     { day: 'Sunday', hours: '24 Hours' },
-    //     { day: 'Monday', hours: '24 Hours' },
-    //     { day: 'Tuesday', hours: '24 Hours' },
-    //     { day: 'Wednesday', hours: '24 Hours' },
-    //     { day: 'Thursday', hours: '24 Hours' },
-    //     { day: 'Friday', hours: '24 Hours' }
-    // ];
-
     const stats = [
         { value: '15min', label: 'Avg. Response Time' },
         { value: '24/7', label: 'Service Available' },
@@ -61,9 +50,9 @@ export default function ServiceAreas() {
                     <div className="flex-1">
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                             {serviceAreas.map((area, index) => (
-                                <div
+                                <Link href={area.href}
                                     key={area.slug}
-                                    onClick={() => setSelectedArea(area.slug)}
+                                    // onClick={() => setSelectedArea(area.slug)}
                                     className={`relative overflow-hidden p-4 rounded-xl bg-white border transition-all duration-300 cursor-pointer ${
                                         selectedArea === area.slug 
                                             ? 'border-[#007A55] shadow-lg' 
@@ -89,7 +78,7 @@ export default function ServiceAreas() {
                                             {city} , UAE
                                         </p>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
